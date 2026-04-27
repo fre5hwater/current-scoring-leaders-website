@@ -19,15 +19,15 @@
     <meta name="twitter:title" content="FAQ | Current Scoring Leaders">
     <meta name="twitter:description" content="Answers to common questions about Current Scoring Leaders services, licensing, pricing, revisions, and turnaround.">
     <meta name="twitter:image" content="https://currentscoringleaders.com/img_csl_studio.webp">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
-        :root{--bg:#0a0a0f;--bg2:#0f0f18;--bg3:#14141f;--blue:#3b82f6;--purple:#8b5cf6;--gold:#c9a855;--green:#10b981;--text:#f1f5f9;--muted:#94a3b8;--border:#1e1e2e;}
+        :root{--bg:#0a0a0f;--bg2:#0f0f18;--bg3:#14141f;--blue:#3b82f6;--purple: #60a5fa;--gold: #cbd5e1;--green:#10b981;--text:#f1f5f9;--muted:#94a3b8;--border:#1e1e2e;}
         *{margin:0;padding:0;box-sizing:border-box;}
         body{font-family:'Inter',sans-serif;background-color:var(--bg);color:var(--text);line-height:1.7;}
         body::after{content:'';position:fixed;inset:0;background:url('img_ps2_collage.webp') left top / 58vh auto no-repeat, url('img_ranger_slayer.webp') right bottom / 50vh auto no-repeat;opacity:0.13;pointer-events:none;z-index:0;filter:brightness(1.6);}
         nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,15,0.94);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:0.9rem 2rem;display:flex;justify-content:space-between;align-items:center;}
-        .nav-logo img{height:56px;width:auto;display:block;}
+        .nav-logo img{height:120px;width:auto;display:block;}
         .footer-logo img{height:36px;width:auto;}
         body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");opacity:0.03;pointer-events:none;z-index:9999;}
         .nav-links{display:flex;gap:2rem;list-style:none;}
@@ -75,7 +75,7 @@
         .section-label{font-size:0.7rem;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);margin-bottom:0.75rem;}
 
         /* CTA */
-        .faq-cta{background:linear-gradient(135deg,rgba(59,130,246,0.1),rgba(139,92,246,0.1));border:1px solid rgba(59,130,246,0.2);border-radius:20px;padding:3rem 2rem;text-align:center;position:relative;overflow:hidden;}
+        .faq-cta{background:linear-gradient(135deg,rgba(59,130,246,0.1),rgba(96, 165, 250,0.1));border:1px solid rgba(59,130,246,0.2);border-radius:20px;padding:3rem 2rem;text-align:center;position:relative;overflow:hidden;}
         .faq-cta::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--blue),var(--purple));}
         .faq-cta h2{font-size:1.5rem;font-weight:900;letter-spacing:-0.3px;margin-bottom:0.6rem;}
         .faq-cta p{color:var(--muted);font-size:0.9rem;margin-bottom:1.5rem;}
@@ -94,6 +94,7 @@
         .hidden{display:none!important;}
         @media(max-width:720px){.nav-links{display:none;}}
     </style>
+<link rel="stylesheet" href="csl-bg.css">
 </head>
 <body>
 <nav>
@@ -156,7 +157,7 @@
     <!-- Rights & Licensing -->
     <div class="faq-section" data-section="rights">
         <div class="faq-section-header">
-            <div class="faq-section-icon" style="background:rgba(201,168,85,0.12);color:var(--gold)"><i class="fas fa-file-signature"></i></div>
+            <div class="faq-section-icon" style="background:rgba(203, 213, 225,0.12);color:var(--gold)"><i class="fas fa-file-signature"></i></div>
             <h2 style="color:var(--gold)">Rights &amp; Licensing</h2>
         </div>
 
@@ -214,7 +215,7 @@
     <!-- Delivery -->
     <div class="faq-section" data-section="delivery">
         <div class="faq-section-header">
-            <div class="faq-section-icon" style="background:rgba(139,92,246,0.12);color:var(--purple)"><i class="fas fa-box-open"></i></div>
+            <div class="faq-section-icon" style="background:rgba(96, 165, 250,0.12);color:var(--purple)"><i class="fas fa-box-open"></i></div>
             <h2 style="color:var(--purple)">Delivery</h2>
         </div>
 
@@ -352,6 +353,7 @@
     });
 </script>
 <script src="csl-shared.js" defer></script><script src="csl-cookie-banner.js" defer></script>
+<script src="csl-bg.js" defer></script>
 </body>
 </html>
 

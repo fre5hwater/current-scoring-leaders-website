@@ -10,15 +10,15 @@
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 <style>
-:root{--bg:#0a0a0f;--bg2:#0f0f18;--bg3:#14141f;--blue:#3b82f6;--purple:#8b5cf6;--text:#f1f5f9;--muted:#94a3b8;--border:#1e1e2e;}
+:root{--bg:#0a0a0f;--bg2:#0f0f18;--bg3:#14141f;--blue:#3b82f6;--purple: #60a5fa;--text:#f1f5f9;--muted:#94a3b8;--border:#1e1e2e;}
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;}
 nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,15,0.94);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center;}
-.nav-logo img{height:48px;width:auto;}
+.nav-logo img{height:120px;width:auto;}
 .nav-links{display:flex;gap:1.5rem;list-style:none;}
 .nav-links a{color:var(--muted);text-decoration:none;font-size:0.9rem;}
 .nav-links a:hover{color:var(--text);}
@@ -43,6 +43,7 @@ h1{font-size:clamp(2rem,4vw,3rem);font-weight:900;letter-spacing:-1px;margin-bot
 @media print{nav,.print-btn{display:none;}body{background:white;color:black;}.doc,.page{background:white;border:none;}.doc h3{color:#1e3a8a;}.doc p,.doc li{color:black;}}
 @media(max-width:720px){.nav-links{display:none;}}
 </style>
+<link rel="stylesheet" href="csl-bg.css">
 </head>
 <body>
 
@@ -169,5 +170,6 @@ h1{font-size:clamp(2rem,4vw,3rem);font-weight:900;letter-spacing:-1px;margin-bot
 <button class="print-btn" onclick="window.print()"><i class="fas fa-print"></i> Print / Save PDF</button>
 
 <script src="csl-shared.js" defer></script><script src="csl-cookie-banner.js" defer></script>
+<script src="csl-bg.js" defer></script>
 </body>
 </html>

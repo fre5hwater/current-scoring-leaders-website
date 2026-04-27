@@ -19,10 +19,10 @@
     <meta name="twitter:title" content="Pricing | Current Scoring Leaders">
     <meta name="twitter:description" content="Transparent pricing for music licensing, custom composition, and retainers.">
     <meta name="twitter:image" content="https://currentscoringleaders.com/img_csl_studio.webp">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
-        :root{--bg:#0a0a0f;--bg2:#0f0f18;--bg3:#14141f;--blue:#3b82f6;--purple:#8b5cf6;--gold:#c9a855;--green:#10b981;--text:#f1f5f9;--muted:#94a3b8;--border:#1e1e2e;}
+        :root{--bg:#0a0a0f;--bg2:#0f0f18;--bg3:#14141f;--blue:#3b82f6;--purple: #60a5fa;--gold: #cbd5e1;--green:#10b981;--text:#f1f5f9;--muted:#94a3b8;--border:#1e1e2e;}
         *{margin:0;padding:0;box-sizing:border-box;}
         html{scroll-behavior:smooth;}
         body{font-family:'Inter',sans-serif;background-color:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden;}
@@ -31,7 +31,7 @@
 
         /* NAV */
         nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,15,0.94);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:0.9rem 2rem;display:flex;justify-content:space-between;align-items:center;}
-        .nav-logo img{height:56px;width:auto;display:block;}
+        .nav-logo img{height:120px;width:auto;display:block;}
         .footer-logo img{height:36px;width:auto;}
         .nav-links{display:flex;gap:2rem;list-style:none;}
         .nav-links a{color:var(--muted);text-decoration:none;font-size:0.875rem;font-weight:500;transition:color 0.2s;}
@@ -75,20 +75,20 @@
         .cat-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;border-radius:16px 16px 0 0;}
         .cat-card.creator::before{background:linear-gradient(90deg,#60a5fa,var(--blue));}
         .cat-card.sync::before{background:linear-gradient(90deg,var(--blue),var(--purple));}
-        .cat-card.premium::before{background:linear-gradient(90deg,var(--purple),#a78bfa);}
-        .cat-card.custom::before{background:linear-gradient(90deg,var(--gold),#f59e0b);}
+        .cat-card.premium::before{background:linear-gradient(90deg,var(--purple),#93c5fd);}
+        .cat-card.custom::before{background:linear-gradient(90deg,var(--gold),#60a5fa);}
 
-        .cat-card.premium{border-color:rgba(139,92,246,0.35);background:linear-gradient(180deg,rgba(139,92,246,0.04),var(--bg2));}
+        .cat-card.premium{border-color:rgba(96, 165, 250,0.35);background:linear-gradient(180deg,rgba(96, 165, 250,0.04),var(--bg2));}
 
         .tier-ribbon{position:absolute;top:-1px;right:16px;font-size:0.6rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;padding:0.25rem 0.7rem;border-radius:0 0 8px 8px;color:white;}
         .tier-ribbon.standard{background:linear-gradient(90deg,#60a5fa,var(--blue));}
-        .tier-ribbon.premium{background:linear-gradient(90deg,var(--purple),#a78bfa);}
+        .tier-ribbon.premium{background:linear-gradient(90deg,var(--purple),#93c5fd);}
 
         .cat-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1rem;margin-bottom:1rem;margin-top:0.5rem;}
         .creator .cat-icon{background:rgba(59,130,246,0.1);color:var(--blue);}
         .sync .cat-icon{background:rgba(59,130,246,0.15);color:var(--blue);}
-        .premium .cat-icon{background:rgba(139,92,246,0.15);color:var(--purple);}
-        .custom .cat-icon{background:rgba(201,168,85,0.15);color:var(--gold);}
+        .premium .cat-icon{background:rgba(96, 165, 250,0.15);color:var(--purple);}
+        .custom .cat-icon{background:rgba(203, 213, 225,0.15);color:var(--gold);}
 
         .cat-name{font-size:0.98rem;font-weight:800;margin-bottom:0.1rem;}
         .cat-for{font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;color:var(--muted);margin-bottom:0.6rem;}
@@ -114,7 +114,7 @@
         .sync .cat-btn:hover{background:var(--purple);}
         .premium .cat-btn{background:var(--purple);color:white;border:none;}
         .premium .cat-btn:hover{background:var(--blue);}
-        .custom .cat-btn{background:rgba(201,168,85,0.12);color:var(--gold);border:1px solid rgba(201,168,85,0.3);}
+        .custom .cat-btn{background:rgba(203, 213, 225,0.12);color:var(--gold);border:1px solid rgba(203, 213, 225,0.3);}
         .custom .cat-btn:hover{background:var(--gold);color:#0a0a0f;}
 
         /* CUSTOM MUSIC ROW — 3 cards */
@@ -123,8 +123,8 @@
         .cm-card:hover{transform:translateY(-3px);border-color:rgba(59,130,246,0.3);}
         .cm-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--blue),var(--purple),var(--gold));}
         .cm-icon{width:44px;height:44px;border-radius:11px;background:rgba(59,130,246,0.12);color:var(--blue);display:flex;align-items:center;justify-content:center;font-size:1.1rem;margin-bottom:1rem;}
-        .cm-card.pkg .cm-icon{background:rgba(139,92,246,0.12);color:var(--purple);}
-        .cm-card.exclusive .cm-icon{background:rgba(201,168,85,0.12);color:var(--gold);}
+        .cm-card.pkg .cm-icon{background:rgba(96, 165, 250,0.12);color:var(--purple);}
+        .cm-card.exclusive .cm-icon{background:rgba(203, 213, 225,0.12);color:var(--gold);}
         .cm-name{font-size:1.05rem;font-weight:800;margin-bottom:0.35rem;}
         .cm-price{font-family:'JetBrains Mono',monospace;font-size:1.25rem;font-weight:700;color:var(--blue);margin-bottom:0.6rem;}
         .cm-card.pkg .cm-price{color:var(--purple);}
@@ -138,7 +138,7 @@
 
         /* RETAINER BLOCK (quiet, application-based) */
         .retainer-block{background:var(--bg2);border:1px solid var(--border);border-radius:20px;padding:2.5rem;display:flex;align-items:center;gap:2rem;flex-wrap:wrap;}
-        .retainer-icon{width:64px;height:64px;border-radius:14px;background:linear-gradient(135deg,rgba(59,130,246,0.15),rgba(139,92,246,0.15));color:var(--blue);display:flex;align-items:center;justify-content:center;font-size:1.6rem;flex-shrink:0;}
+        .retainer-icon{width:64px;height:64px;border-radius:14px;background:linear-gradient(135deg,rgba(59,130,246,0.15),rgba(96, 165, 250,0.15));color:var(--blue);display:flex;align-items:center;justify-content:center;font-size:1.6rem;flex-shrink:0;}
         .retainer-body{flex:1;min-width:260px;}
         .retainer-body h3{font-size:1.25rem;font-weight:800;margin-bottom:0.5rem;}
         .retainer-body p{color:var(--muted);font-size:0.92rem;line-height:1.6;max-width:620px;}
@@ -184,7 +184,7 @@
         .faq-item p{color:var(--muted);font-size:0.85rem;line-height:1.65;}
 
         /* CTA BANNER */
-        .cta-banner{background:linear-gradient(135deg,rgba(59,130,246,0.15),rgba(139,92,246,0.15));border:1px solid rgba(59,130,246,0.2);border-radius:20px;padding:3.5rem 2.5rem;text-align:center;margin:0 auto;max-width:1100px;}
+        .cta-banner{background:linear-gradient(135deg,rgba(59,130,246,0.15),rgba(96, 165, 250,0.15));border:1px solid rgba(59,130,246,0.2);border-radius:20px;padding:3.5rem 2.5rem;text-align:center;margin:0 auto;max-width:1100px;}
         .cta-banner h2{font-size:clamp(1.5rem,3vw,2.1rem);font-weight:800;margin-bottom:0.75rem;}
         .cta-banner p{color:var(--muted);font-size:0.95rem;margin-bottom:1.75rem;max-width:540px;margin-left:auto;margin-right:auto;line-height:1.6;}
         .cta-btns{display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;}
@@ -204,6 +204,7 @@
         @media(max-width:980px){.catalog-grid{grid-template-columns:repeat(2,1fr);}}
         @media(max-width:720px){.nav-links{display:none;}.catalog-grid{grid-template-columns:1fr;}.retainer-block{flex-direction:column;align-items:flex-start;}}
     </style>
+<link rel="stylesheet" href="csl-bg.css">
 </head>
 <body>
 
@@ -237,7 +238,7 @@
 <style>
     .spectrum-wrap { max-width: 1100px; margin: 0 auto 4rem; padding: 0 2rem; }
     .spectrum-title { font-size: 0.78rem; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); text-align: center; margin-bottom: 1.5rem; }
-    .spectrum-bar { position: relative; height: 14px; border-radius: 100px; background: linear-gradient(90deg, #10b981 0%, #3b82f6 30%, #8b5cf6 60%, #f59e0b 100%); margin-bottom: 3rem; }
+    .spectrum-bar { position: relative; height: 14px; border-radius: 100px; background: linear-gradient(90deg, #10b981 0%, #3b82f6 30%, #60a5fa 60%, #60a5fa 100%); margin-bottom: 3rem; }
     .spectrum-marks { position: absolute; inset: 0; display: flex; justify-content: space-between; }
     .spectrum-mark { position: relative; width: 18px; height: 18px; background: var(--bg); border: 3px solid white; border-radius: 50%; top: -2px; }
     .spectrum-labels { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: -2.25rem; }
@@ -247,8 +248,8 @@
     .spec-label .sub { font-size: 0.7rem; color: var(--muted); line-height: 1.4; }
     .spec-label.s1 .price { color: #10b981; }
     .spec-label.s2 .price { color: #3b82f6; }
-    .spec-label.s3 .price { color: #8b5cf6; }
-    .spec-label.s4 .price { color: #f59e0b; }
+    .spec-label.s3 .price { color: #60a5fa; }
+    .spec-label.s4 .price { color: #60a5fa; }
     @media (max-width: 700px) { .spectrum-labels { grid-template-columns: repeat(2,1fr); gap: 1.25rem; } .spectrum-bar { display:none; } }
 </style>
 <div class="spectrum-wrap">
@@ -257,8 +258,8 @@
         <div class="spectrum-marks">
             <div class="spectrum-mark" style="background:#10b981;"></div>
             <div class="spectrum-mark" style="background:#3b82f6;"></div>
-            <div class="spectrum-mark" style="background:#8b5cf6;"></div>
-            <div class="spectrum-mark" style="background:#f59e0b;"></div>
+            <div class="spectrum-mark" style="background:#60a5fa;"></div>
+            <div class="spectrum-mark" style="background:#60a5fa;"></div>
         </div>
     </div>
     <div class="spectrum-labels">
@@ -669,5 +670,6 @@
 </footer>
 
 <script src="csl-shared.js" defer></script><script src="csl-cookie-banner.js" defer></script>
+<script src="csl-bg.js" defer></script>
 </body>
 </html>

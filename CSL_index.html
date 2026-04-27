@@ -49,7 +49,7 @@
       "serviceType": ["Music Composition", "Film Scoring", "Sync Licensing", "Custom Music", "Podcast Music", "Game Music"]
     }
     </script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
         :root {
@@ -57,9 +57,9 @@
             --bg2: #0f0f18;
             --bg3: #14141f;
             --blue: #3b82f6;
-            --purple: #8b5cf6;
+            --purple: #60a5fa;
             --green: #10b981;
-            --gold: #f59e0b;
+            --gold: #cbd5e1;
             --text: #f1f5f9;
             --muted: #94a3b8;
             --border: #1e1e2e;
@@ -103,7 +103,7 @@
             align-items: center;
         }
 
-        .nav-logo img { height: 56px; width: auto; display: block; }
+        .nav-logo img { height: 120px; width: auto; display: block; }
         .footer-logo img { height: 36px; width: auto; }
         body::before {
             content: '';
@@ -184,7 +184,7 @@
             position: absolute;
             width: 900px;
             height: 900px;
-            background: radial-gradient(circle, rgba(59,130,246,0.18) 0%, rgba(139,92,246,0.08) 40%, transparent 70%);
+            background: radial-gradient(circle, rgba(59,130,246,0.18) 0%, rgba(96, 165, 250,0.08) 40%, transparent 70%);
             top: 50%; left: 50%;
             transform: translate(-50%, -50%);
             pointer-events: none;
@@ -193,7 +193,7 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(105deg, rgba(59,130,246,0.06) 0%, transparent 50%, rgba(139,92,246,0.06) 100%);
+            background: linear-gradient(105deg, rgba(59,130,246,0.06) 0%, transparent 50%, rgba(96, 165, 250,0.06) 100%);
             pointer-events: none;
         }
 
@@ -479,7 +479,7 @@
 
         /* CTA BANNER */
         .cta-banner {
-            background: linear-gradient(135deg, rgba(59,130,246,0.15), rgba(139,92,246,0.15));
+            background: linear-gradient(135deg, rgba(59,130,246,0.15), rgba(96, 165, 250,0.15));
             border: 1px solid rgba(59,130,246,0.2);
             border-radius: 20px;
             padding: 4rem 3rem;
@@ -532,6 +532,7 @@
             .cta-banner { padding: 2.5rem 1.5rem; margin: 0 1rem 4rem; }
         }
     </style>
+<link rel="stylesheet" href="csl-bg.css">
 </head>
 <body>
 
@@ -750,10 +751,10 @@
     </div>
 
     <!-- CTA BANNER WITH INLINE FORM -->
-    <div class="cta-banner" id="contact" style="background:linear-gradient(135deg,rgba(59,130,246,0.12),rgba(139,92,246,0.12));border:1px solid rgba(59,130,246,0.25);border-radius:24px;padding:3.5rem 2rem;margin:2rem auto 4rem;max-width:1100px;">
+    <div class="cta-banner" id="contact" style="background:linear-gradient(135deg,rgba(59,130,246,0.12),rgba(96, 165, 250,0.12));border:1px solid rgba(59,130,246,0.25);border-radius:24px;padding:3.5rem 2rem;margin:2rem auto 4rem;max-width:1100px;">
         <div style="display:grid;grid-template-columns:1fr 1.1fr;gap:3rem;align-items:center;max-width:1000px;margin:0 auto;">
             <div>
-                <h2 style="font-size:clamp(1.6rem,2.8vw,2.2rem);font-weight:900;letter-spacing:-0.5px;line-height:1.15;margin-bottom:1rem;">Ready to give your project<br><span style="background:linear-gradient(135deg,#3b82f6,#8b5cf6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">its own sound?</span></h2>
+                <h2 style="font-size:clamp(1.6rem,2.8vw,2.2rem);font-weight:900;letter-spacing:-0.5px;line-height:1.15;margin-bottom:1rem;">Ready to give your project<br><span style="background:linear-gradient(135deg,#3b82f6,#60a5fa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">its own sound?</span></h2>
                 <p style="color:#94a3b8;font-size:0.98rem;line-height:1.65;margin-bottom:1.25rem;">Send us a quick brief. We respond within <strong style="color:#f1f5f9;">48 hours</strong> with a real quote &mdash; not a chatbot.</p>
                 <ul style="list-style:none;padding:0;margin:0;font-size:0.85rem;color:#cbd5e1;">
                     <li style="margin-bottom:0.5rem;display:flex;align-items:center;gap:0.5rem;"><i class="fas fa-check" style="color:#10b981;"></i> 48-hour response guaranteed</li>
@@ -775,7 +776,7 @@
                     <label style="display:block;font-size:0.72rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#94a3b8;margin-bottom:0.4rem;">What do you need?</label>
                     <textarea name="message" required rows="3" placeholder="A quick description of your project, deadline, and budget if known..." style="width:100%;background:#14141f;border:1px solid #1e1e2e;color:#f1f5f9;padding:0.7rem 0.9rem;border-radius:9px;font-family:inherit;font-size:0.9rem;outline:none;resize:vertical;min-height:90px;"></textarea>
                 </div>
-                <button type="submit" style="width:100%;background:linear-gradient(135deg,#3b82f6,#8b5cf6);color:white;padding:0.85rem;border-radius:10px;border:none;font-weight:800;font-size:0.92rem;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:0.5rem;transition:transform 0.15s;" onmouseover="this.style.transform='translateY(-1px)'" onmouseout="this.style.transform='none'">
+                <button type="submit" style="width:100%;background:linear-gradient(135deg,#3b82f6,#60a5fa);color:white;padding:0.85rem;border-radius:10px;border:none;font-weight:800;font-size:0.92rem;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:0.5rem;transition:transform 0.15s;" onmouseover="this.style.transform='translateY(-1px)'" onmouseout="this.style.transform='none'">
                     <i class="fas fa-paper-plane"></i> Send Inquiry
                 </button>
                 <p style="font-size:0.72rem;color:#64748b;text-align:center;margin-top:0.85rem;">Or use the <a href="CSL_booking.html" style="color:#3b82f6;text-decoration:underline;">full project form</a> for more detail</p>
@@ -810,5 +811,6 @@
     </footer>
 
 <script src="csl-shared.js" defer></script><script src="csl-cookie-banner.js" defer></script>
+<script src="csl-bg.js" defer></script>
 </body>
 </html>

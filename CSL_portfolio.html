@@ -19,7 +19,7 @@
     <meta name="twitter:title" content="Portfolio | Current Scoring Leaders">
     <meta name="twitter:description" content="60+ original tracks across gaming, hip hop, scoring, and brand work.">
     <meta name="twitter:image" content="https://currentscoringleaders.com/img_csl_studio.webp">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
         :root {
@@ -27,9 +27,9 @@
             --bg2: #0f0f18;
             --bg3: #14141f;
             --blue: #3b82f6;
-            --purple: #8b5cf6;
+            --purple: #60a5fa;
             --green: #10b981;
-            --gold: #c9a855;
+            --gold: #cbd5e1;
             --red: #ef4444;
             --cyan: #06b6d4;
             --text: #f1f5f9;
@@ -87,7 +87,7 @@
             display: flex; justify-content: space-between; align-items: center;
         }
 
-        .nav-logo img { height: 56px; width: auto; display: block; }
+        .nav-logo img { height: 120px; width: auto; display: block; }
         .footer-logo img { height: 36px; width: auto; }
         body::before {
             content: '';
@@ -182,9 +182,9 @@
             border: 1px solid transparent;
         }
         .chip.green { background: rgba(16,185,129,0.1); border-color: rgba(16,185,129,0.25); color: var(--green); }
-        .chip.purple { background: rgba(139,92,246,0.1); border-color: rgba(139,92,246,0.25); color: var(--purple); }
+        .chip.purple { background: rgba(96, 165, 250,0.1); border-color: rgba(96, 165, 250,0.25); color: var(--purple); }
         .chip.blue { background: rgba(59,130,246,0.1); border-color: rgba(59,130,246,0.25); color: var(--blue); }
-        .chip.gold { background: rgba(201,168,85,0.1); border-color: rgba(201,168,85,0.25); color: var(--gold); }
+        .chip.gold { background: rgba(203, 213, 225,0.1); border-color: rgba(203, 213, 225,0.25); color: var(--gold); }
 
         /* ── MAIN ── */
         .main { max-width: 1300px; margin: 0 auto; padding: 1.5rem 2rem 6rem; }
@@ -219,9 +219,9 @@
 
         /* Series grouping — cards in a series share a left accent */
         .track-card.series-gaming  { border-left: 3px solid rgba(16,185,129,0.5); }
-        .track-card.series-hiphop  { border-left: 3px solid rgba(139,92,246,0.5); }
+        .track-card.series-hiphop  { border-left: 3px solid rgba(96, 165, 250,0.5); }
         .track-card.series-rnb     { border-left: 3px solid rgba(59,130,246,0.5); }
-        .track-card.series-exp     { border-left: 3px solid rgba(201,168,85,0.5); }
+        .track-card.series-exp     { border-left: 3px solid rgba(203, 213, 225,0.5); }
 
         /* Album art banner */
         .track-art {
@@ -296,9 +296,9 @@
             pointer-events: none; z-index: 0;
         }
         .series-gaming::before  { background: radial-gradient(ellipse at center, rgba(16,185,129,0.07) 0%, transparent 70%); }
-        .series-hiphop::before  { background: radial-gradient(ellipse at center, rgba(139,92,246,0.07) 0%, transparent 70%); }
+        .series-hiphop::before  { background: radial-gradient(ellipse at center, rgba(96, 165, 250,0.07) 0%, transparent 70%); }
         .series-rnb::before     { background: radial-gradient(ellipse at center, rgba(59,130,246,0.07) 0%, transparent 70%); }
-        .series-exp::before     { background: radial-gradient(ellipse at center, rgba(201,168,85,0.07) 0%, transparent 70%); }
+        .series-exp::before     { background: radial-gradient(ellipse at center, rgba(203, 213, 225,0.07) 0%, transparent 70%); }
         .track-card:hover::before { opacity: 1; }
 
         .track-card:hover {
@@ -306,7 +306,7 @@
             box-shadow: 0 20px 50px rgba(0,0,0,0.6), 0 0 0 1px rgba(59,130,246,0.2);
         }
         .series-gaming:hover  { box-shadow: 0 20px 50px rgba(0,0,0,0.6), 0 0 24px rgba(16,185,129,0.18), 0 0 0 1px rgba(16,185,129,0.25); }
-        .series-hiphop:hover  { box-shadow: 0 20px 50px rgba(0,0,0,0.6), 0 0 24px rgba(139,92,246,0.18), 0 0 0 1px rgba(139,92,246,0.25); }
+        .series-hiphop:hover  { box-shadow: 0 20px 50px rgba(0,0,0,0.6), 0 0 24px rgba(96, 165, 250,0.18), 0 0 0 1px rgba(96, 165, 250,0.25); }
         .series-rnb:hover     { box-shadow: 0 20px 50px rgba(0,0,0,0.6), 0 0 24px rgba(59,130,246,0.18), 0 0 0 1px rgba(59,130,246,0.25); }
 
         /* Track art zoom on hover */
@@ -333,8 +333,8 @@
             animation: btn-throb 0.8s ease-in-out infinite alternate;
         }
         @keyframes btn-throb {
-            from { box-shadow: 0 3px 12px rgba(139,92,246,0.4); }
-            to   { box-shadow: 0 6px 24px rgba(245,158,11,0.6); }
+            from { box-shadow: 0 3px 12px rgba(96, 165, 250,0.4); }
+            to   { box-shadow: 0 6px 24px rgba(96, 165, 250,0.6); }
         }
 
         /* Card title highlight on hover */
@@ -345,8 +345,8 @@
         .track-price-row {
             display: flex; align-items: center; justify-content: space-between;
             gap: 0.5rem;
-            background: linear-gradient(90deg, rgba(201,168,85,0.08), rgba(59,130,246,0.06));
-            border: 1px solid rgba(201,168,85,0.18);
+            background: linear-gradient(90deg, rgba(203, 213, 225,0.08), rgba(59,130,246,0.06));
+            border: 1px solid rgba(203, 213, 225,0.18);
             border-radius: 8px;
             padding: 0.4rem 0.65rem;
             font-size: 0.68rem;
@@ -366,8 +366,8 @@
         .catalog-banner {
             display: grid; grid-template-columns: auto 1fr auto; gap: 1.25rem;
             align-items: center;
-            background: linear-gradient(105deg, rgba(201,168,85,0.12), rgba(59,130,246,0.08) 60%, rgba(139,92,246,0.1));
-            border: 1px solid rgba(201,168,85,0.25);
+            background: linear-gradient(105deg, rgba(203, 213, 225,0.12), rgba(59,130,246,0.08) 60%, rgba(96, 165, 250,0.1));
+            border: 1px solid rgba(203, 213, 225,0.25);
             border-radius: 14px;
             padding: 1.1rem 1.5rem;
             margin-bottom: 1.5rem;
@@ -379,7 +379,7 @@
         }
         .cb-icon {
             width: 48px; height: 48px; border-radius: 12px;
-            background: rgba(201,168,85,0.15); color: var(--gold);
+            background: rgba(203, 213, 225,0.15); color: var(--gold);
             display: flex; align-items: center; justify-content: center;
             font-size: 1.3rem; flex-shrink: 0;
         }
@@ -431,10 +431,10 @@
         }
         .track-action-btn.book:hover { background: var(--purple); }
         .track-action-btn.license {
-            background: rgba(201,168,85,0.15); color: var(--gold);
-            border: 1px solid rgba(201,168,85,0.3);
+            background: rgba(203, 213, 225,0.15); color: var(--gold);
+            border: 1px solid rgba(203, 213, 225,0.3);
         }
-        .track-action-btn.license:hover { background: rgba(201,168,85,0.28); }
+        .track-action-btn.license:hover { background: rgba(203, 213, 225,0.28); }
 
         /* ── SECTION DIVIDERS — full cinematic genre banners ── */
         .section-divider {
@@ -497,9 +497,9 @@
             justify-content: center; font-size: 1rem; flex-shrink: 0;
         }
         .cat-gaming .divider-icon  { background: rgba(16,185,129,0.15); color: var(--green); }
-        .cat-hiphop .divider-icon  { background: rgba(139,92,246,0.15); color: var(--purple); }
+        .cat-hiphop .divider-icon  { background: rgba(96, 165, 250,0.15); color: var(--purple); }
         .cat-rnb    .divider-icon  { background: rgba(59,130,246,0.15); color: var(--blue); }
-        .cat-exp    .divider-icon  { background: rgba(201,168,85,0.15); color: var(--gold); }
+        .cat-exp    .divider-icon  { background: rgba(203, 213, 225,0.15); color: var(--gold); }
         .divider-label {
             font-size: 0.82rem; font-weight: 900; text-transform: uppercase;
             letter-spacing: 2.5px; display: block;
@@ -516,7 +516,7 @@
 
         /* ── CTA ── */
         .portfolio-cta {
-            background: linear-gradient(135deg, rgba(59,130,246,0.1), rgba(139,92,246,0.1));
+            background: linear-gradient(135deg, rgba(59,130,246,0.1), rgba(96, 165, 250,0.1));
             border: 1px solid rgba(59,130,246,0.2); border-radius: 20px;
             padding: 3rem 2rem; text-align: center; margin-top: 2.5rem;
             position: relative; overflow: hidden;
@@ -568,6 +568,7 @@
         @media (max-width: 900px) { .hero { grid-template-columns: 1fr; } .nav-links { display: none; } }
         @media (max-width: 600px) { .tracks-grid { grid-template-columns: 1fr; } }
     </style>
+<link rel="stylesheet" href="csl-bg.css">
 </head>
 <body>
 
@@ -746,19 +747,19 @@
             </div>
 
             <div class="track-card series-gaming" data-category="gaming">
-                <div class="track-art" style="background: linear-gradient(135deg,#1a0a2e,#2d1b69,#8b5cf6);">
-                    <i class="fas fa-fire track-art-icon" style="color:#8b5cf6"></i>
-                    <span class="track-art-label" style="color:#8b5cf6">Level 04</span>
+                <div class="track-art" style="background: linear-gradient(135deg,#1a0a2e,#2d1b69,#60a5fa);">
+                    <i class="fas fa-fire track-art-icon" style="color:#60a5fa"></i>
+                    <span class="track-art-label" style="color:#60a5fa">Level 04</span>
                     <span class="track-art-num">CSL-G04</span>
                 </div>
                 <div class="track-body">
                     <div class="track-top">
                         <div class="track-title">Gaming Level 4</div>
-                        <span class="track-badge" style="background:rgba(139,92,246,0.12);color:var(--purple);border:1px solid rgba(139,92,246,0.3)">Stage 4</span>
+                        <span class="track-badge" style="background:rgba(96, 165, 250,0.12);color:var(--purple);border:1px solid rgba(96, 165, 250,0.3)">Stage 4</span>
                     </div>
                     <div class="track-desc">Things just got darker. Score shifts tone to match — signals danger without shattering the world's logic.</div>
                     <div class="track-tags">
-                        <span class="track-tag" style="background:rgba(139,92,246,0.08);border-color:rgba(139,92,246,0.2);color:var(--purple)">Dark</span>
+                        <span class="track-tag" style="background:rgba(96, 165, 250,0.08);border-color:rgba(96, 165, 250,0.2);color:var(--purple)">Dark</span>
                         <span class="track-tag" style="background:rgba(59,130,246,0.08);border-color:rgba(59,130,246,0.2);color:var(--blue)">Atmospheric</span>
                     </div>
                     <div class="track-meta-row">
@@ -770,20 +771,20 @@
             </div>
 
             <div class="track-card series-gaming" data-category="gaming">
-                <div class="track-art" style="background: linear-gradient(135deg,#1f1600,#3d2b00,#f59e0b);">
-                    <i class="fas fa-crown track-art-icon" style="color:#f59e0b"></i>
-                    <span class="track-art-label" style="color:#f59e0b">Level 05</span>
+                <div class="track-art" style="background: linear-gradient(135deg,#1f1600,#3d2b00,#60a5fa);">
+                    <i class="fas fa-crown track-art-icon" style="color:#60a5fa"></i>
+                    <span class="track-art-label" style="color:#60a5fa">Level 05</span>
                     <span class="track-art-num">CSL-G05</span>
                 </div>
                 <div class="track-body">
                     <div class="track-top">
                         <div class="track-title">Gaming Level 5</div>
-                        <span class="track-badge" style="background:rgba(245,158,11,0.12);color:var(--gold);border:1px solid rgba(245,158,11,0.3)">Stage 5</span>
+                        <span class="track-badge" style="background:rgba(96, 165, 250,0.12);color:var(--gold);border:1px solid rgba(96, 165, 250,0.3)">Stage 5</span>
                     </div>
                     <div class="track-desc">Pre-boss silence. The kind of tension that makes you hold your breath. Score keeps the player wired — locked in right before everything breaks.</div>
                     <div class="track-tags">
-                        <span class="track-tag" style="background:rgba(245,158,11,0.08);border-color:rgba(245,158,11,0.2);color:var(--gold)">High Stakes</span>
-                        <span class="track-tag" style="background:rgba(139,92,246,0.08);border-color:rgba(139,92,246,0.2);color:var(--purple)">Tension</span>
+                        <span class="track-tag" style="background:rgba(96, 165, 250,0.08);border-color:rgba(96, 165, 250,0.2);color:var(--gold)">High Stakes</span>
+                        <span class="track-tag" style="background:rgba(96, 165, 250,0.08);border-color:rgba(96, 165, 250,0.2);color:var(--purple)">Tension</span>
                     </div>
                     <div class="track-meta-row">
                         <span><i class="fas fa-layer-group"></i> 7-Part Series</span>
@@ -831,7 +832,7 @@
                     <div class="track-desc">This is what the whole arc was building to. Seven levels of score — it closes here. Heavy. Orchestral. Done right.</div>
                     <div class="track-tags">
                         <span class="track-tag" style="background:rgba(217,70,239,0.08);border-color:rgba(217,70,239,0.2);color:#d946ef">Finale</span>
-                        <span class="track-tag" style="background:rgba(245,158,11,0.08);border-color:rgba(245,158,11,0.2);color:var(--gold)">Orchestral</span>
+                        <span class="track-tag" style="background:rgba(96, 165, 250,0.08);border-color:rgba(96, 165, 250,0.2);color:var(--gold)">Orchestral</span>
                     </div>
                     <div class="track-meta-row">
                         <span><i class="fas fa-layer-group"></i> 7-Part Series</span>
@@ -855,7 +856,7 @@
                     <div class="track-desc">Space doesn't follow rules and this track doesn't either. Controlled chaos — sounds like nothing makes sense but every second is intentional.</div>
                     <div class="track-tags">
                         <span class="track-tag" style="background:rgba(59,130,246,0.08);border-color:rgba(59,130,246,0.2);color:var(--blue)">Sci-Fi</span>
-                        <span class="track-tag" style="background:rgba(139,92,246,0.08);border-color:rgba(139,92,246,0.2);color:var(--purple)">Experimental</span>
+                        <span class="track-tag" style="background:rgba(96, 165, 250,0.08);border-color:rgba(96, 165, 250,0.2);color:var(--purple)">Experimental</span>
                     </div>
                     <div class="track-meta-row">
                         <span><i class="fas fa-tag"></i> Custom Scoring</span>
@@ -903,7 +904,7 @@
                     <div class="track-desc">The payoff. Everything Part 1 built — this one sees it through. Earned, not loud. The kind of close a story deserves.</div>
                     <div class="track-tags">
                         <span class="track-tag" style="background:rgba(59,130,246,0.08);border-color:rgba(59,130,246,0.2);color:var(--blue)">Narrative</span>
-                        <span class="track-tag" style="background:rgba(245,158,11,0.08);border-color:rgba(245,158,11,0.2);color:var(--gold)">Emotional</span>
+                        <span class="track-tag" style="background:rgba(96, 165, 250,0.08);border-color:rgba(96, 165, 250,0.2);color:var(--gold)">Emotional</span>
                     </div>
                     <div class="track-meta-row">
                         <span><i class="fas fa-layer-group"></i> 2-Part Story</span>
@@ -926,19 +927,19 @@
             </div>
 
             <div class="track-card" data-category="hiphop">
-                <div class="track-art" style="background: linear-gradient(135deg,#1a0a2e,#2d1060,#7c3aed);">
-                    <i class="fas fa-microphone track-art-icon" style="color:#7c3aed"></i>
-                    <span class="track-art-label" style="color:#a78bfa">Trap</span>
+                <div class="track-art" style="background: linear-gradient(135deg,#1a0a2e,#2d1060,#3b82f6);">
+                    <i class="fas fa-microphone track-art-icon" style="color:#3b82f6"></i>
+                    <span class="track-art-label" style="color:#93c5fd">Trap</span>
                     <span class="track-art-num">CSL-H01</span>
                 </div>
                 <div class="track-body">
                     <div class="track-top">
                         <div class="track-title">Don't Trust These Hoes 1</div>
-                        <span class="track-badge" style="background:rgba(139,92,246,0.12);color:var(--purple);border:1px solid rgba(139,92,246,0.3)">Vol. 1</span>
+                        <span class="track-badge" style="background:rgba(96, 165, 250,0.12);color:var(--purple);border:1px solid rgba(96, 165, 250,0.3)">Vol. 1</span>
                     </div>
                     <div class="track-desc">Hard start. No buildup needed. This one comes in ready and stays that way the whole time.</div>
                     <div class="track-tags">
-                        <span class="track-tag" style="background:rgba(139,92,246,0.08);border-color:rgba(139,92,246,0.2);color:var(--purple)">Trap</span>
+                        <span class="track-tag" style="background:rgba(96, 165, 250,0.08);border-color:rgba(96, 165, 250,0.2);color:var(--purple)">Trap</span>
                         <span class="track-tag" style="background:rgba(239,68,68,0.08);border-color:rgba(239,68,68,0.2);color:var(--red)">Street</span>
                     </div>
                     <div class="track-meta-row">
@@ -950,19 +951,19 @@
             </div>
 
             <div class="track-card" data-category="hiphop">
-                <div class="track-art" style="background: linear-gradient(135deg,#200a3e,#3b1278,#8b5cf6);">
-                    <i class="fas fa-microphone track-art-icon" style="color:#8b5cf6"></i>
-                    <span class="track-art-label" style="color:#c4b5fd">Trap</span>
+                <div class="track-art" style="background: linear-gradient(135deg,#200a3e,#3b1278,#60a5fa);">
+                    <i class="fas fa-microphone track-art-icon" style="color:#60a5fa"></i>
+                    <span class="track-art-label" style="color:#bfdbfe">Trap</span>
                     <span class="track-art-num">CSL-H02</span>
                 </div>
                 <div class="track-body">
                     <div class="track-top">
                         <div class="track-title">Don't Trust These Hoes 2</div>
-                        <span class="track-badge" style="background:rgba(139,92,246,0.12);color:var(--purple);border:1px solid rgba(139,92,246,0.3)">Vol. 2</span>
+                        <span class="track-badge" style="background:rgba(96, 165, 250,0.12);color:var(--purple);border:1px solid rgba(96, 165, 250,0.3)">Vol. 2</span>
                     </div>
                     <div class="track-desc">Picks up where Vol. 1 left off. Different angle, same energy. The vibe doesn't let up.</div>
                     <div class="track-tags">
-                        <span class="track-tag" style="background:rgba(139,92,246,0.08);border-color:rgba(139,92,246,0.2);color:var(--purple)">Trap</span>
+                        <span class="track-tag" style="background:rgba(96, 165, 250,0.08);border-color:rgba(96, 165, 250,0.2);color:var(--purple)">Trap</span>
                         <span class="track-tag" style="background:rgba(59,130,246,0.08);border-color:rgba(59,130,246,0.2);color:var(--blue)">Hard</span>
                     </div>
                     <div class="track-meta-row">
@@ -1011,7 +1012,7 @@
                     <div class="track-desc">The name says enough. Loud, intentional, built for a rapper who needs the beat to match their confidence.</div>
                     <div class="track-tags">
                         <span class="track-tag" style="background:rgba(239,68,68,0.08);border-color:rgba(239,68,68,0.2);color:var(--red)">Aggressive</span>
-                        <span class="track-tag" style="background:rgba(139,92,246,0.08);border-color:rgba(139,92,246,0.2);color:var(--purple)">Rap</span>
+                        <span class="track-tag" style="background:rgba(96, 165, 250,0.08);border-color:rgba(96, 165, 250,0.2);color:var(--purple)">Rap</span>
                     </div>
                     <div class="track-meta-row">
                         <span><i class="fas fa-tag"></i> Hip Hop</span>
@@ -1035,7 +1036,7 @@
                     <div class="track-desc">Same direction, more pressure. This version doesn't leave room to breathe — that's the point.</div>
                     <div class="track-tags">
                         <span class="track-tag" style="background:rgba(239,68,68,0.08);border-color:rgba(239,68,68,0.2);color:var(--red)">Aggressive</span>
-                        <span class="track-tag" style="background:rgba(245,158,11,0.08);border-color:rgba(245,158,11,0.2);color:var(--gold)">High Energy</span>
+                        <span class="track-tag" style="background:rgba(96, 165, 250,0.08);border-color:rgba(96, 165, 250,0.2);color:var(--gold)">High Energy</span>
                     </div>
                     <div class="track-meta-row">
                         <span><i class="fas fa-tag"></i> Hip Hop</span>
@@ -1058,7 +1059,7 @@
                     </div>
                     <div class="track-desc">Named right. The low end hits first and the rest builds around it. Hard drums, space to rap in.</div>
                     <div class="track-tags">
-                        <span class="track-tag" style="background:rgba(139,92,246,0.08);border-color:rgba(139,92,246,0.2);color:var(--purple)">Trap</span>
+                        <span class="track-tag" style="background:rgba(96, 165, 250,0.08);border-color:rgba(96, 165, 250,0.2);color:var(--purple)">Trap</span>
                         <span class="track-tag" style="background:rgba(59,130,246,0.08);border-color:rgba(59,130,246,0.2);color:var(--blue)">Boom Bap</span>
                     </div>
                     <div class="track-meta-row">
@@ -1082,8 +1083,8 @@
                     </div>
                     <div class="track-desc">Third entry in the series. Bigger sound, more layered. Still hits the same way but with more weight behind it.</div>
                     <div class="track-tags">
-                        <span class="track-tag" style="background:rgba(139,92,246,0.08);border-color:rgba(139,92,246,0.2);color:var(--purple)">Trap</span>
-                        <span class="track-tag" style="background:rgba(245,158,11,0.08);border-color:rgba(245,158,11,0.2);color:var(--gold)">Heavy</span>
+                        <span class="track-tag" style="background:rgba(96, 165, 250,0.08);border-color:rgba(96, 165, 250,0.2);color:var(--purple)">Trap</span>
+                        <span class="track-tag" style="background:rgba(96, 165, 250,0.08);border-color:rgba(96, 165, 250,0.2);color:var(--gold)">Heavy</span>
                     </div>
                     <div class="track-meta-row">
                         <span><i class="fas fa-tag"></i> Hip Hop</span>
@@ -1131,7 +1132,7 @@
                     <div class="track-desc">Slower, more intentional. Room to think. Built for someone who has something real to say and needs the beat to back them up.</div>
                     <div class="track-tags">
                         <span class="track-tag" style="background:rgba(16,185,129,0.08);border-color:rgba(16,185,129,0.2);color:var(--green)">Conscious</span>
-                        <span class="track-tag" style="background:rgba(245,158,11,0.08);border-color:rgba(245,158,11,0.2);color:var(--gold)">Thoughtful</span>
+                        <span class="track-tag" style="background:rgba(96, 165, 250,0.08);border-color:rgba(96, 165, 250,0.2);color:var(--gold)">Thoughtful</span>
                     </div>
                     <div class="track-meta-row">
                         <span><i class="fas fa-tag"></i> Hip Hop</span>
@@ -1155,7 +1156,7 @@
                     <div class="track-desc">Built for group energy. Big enough to fill a room. The kind of track that makes everyone feel like they're moving together.</div>
                     <div class="track-tags">
                         <span class="track-tag" style="background:rgba(59,130,246,0.08);border-color:rgba(59,130,246,0.2);color:var(--blue)">Street</span>
-                        <span class="track-tag" style="background:rgba(139,92,246,0.08);border-color:rgba(139,92,246,0.2);color:var(--purple)">Anthemic</span>
+                        <span class="track-tag" style="background:rgba(96, 165, 250,0.08);border-color:rgba(96, 165, 250,0.2);color:var(--purple)">Anthemic</span>
                     </div>
                     <div class="track-meta-row">
                         <span><i class="fas fa-tag"></i> Hip Hop</span>
@@ -1191,7 +1192,7 @@
                     <div class="track-desc">Light, sweet, intentional. A mood that doesn't need to try hard because it already sounds right.</div>
                     <div class="track-tags">
                         <span class="track-tag" style="background:rgba(225,29,72,0.08);border-color:rgba(225,29,72,0.2);color:#e11d48">Soul</span>
-                        <span class="track-tag" style="background:rgba(245,158,11,0.08);border-color:rgba(245,158,11,0.2);color:var(--gold)">Smooth</span>
+                        <span class="track-tag" style="background:rgba(96, 165, 250,0.08);border-color:rgba(96, 165, 250,0.2);color:var(--gold)">Smooth</span>
                     </div>
                     <div class="track-meta-row">
                         <span><i class="fas fa-tag"></i> R&amp;B / Soul</span>
@@ -1202,19 +1203,19 @@
             </div>
 
             <div class="track-card" data-category="rnb">
-                <div class="track-art" style="background: linear-gradient(135deg,#0f0a1a,#1a1228,#7c3aed);">
-                    <i class="fas fa-moon track-art-icon" style="color:#7c3aed"></i>
-                    <span class="track-art-label" style="color:#c4b5fd">Vibe</span>
+                <div class="track-art" style="background: linear-gradient(135deg,#0f0a1a,#1a1228,#3b82f6);">
+                    <i class="fas fa-moon track-art-icon" style="color:#3b82f6"></i>
+                    <span class="track-art-label" style="color:#bfdbfe">Vibe</span>
                     <span class="track-art-num">CSL-R02</span>
                 </div>
                 <div class="track-body">
                     <div class="track-top">
                         <div class="track-title">Shiii I'm Off It</div>
-                        <span class="track-badge" style="background:rgba(124,58,237,0.12);color:#7c3aed;border:1px solid rgba(124,58,237,0.3)">Late Night</span>
+                        <span class="track-badge" style="background:rgba(59, 130, 246,0.12);color:#3b82f6;border:1px solid rgba(59, 130, 246,0.3)">Late Night</span>
                     </div>
                     <div class="track-desc">That late-night energy when everything slows down and the vibe takes over. Loose but locked in.</div>
                     <div class="track-tags">
-                        <span class="track-tag" style="background:rgba(139,92,246,0.08);border-color:rgba(139,92,246,0.2);color:var(--purple)">Vibe</span>
+                        <span class="track-tag" style="background:rgba(96, 165, 250,0.08);border-color:rgba(96, 165, 250,0.2);color:var(--purple)">Vibe</span>
                         <span class="track-tag" style="background:rgba(59,130,246,0.08);border-color:rgba(59,130,246,0.2);color:var(--blue)">Late Night</span>
                     </div>
                     <div class="track-meta-row">
@@ -1239,7 +1240,7 @@
                     <div class="track-desc">Starts the Stay Lit run strong. Trap soul foundation — melodic but still hits when it needs to.</div>
                     <div class="track-tags">
                         <span class="track-tag" style="background:rgba(14,165,233,0.08);border-color:rgba(14,165,233,0.2);color:#0ea5e9">Trap Soul</span>
-                        <span class="track-tag" style="background:rgba(139,92,246,0.08);border-color:rgba(139,92,246,0.2);color:var(--purple)">Melodic</span>
+                        <span class="track-tag" style="background:rgba(96, 165, 250,0.08);border-color:rgba(96, 165, 250,0.2);color:var(--purple)">Melodic</span>
                     </div>
                     <div class="track-meta-row">
                         <span><i class="fas fa-tag"></i> R&amp;B / Trap Soul</span>
@@ -1287,7 +1288,7 @@
                     <div class="track-desc">Mid-series peak. The emotion is more open here — more range, more room to feel something.</div>
                     <div class="track-tags">
                         <span class="track-tag" style="background:rgba(59,130,246,0.08);border-color:rgba(59,130,246,0.2);color:var(--blue)">Trap Soul</span>
-                        <span class="track-tag" style="background:rgba(245,158,11,0.08);border-color:rgba(245,158,11,0.2);color:var(--gold)">Emotional</span>
+                        <span class="track-tag" style="background:rgba(96, 165, 250,0.08);border-color:rgba(96, 165, 250,0.2);color:var(--gold)">Emotional</span>
                     </div>
                     <div class="track-meta-row">
                         <span><i class="fas fa-tag"></i> R&amp;B / Trap Soul</span>
@@ -1310,7 +1311,7 @@
                     </div>
                     <div class="track-desc">Fourth entry. The series finds a darker register here. Same vibe, different shade of it.</div>
                     <div class="track-tags">
-                        <span class="track-tag" style="background:rgba(139,92,246,0.08);border-color:rgba(139,92,246,0.2);color:var(--purple)">Dark R&amp;B</span>
+                        <span class="track-tag" style="background:rgba(96, 165, 250,0.08);border-color:rgba(96, 165, 250,0.2);color:var(--purple)">Dark R&amp;B</span>
                         <span class="track-tag" style="background:rgba(59,130,246,0.08);border-color:rgba(59,130,246,0.2);color:var(--blue)">Moody</span>
                     </div>
                     <div class="track-meta-row">
@@ -1322,20 +1323,20 @@
             </div>
 
             <div class="track-card" data-category="rnb">
-                <div class="track-art" style="background: linear-gradient(135deg,#1a1228,#2d1f45,#7c3aed);">
-                    <i class="fas fa-fire track-art-icon" style="color:#7c3aed"></i>
-                    <span class="track-art-label" style="color:#c4b5fd">Trap Soul</span>
+                <div class="track-art" style="background: linear-gradient(135deg,#1a1228,#2d1f45,#3b82f6);">
+                    <i class="fas fa-fire track-art-icon" style="color:#3b82f6"></i>
+                    <span class="track-art-label" style="color:#bfdbfe">Trap Soul</span>
                     <span class="track-art-num">CSL-S05</span>
                 </div>
                 <div class="track-body">
                     <div class="track-top">
                         <div class="track-title">Stay Lit 5</div>
-                        <span class="track-badge" style="background:rgba(124,58,237,0.12);color:#7c3aed;border:1px solid rgba(124,58,237,0.3)">Series Close</span>
+                        <span class="track-badge" style="background:rgba(59, 130, 246,0.12);color:#3b82f6;border:1px solid rgba(59, 130, 246,0.3)">Series Close</span>
                     </div>
                     <div class="track-desc">Closes the Stay Lit run. Brings the series full circle — the sound is familiar now. That's the point.</div>
                     <div class="track-tags">
-                        <span class="track-tag" style="background:rgba(139,92,246,0.08);border-color:rgba(139,92,246,0.2);color:var(--purple)">Trap Soul</span>
-                        <span class="track-tag" style="background:rgba(201,168,85,0.08);border-color:rgba(201,168,85,0.2);color:var(--gold)">Identity</span>
+                        <span class="track-tag" style="background:rgba(96, 165, 250,0.08);border-color:rgba(96, 165, 250,0.2);color:var(--purple)">Trap Soul</span>
+                        <span class="track-tag" style="background:rgba(203, 213, 225,0.08);border-color:rgba(203, 213, 225,0.2);color:var(--gold)">Identity</span>
                     </div>
                     <div class="track-meta-row">
                         <span><i class="fas fa-tag"></i> R&amp;B / Trap Soul</span>
@@ -1383,7 +1384,7 @@
                     <div class="track-desc">Continues building the Super Lit sound. The production gets more detailed without losing the feeling.</div>
                     <div class="track-tags">
                         <span class="track-tag" style="background:rgba(6,182,212,0.08);border-color:rgba(6,182,212,0.2);color:var(--cyan)">R&amp;B</span>
-                        <span class="track-tag" style="background:rgba(139,92,246,0.08);border-color:rgba(139,92,246,0.2);color:var(--purple)">Melodic</span>
+                        <span class="track-tag" style="background:rgba(96, 165, 250,0.08);border-color:rgba(96, 165, 250,0.2);color:var(--purple)">Melodic</span>
                     </div>
                     <div class="track-meta-row">
                         <span><i class="fas fa-tag"></i> R&amp;B / Vibe</span>
@@ -1407,7 +1408,7 @@
                     <div class="track-desc">Third in the series — this one settles into its identity. More confident, more controlled. Knows exactly what it is.</div>
                     <div class="track-tags">
                         <span class="track-tag" style="background:rgba(6,182,212,0.08);border-color:rgba(6,182,212,0.2);color:var(--cyan)">R&amp;B</span>
-                        <span class="track-tag" style="background:rgba(245,158,11,0.08);border-color:rgba(245,158,11,0.2);color:var(--gold)">Confident</span>
+                        <span class="track-tag" style="background:rgba(96, 165, 250,0.08);border-color:rgba(96, 165, 250,0.2);color:var(--gold)">Confident</span>
                     </div>
                     <div class="track-meta-row">
                         <span><i class="fas fa-tag"></i> R&amp;B / Vibe</span>
@@ -1431,7 +1432,7 @@
                     <div class="track-desc">Darker turn for the series. The melody is more restrained. The feeling hits harder because of it.</div>
                     <div class="track-tags">
                         <span class="track-tag" style="background:rgba(59,130,246,0.08);border-color:rgba(59,130,246,0.2);color:var(--blue)">Dark R&amp;B</span>
-                        <span class="track-tag" style="background:rgba(139,92,246,0.08);border-color:rgba(139,92,246,0.2);color:var(--purple)">Restrained</span>
+                        <span class="track-tag" style="background:rgba(96, 165, 250,0.08);border-color:rgba(96, 165, 250,0.2);color:var(--purple)">Restrained</span>
                     </div>
                     <div class="track-meta-row">
                         <span><i class="fas fa-tag"></i> R&amp;B / Vibe</span>
@@ -1479,7 +1480,7 @@
                     <div class="track-desc">Stands alone in the series. Skips a number on purpose — this one operates on its own level.</div>
                     <div class="track-tags">
                         <span class="track-tag" style="background:rgba(59,130,246,0.08);border-color:rgba(59,130,246,0.2);color:var(--blue)">R&amp;B</span>
-                        <span class="track-tag" style="background:rgba(201,168,85,0.08);border-color:rgba(201,168,85,0.2);color:var(--gold)">Premium</span>
+                        <span class="track-tag" style="background:rgba(203, 213, 225,0.08);border-color:rgba(203, 213, 225,0.2);color:var(--gold)">Premium</span>
                     </div>
                     <div class="track-meta-row">
                         <span><i class="fas fa-tag"></i> R&amp;B / Vibe</span>
@@ -1502,19 +1503,19 @@
             </div>
 
             <div class="track-card" data-category="experimental">
-                <div class="track-art" style="background: linear-gradient(135deg,#1a1000,#352000,#d97706);">
-                    <i class="fas fa-drafting-compass track-art-icon" style="color:#d97706"></i>
+                <div class="track-art" style="background: linear-gradient(135deg,#1a1000,#352000,#3b82f6);">
+                    <i class="fas fa-drafting-compass track-art-icon" style="color:#3b82f6"></i>
                     <span class="track-art-label" style="color:#fcd34d">Blueprint</span>
                     <span class="track-art-num">CSL-E01</span>
                 </div>
                 <div class="track-body">
                     <div class="track-top">
                         <div class="track-title">Architect</div>
-                        <span class="track-badge" style="background:rgba(217,119,6,0.12);color:#d97706;border:1px solid rgba(217,119,6,0.3)">Design</span>
+                        <span class="track-badge" style="background:rgba(217,119,6,0.12);color:#3b82f6;border:1px solid rgba(217,119,6,0.3)">Design</span>
                     </div>
                     <div class="track-desc">Structured chaos. This one was built with intent — every element placed, nothing left to chance. Cinematic with an edge.</div>
                     <div class="track-tags">
-                        <span class="track-tag" style="background:rgba(245,158,11,0.08);border-color:rgba(245,158,11,0.2);color:var(--gold)">Experimental</span>
+                        <span class="track-tag" style="background:rgba(96, 165, 250,0.08);border-color:rgba(96, 165, 250,0.2);color:var(--gold)">Experimental</span>
                         <span class="track-tag" style="background:rgba(59,130,246,0.08);border-color:rgba(59,130,246,0.2);color:var(--blue)">Cinematic</span>
                     </div>
                     <div class="track-meta-row">
@@ -1538,8 +1539,8 @@
                     </div>
                     <div class="track-desc">Same blueprint, different execution. The alternate version shows how much a track can change without losing its identity.</div>
                     <div class="track-tags">
-                        <span class="track-tag" style="background:rgba(245,158,11,0.08);border-color:rgba(245,158,11,0.2);color:var(--gold)">Alternate</span>
-                        <span class="track-tag" style="background:rgba(139,92,246,0.08);border-color:rgba(139,92,246,0.2);color:var(--purple)">Variant</span>
+                        <span class="track-tag" style="background:rgba(96, 165, 250,0.08);border-color:rgba(96, 165, 250,0.2);color:var(--gold)">Alternate</span>
+                        <span class="track-tag" style="background:rgba(96, 165, 250,0.08);border-color:rgba(96, 165, 250,0.2);color:var(--purple)">Variant</span>
                     </div>
                     <div class="track-meta-row">
                         <span><i class="fas fa-tag"></i> Custom Scoring</span>
@@ -1611,7 +1612,7 @@
                     <div class="track-desc">Blends styles that don't usually sit together and makes them work. First version of a concept that kept evolving.</div>
                     <div class="track-tags">
                         <span class="track-tag" style="background:rgba(16,185,129,0.08);border-color:rgba(16,185,129,0.2);color:var(--green)">Fusion</span>
-                        <span class="track-tag" style="background:rgba(245,158,11,0.08);border-color:rgba(245,158,11,0.2);color:var(--gold)">Eclectic</span>
+                        <span class="track-tag" style="background:rgba(96, 165, 250,0.08);border-color:rgba(96, 165, 250,0.2);color:var(--gold)">Eclectic</span>
                     </div>
                     <div class="track-meta-row">
                         <span><i class="fas fa-tag"></i> Experimental</span>
@@ -1731,7 +1732,7 @@
                     <div class="track-desc">More layered version of the Motion concept. The movement is there but the texture around it got richer.</div>
                     <div class="track-tags">
                         <span class="track-tag" style="background:rgba(6,182,212,0.08);border-color:rgba(6,182,212,0.2);color:var(--cyan)">Movement</span>
-                        <span class="track-tag" style="background:rgba(139,92,246,0.08);border-color:rgba(139,92,246,0.2);color:var(--purple)">Layered</span>
+                        <span class="track-tag" style="background:rgba(96, 165, 250,0.08);border-color:rgba(96, 165, 250,0.2);color:var(--purple)">Layered</span>
                     </div>
                     <div class="track-meta-row">
                         <span><i class="fas fa-tag"></i> Experimental</span>
@@ -1755,7 +1756,7 @@
                     <div class="track-desc">Third and final entry in the Motion series. The full concept is realized here. Everything in motion, nothing wasted.</div>
                     <div class="track-tags">
                         <span class="track-tag" style="background:rgba(6,182,212,0.08);border-color:rgba(6,182,212,0.2);color:var(--cyan)">Movement</span>
-                        <span class="track-tag" style="background:rgba(201,168,85,0.08);border-color:rgba(201,168,85,0.2);color:var(--gold)">Complete</span>
+                        <span class="track-tag" style="background:rgba(203, 213, 225,0.08);border-color:rgba(203, 213, 225,0.2);color:var(--gold)">Complete</span>
                     </div>
                     <div class="track-meta-row">
                         <span><i class="fas fa-tag"></i> Experimental</span>
@@ -1947,6 +1948,7 @@
     </script>
 
 <script src="csl-shared.js" defer></script><script src="csl-cookie-banner.js" defer></script>
+<script src="csl-bg.js" defer></script>
 </body>
 </html>
 

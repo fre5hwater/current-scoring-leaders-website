@@ -19,17 +19,17 @@
 <meta name="twitter:title" content="Case Study: 7-Level Gaming Soundtrack">
 <meta name="twitter:description" content="Inside the brief, build, and deliverables for an escalating 7-part adaptive gaming soundtrack.">
 <meta name="twitter:image" content="https://currentscoringleaders.com/img_csl_studio.webp">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 <style>
-:root{--bg:#0a0a0f;--bg2:#0f0f18;--bg3:#14141f;--blue:#3b82f6;--purple:#8b5cf6;--green:#10b981;--gold:#f59e0b;--text:#f1f5f9;--muted:#94a3b8;--border:#1e1e2e;}
+:root{--bg:#0a0a0f;--bg2:#0f0f18;--bg3:#14141f;--blue:#3b82f6;--purple: #60a5fa;--green:#10b981;--gold: #cbd5e1;--text:#f1f5f9;--muted:#94a3b8;--border:#1e1e2e;}
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;overflow-x:hidden;}
 body::after{content:'';position:fixed;inset:0;background:url('img_csl_studio.webp') right bottom / 480px auto no-repeat;opacity:0.06;pointer-events:none;z-index:0;filter:brightness(1.5);}
 
 nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,15,0.94);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center;}
-.nav-logo img{height:56px;width:auto;}
+.nav-logo img{height:120px;width:auto;}
 .nav-links{display:flex;gap:2rem;list-style:none;}
 .nav-links a{color:var(--muted);text-decoration:none;font-size:0.9rem;font-weight:500;}
 .nav-links a:hover{color:var(--text);}
@@ -72,7 +72,7 @@ h1 .grad{background:linear-gradient(135deg,var(--blue),var(--purple));-webkit-ba
 .deliv-card h4{font-size:0.95rem;font-weight:700;margin-bottom:0.3rem;}
 .deliv-card p{font-size:0.85rem;color:var(--muted);margin:0;line-height:1.5;}
 
-.cta-banner{background:linear-gradient(135deg,rgba(59,130,246,0.15),rgba(139,92,246,0.15));border:1px solid rgba(59,130,246,0.2);border-radius:20px;padding:3rem 2rem;text-align:center;margin:3rem auto;max-width:800px;}
+.cta-banner{background:linear-gradient(135deg,rgba(59,130,246,0.15),rgba(96, 165, 250,0.15));border:1px solid rgba(59,130,246,0.2);border-radius:20px;padding:3rem 2rem;text-align:center;margin:3rem auto;max-width:800px;}
 .cta-banner h2{font-size:clamp(1.6rem,2.8vw,2.2rem);font-weight:800;margin-bottom:1rem;}
 .cta-banner p{color:var(--muted);margin-bottom:1.5rem;}
 .btn-primary{background:var(--blue);color:white;padding:0.85rem 2rem;border-radius:10px;text-decoration:none;font-weight:700;display:inline-flex;align-items:center;gap:0.5rem;transition:all 0.2s;}
@@ -87,6 +87,7 @@ footer p{color:var(--muted);font-size:0.78rem;}
 
 @media(max-width:720px){.nav-links{display:none;}.meta-strip{gap:1.5rem;}}
 </style>
+<link rel="stylesheet" href="csl-bg.css">
 </head>
 <body>
 
@@ -250,5 +251,6 @@ footer p{color:var(--muted);font-size:0.78rem;}
 </footer>
 
 <script src="csl-shared.js" defer></script><script src="csl-cookie-banner.js" defer></script>
+<script src="csl-bg.js" defer></script>
 </body>
 </html>
