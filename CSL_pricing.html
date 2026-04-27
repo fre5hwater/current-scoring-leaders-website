@@ -233,6 +233,58 @@
     </div>
 </div>
 
+<!-- ─── PRICE SPECTRUM INFOGRAPHIC ─── -->
+<style>
+    .spectrum-wrap { max-width: 1100px; margin: 0 auto 4rem; padding: 0 2rem; }
+    .spectrum-title { font-size: 0.78rem; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); text-align: center; margin-bottom: 1.5rem; }
+    .spectrum-bar { position: relative; height: 14px; border-radius: 100px; background: linear-gradient(90deg, #10b981 0%, #3b82f6 30%, #8b5cf6 60%, #f59e0b 100%); margin-bottom: 3rem; }
+    .spectrum-marks { position: absolute; inset: 0; display: flex; justify-content: space-between; }
+    .spectrum-mark { position: relative; width: 18px; height: 18px; background: var(--bg); border: 3px solid white; border-radius: 50%; top: -2px; }
+    .spectrum-labels { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: -2.25rem; }
+    .spec-label { text-align: center; padding-top: 1.5rem; }
+    .spec-label .price { font-size: 1.4rem; font-weight: 900; font-family: 'JetBrains Mono', monospace; }
+    .spec-label .name { font-size: 0.78rem; font-weight: 700; color: var(--text); margin: 0.35rem 0 0.25rem; }
+    .spec-label .sub { font-size: 0.7rem; color: var(--muted); line-height: 1.4; }
+    .spec-label.s1 .price { color: #10b981; }
+    .spec-label.s2 .price { color: #3b82f6; }
+    .spec-label.s3 .price { color: #8b5cf6; }
+    .spec-label.s4 .price { color: #f59e0b; }
+    @media (max-width: 700px) { .spectrum-labels { grid-template-columns: repeat(2,1fr); gap: 1.25rem; } .spectrum-bar { display:none; } }
+</style>
+<div class="spectrum-wrap">
+    <div class="spectrum-title">The Price Spectrum &mdash; from licensing to custom commissions</div>
+    <div class="spectrum-bar">
+        <div class="spectrum-marks">
+            <div class="spectrum-mark" style="background:#10b981;"></div>
+            <div class="spectrum-mark" style="background:#3b82f6;"></div>
+            <div class="spectrum-mark" style="background:#8b5cf6;"></div>
+            <div class="spectrum-mark" style="background:#f59e0b;"></div>
+        </div>
+    </div>
+    <div class="spectrum-labels">
+        <div class="spec-label s1">
+            <div class="price">$149</div>
+            <div class="name">Creator License</div>
+            <div class="sub">Online use, single project</div>
+        </div>
+        <div class="spec-label s2">
+            <div class="price">$500&ndash;900</div>
+            <div class="name">Sync License</div>
+            <div class="sub">Broadcast / agency-ready</div>
+        </div>
+        <div class="spec-label s3">
+            <div class="price">$1.2K&ndash;5K</div>
+            <div class="name">Custom Composition</div>
+            <div class="sub">Written for your project</div>
+        </div>
+        <div class="spec-label s4">
+            <div class="price">$5K+</div>
+            <div class="name">Custom + WFH</div>
+            <div class="sub">Full ownership transfer</div>
+        </div>
+    </div>
+</div>
+
 <div class="main">
 
     <!-- ═══════════════════════════════════════
@@ -242,7 +294,7 @@
         <div class="sec-header">
             <div class="sec-label">Catalog Licensing</div>
             <div class="sec-title">License a track that already exists.</div>
-            <div class="sec-sub">Pick a track from the catalog, pick your license tier, done. All four tiers cover commercial use. The difference is <strong>how far the track can travel</strong> — from YouTube-only to broadcast-ready — and what registration and exclusivity options you get.</div>
+            <div class="sec-sub">All four tiers cover commercial use. The difference is <strong>how far the track can travel</strong> and what exclusivity options you get.</div>
         </div>
 
         <div class="catalog-grid">
@@ -330,7 +382,7 @@
         <div class="sec-header">
             <div class="sec-label">Custom Music</div>
             <div class="sec-title">Commission something brand-new.</div>
-            <div class="sec-sub">Written, arranged, and produced for your specific project. Final price depends on track count, total minutes, exclusivity scope, and whether you want a full ownership transfer (Work-for-Hire) or a license.</div>
+            <div class="sec-sub">Written for your project. Price = track count + minutes + exclusivity + ownership scope.</div>
         </div>
 
         <div class="custom-grid">
@@ -390,7 +442,7 @@
         <div class="sec-header">
             <div class="sec-label">Monthly Retainers</div>
             <div class="sec-title">Ongoing music for brands and studios.</div>
-            <div class="sec-sub">For clients who need a steady stream of original music. Four tiers — Creator, Standard, Studio, and Full-Service — scoped by track count, turnaround SLA, delivery formats, and exclusivity options.</div>
+            <div class="sec-sub">Steady stream of original music. Four tiers scoped by track count, turnaround SLA, and exclusivity.</div>
         </div>
 
         <div class="retainer-block">
@@ -416,7 +468,7 @@
         <div class="sec-header">
             <div class="sec-label">Add-Ons</div>
             <div class="sec-title">Upgrade any project.</div>
-            <div class="sec-sub">Most of these are flat fees added to your invoice at or before delivery. Rush fees apply only if CSL agrees the requested turnaround is achievable.</div>
+            <div class="sec-sub">Flat fees added at or before delivery. Rush only if achievable.</div>
         </div>
 
         <div class="addon-grid">
@@ -486,7 +538,7 @@
         <div class="sec-header">
             <div class="sec-label">Side-by-Side</div>
             <div class="sec-title">Which tier covers what?</div>
-            <div class="sec-sub">Quick reference for matching your use case to the right license tier. When in doubt, send us a brief — we'll point you to the right one.</div>
+            <div class="sec-sub">Match your use case to the right tier. In doubt? <a href="CSL_booking.html" style="color:var(--blue);">send a brief &rsaquo;</a></div>
         </div>
 
         <div class="compare-wrap">
