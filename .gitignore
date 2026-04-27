@@ -27,3 +27,8 @@ ARCHIVE/
 *.log
 npm-debug.log*
 .vercel
+
+node_modules/
+package-lock.json
+mega_grab.log
+MEDIA/originals/

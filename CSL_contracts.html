@@ -97,10 +97,10 @@ footer p{color:var(--muted);font-size:0.78rem;}
 </section>
 
 <div class="tabs" role="tablist">
-    <button class="tab active" data-panel="license">License Agreement</button>
-    <button class="tab" data-panel="sow">Statement of Work</button>
-    <button class="tab" data-panel="wfh">Work-for-Hire</button>
-    <button class="tab" data-panel="nda">Mutual NDA</button>
+    <button type="button" role="tab" class="tab active" data-panel="license">License Agreement</button>
+    <button type="button" role="tab" class="tab" data-panel="sow">Statement of Work</button>
+    <button type="button" role="tab" class="tab" data-panel="wfh">Work-for-Hire</button>
+    <button type="button" role="tab" class="tab" data-panel="nda">Mutual NDA</button>
 </div>
 
 <div class="content">
@@ -152,9 +152,9 @@ footer p{color:var(--muted);font-size:0.78rem;}
         <p>If you've reviewed the License terms above and want to confirm your understanding before checkout, sign below. This is informational; the final binding License is the PDF you receive with your delivery.</p>
         <form class="ack-form" onsubmit="return submitAck(event,'license_ack')">
             <input type="text" name="_gotcha" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
-            <div class="field"><label>Your Name</label><input type="text" name="name" required></div>
-            <div class="field"><label>Email</label><input type="email" name="email" required></div>
-            <div class="field"><label>Project / Track Reference <span style="text-transform:none;color:var(--muted);">(if any)</span></label><input type="text" name="project"></div>
+            <div class="field"><label>Your Name</label><input type="text" name="name" aria-label="Your Name" required></div>
+            <div class="field"><label>Email</label><input type="email" name="email" aria-label="Email" required></div>
+            <div class="field"><label>Project / Track Reference <span style="text-transform:none;color:var(--muted);">(if any)</span></label><input type="text" name="project" aria-label="Project or Track Reference"></div>
             <label class="checkbox-row"><input type="checkbox" name="ack_terms" required> I have read and understand this License Agreement.</label>
             <label class="checkbox-row"><input type="checkbox" name="ack_disclosure" required> I have read the Authorship &amp; Production Disclosure on the Licensing page.</label>
             <button type="submit" class="btn"><i class="fas fa-check"></i> Acknowledge</button>
