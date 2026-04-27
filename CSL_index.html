@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Scoring Leaders | Custom Music for Projects That Need Their Own Sound</title>
+    <meta name="description" content="Current Scoring Leaders creates original custom music for creators, podcasters, production companies, games, and brands. Philadelphia-based. Premium quality. Personal service.">
+    <link rel="canonical" href="https://currentscoringleaders.com/">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Current Scoring Leaders">
+    <meta property="og:title" content="Current Scoring Leaders | Custom Music for Projects That Need Their Own Sound">
+    <meta property="og:description" content="Original custom music for creators, podcasters, production companies, games, and brands. Philadelphia-based. Premium quality. Personal service.">
+    <meta property="og:image" content="https://currentscoringleaders.com/img_csl_studio.webp">
+    <meta property="og:url" content="https://currentscoringleaders.com/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Current Scoring Leaders | Custom Music Scoring">
+    <meta name="twitter:description" content="Original custom music for creators, podcasters, production companies, games, and brands. Philadelphia-based.">
+    <meta name="twitter:image" content="https://currentscoringleaders.com/img_csl_studio.webp">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "https://currentscoringleaders.com/#business",
+      "name": "Current Scoring Leaders LLC",
+      "alternateName": "CSL",
+      "url": "https://currentscoringleaders.com/",
+      "logo": "https://currentscoringleaders.com/CSL_logo_clean.png",
+      "image": "https://currentscoringleaders.com/img_csl_studio.webp",
+      "description": "Philadelphia-based custom music composition, film scoring, and sync licensing for creators, studios, podcasters, and games.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Roslyn",
+        "addressRegion": "PA",
+        "postalCode": "19001",
+        "addressCountry": "US"
+      },
+      "email": "currentscoringleaders@gmail.com",
+      "founder": {
+        "@type": "Person",
+        "name": "Avery Jones",
+        "alternateName": "FreshWater"
+      },
+      "areaServed": "US",
+      "priceRange": "$149-$10000",
+      "serviceType": ["Music Composition", "Film Scoring", "Sync Licensing", "Custom Music", "Podcast Music", "Game Music"]
+    }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0a0a0f;
+            --bg2: #0f0f18;
+            --bg3: #14141f;
+            --blue: #3b82f6;
+            --purple: #8b5cf6;
+            --green: #10b981;
+            --gold: #f59e0b;
+            --text: #f1f5f9;
+            --muted: #94a3b8;
+            --border: #1e1e2e;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            overflow-x: hidden;
+        }
+        body::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background:
+                url('img_genesis_schematic.webp') right bottom / 480px auto no-repeat,
+                url('img_ps2_collage.webp') left top / 520px auto no-repeat;
+            opacity: 0.06;
+            pointer-events: none;
+            z-index: 0;
+            filter: brightness(1.5);
+        }
+
+        /* NAV */
+        nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 100;
+            background: rgba(10,10,15,0.92);
+            -webkit-backdrop-filter: blur(12px);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo img { height: 56px; width: auto; display: block; }
+        .footer-logo img { height: 36px; width: auto; }
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+            opacity: 0.03;
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover { color: var(--text); }
+
+        .nav-cta {
+            background: var(--blue);
+            color: white !important;
+            padding: 0.5rem 1.25rem;
+            border-radius: 8px;
+            font-weight: 600 !important;
+            transition: background 0.2s !important;
+        }
+
+        .nav-cta:hover { background: var(--purple) !important; color: white !important; }
+
+        /* HERO */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 8rem 2rem 4rem;
+            position: relative;
+            overflow: hidden;
+            background-image: url('img_csl_studio.webp');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+        .hero-img-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to bottom,
+                rgba(10,10,15,0.65) 0%,
+                rgba(10,10,15,0.25) 40%,
+                rgba(10,10,15,0.25) 65%,
+                rgba(10,10,15,0.75) 100%
+            );
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .hero-grid {
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(59,130,246,0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(59,130,246,0.05) 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+
+        .hero-glow {
+            position: absolute;
+            width: 900px;
+            height: 900px;
+            background: radial-gradient(circle, rgba(59,130,246,0.18) 0%, rgba(139,92,246,0.08) 40%, transparent 70%);
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(105deg, rgba(59,130,246,0.06) 0%, transparent 50%, rgba(139,92,246,0.06) 100%);
+            pointer-events: none;
+        }
+
+        .hero-content { position: relative; z-index: 1; max-width: 900px; }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(59,130,246,0.1);
+            border: 1px solid rgba(59,130,246,0.3);
+            color: var(--blue);
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            font-weight: 900;
+            line-height: 1.1;
+            letter-spacing: -1px;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 .grad {
+            background: linear-gradient(135deg, var(--blue), var(--purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--muted);
+            line-height: 1.7;
+            max-width: 650px;
+            margin: 0 auto 2.5rem;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--blue);
+            color: white;
+            padding: 0.9rem 2rem;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary:hover { background: var(--purple); transform: translateY(-2px); }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text);
+            padding: 0.9rem 2rem;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            border: 1px solid var(--border);
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-secondary:hover { border-color: var(--blue); color: var(--blue); transform: translateY(-2px); }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 4rem;
+            padding-top: 3rem;
+            border-top: 1px solid var(--border);
+            flex-wrap: wrap;
+        }
+
+        .stat { text-align: center; }
+
+        .stat-num {
+            font-size: 2rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--blue), var(--purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label { color: var(--muted); font-size: 0.85rem; margin-top: 0.25rem; }
+
+        /* LOGO PLACEHOLDER */
+        .logo-placeholder {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--blue), var(--purple));
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 0 auto 2rem;
+            box-shadow: 0 0 40px rgba(59,130,246,0.3);
+        }
+
+        /* SERVICES PREVIEW */
+        .section {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-label {
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--blue);
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-size: clamp(1.8rem, 3vw, 2.8rem);
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 1rem;
+        }
+
+        .section-sub {
+            color: var(--muted);
+            font-size: 1.05rem;
+            max-width: 600px;
+            line-height: 1.7;
+            margin-bottom: 3rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .service-card {
+            background: var(--bg2);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--blue), var(--purple));
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .service-card:hover { border-color: rgba(59,130,246,0.4); transform: translateY(-4px); }
+        .service-card:hover::before { opacity: 1; }
+
+        .service-icon {
+            width: 52px;
+            height: 52px;
+            background: rgba(59,130,246,0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            color: var(--blue);
+            margin-bottom: 1.25rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .service-card p {
+            color: var(--muted);
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .service-price {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            color: var(--blue);
+            font-weight: 600;
+        }
+
+        /* WHO WE SERVE */
+        .clients-section {
+            background: var(--bg2);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            padding: 6rem 2rem;
+        }
+
+        .clients-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .clients-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .client-card {
+            background: var(--bg3);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .client-card:hover { border-color: var(--purple); }
+
+        .client-card i {
+            font-size: 2rem;
+            color: var(--purple);
+            margin-bottom: 1rem;
+        }
+
+        .client-card h4 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem; }
+        .client-card p { font-size: 0.8rem; color: var(--muted); line-height: 1.5; }
+
+        /* PROCESS */
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .step {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .step-num {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--blue), var(--purple));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 0.95rem;
+        }
+
+        .step h4 { font-size: 1rem; font-weight: 700; }
+        .step p { font-size: 0.875rem; color: var(--muted); line-height: 1.6; }
+
+        /* CTA BANNER */
+        .cta-banner {
+            background: linear-gradient(135deg, rgba(59,130,246,0.15), rgba(139,92,246,0.15));
+            border: 1px solid rgba(59,130,246,0.2);
+            border-radius: 20px;
+            padding: 4rem 3rem;
+            text-align: center;
+            margin: 0 2rem 6rem;
+            max-width: 1160px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-banner h2 { font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 800; margin-bottom: 1rem; }
+        .cta-banner p { color: var(--muted); font-size: 1rem; margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto; }
+
+        /* FOOTER */
+        footer {
+            background: var(--bg2);
+            border-top: 1px solid var(--border);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-size: 1.1rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--blue), var(--purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            list-style: none;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a { color: var(--muted); text-decoration: none; font-size: 0.875rem; transition: color 0.2s; }
+        .footer-links a:hover { color: var(--text); }
+
+        footer p { color: var(--muted); font-size: 0.8rem; }
+
+        /* MOBILE */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero-stats { gap: 2rem; }
+            .cta-banner { padding: 2.5rem 1.5rem; margin: 0 1rem 4rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <a href="CSL_index.html" class="nav-logo"><img src="CSL_logo_dark.png" alt="Current Scoring Leaders"></a>
+        <ul class="nav-links">
+            <li><a href="CSL_pricing.html">Pricing</a></li>
+            <li><a href="CSL_portfolio.html">Portfolio</a></li>
+            <li><a href="CSL_process.html">Our Process</a></li>
+            <li><a href="CSL_about.html">About &amp; Contact</a></li>
+            <li><a href="CSL_booking.html" class="nav-cta">Work With Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-img-overlay"></div>
+        <div class="hero-grid"></div>
+        <div class="hero-glow"></div>
+        <div class="hero-content">
+            <div class="logo-placeholder"><i class="fas fa-music"></i></div>
+            <div class="hero-badge"><i class="fas fa-map-marker-alt"></i> Philadelphia, PA — Premium Custom Music</div>
+            <h1>Your Project Deserves<br><span class="grad">Its Own Sound</span></h1>
+            <p>Current Scoring Leaders creates original music built around your vision. No stock libraries. No recycled loops. Custom composition for creators, studios, podcasters, and games that take their craft seriously.</p>
+            <div class="hero-btns">
+                <a href="CSL_booking.html" class="btn-primary"><i class="fas fa-paper-plane"></i> Start a Project</a>
+                <a href="CSL_portfolio.html" class="btn-secondary"><i class="fas fa-headphones"></i> Hear the Work</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-num">60+</div>
+                    <div class="stat-label">Original Tracks</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-num">5</div>
+                    <div class="stat-label">Service Types</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-num">All</div>
+                    <div class="stat-label">Genres Covered</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-num">100%</div>
+                    <div class="stat-label">Custom — Never Stock</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES PREVIEW -->
+    <div class="section">
+        <div class="section-label">What We Do</div>
+        <h2 class="section-title">Music Built for the Project,<br>Not Pulled from a Shelf</h2>
+        <p class="section-sub">Every sound delivered by CSL is composed specifically for the client. Your audience will never hear it anywhere else.</p>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-youtube"></i></div>
+                <h3>Creator License</h3>
+                <p>License a catalog track for YouTube, podcasts, and social media. Non-exclusive, worldwide, immediate delivery.</p>
+                <div class="service-price">$149</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-film"></i></div>
+                <h3>Sync License</h3>
+                <p>For indie film, digital ads, web series, and small games. Broadcast-eligible, with stems included.</p>
+                <div class="service-price">$500</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-certificate"></i></div>
+                <h3>Sync License — Premium</h3>
+                <p>DAW-reworked, Copyright Office registered, agency and broadcast-ready. Exclusive and WFH upgrades available.</p>
+                <div class="service-price">$900</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-music"></i></div>
+                <h3>Custom Music</h3>
+                <p>Commissioned original tracks for your specific project. Single tracks or full packages for series, film, and campaigns.</p>
+                <div class="service-price">Starting at $750</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-calendar-check"></i></div>
+                <h3>Monthly Retainer</h3>
+                <p>Ongoing scoring for brands and studios who need music on a consistent schedule. Application required.</p>
+                <div class="service-price">Starting at $1,000/mo</div>
+            </div>
+        </div>
+
+        <div style="text-align:center; margin-top:2.5rem;">
+            <a href="CSL_pricing.html" class="btn-secondary"><i class="fas fa-arrow-right"></i> View Full Pricing</a>
+        </div>
+    </div>
+
+    <!-- WHO WE SERVE -->
+    <div class="clients-section">
+        <div class="clients-inner">
+            <div class="section-label">Who We Work With</div>
+            <h2 class="section-title">Built for Creators Who Take Quality Seriously</h2>
+            <div class="clients-grid">
+                <div class="client-card">
+                    <i class="fas fa-youtube"></i>
+                    <h4>YouTube Creators</h4>
+                    <p>Signature themes and content music for channels building a real identity.</p>
+                </div>
+                <div class="client-card">
+                    <i class="fas fa-microphone-alt"></i>
+                    <h4>Podcasters</h4>
+                    <p>Intro/outro packages that make your show sound professional from day one.</p>
+                </div>
+                <div class="client-card">
+                    <i class="fas fa-film"></i>
+                    <h4>Production Companies</h4>
+                    <p>Local and regional studios that need original scores for their projects.</p>
+                </div>
+                <div class="client-card">
+                    <i class="fas fa-gamepad"></i>
+                    <h4>Indie Game Developers</h4>
+                    <p>Full soundtracks and adaptive music for games that need to feel alive.</p>
+                </div>
+                <div class="client-card">
+                    <i class="fas fa-cut"></i>
+                    <h4>Video Editors &amp; Agencies</h4>
+                    <p>Referral partnerships for editors who want to offer clients something premium.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PROCESS -->
+    <div class="section">
+        <div class="section-label">How It Works</div>
+        <h2 class="section-title">Simple Process. No Guesswork.</h2>
+        <p class="section-sub">From first contact to final delivery, everything is handled with clarity and precision.</p>
+
+        <div class="process-steps">
+            <div class="step">
+                <div class="step-num">01</div>
+                <h4>Tell Us About Your Project</h4>
+                <p>Fill out the inquiry form with your project type, genre direction, length, and deadline. No commitment yet.</p>
+            </div>
+            <div class="step">
+                <div class="step-num">02</div>
+                <h4>We Send a Custom Quote</h4>
+                <p>Within 48 hours we review your submission and send a detailed quote with scope and timeline.</p>
+            </div>
+            <div class="step">
+                <div class="step-num">03</div>
+                <h4>Agree &amp; We Get to Work</h4>
+                <p>Contract signed, deposit placed, composition begins. We keep you in the loop throughout.</p>
+            </div>
+            <div class="step">
+                <div class="step-num">04</div>
+                <h4>Revisions &amp; Final Delivery</h4>
+                <p>Review the work, request revisions within your package, and receive final stems + license.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOUNDER'S PROMISE -->
+    <div class="section">
+        <div class="section-label">Founder's Promise</div>
+        <h2 class="section-title">Why Trust a New Studio?</h2>
+        <p class="section-sub">CSL is a young business but the work isn't. Here's what every client gets — in writing, every time.</p>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-handshake"></i></div>
+                <h3>Signed Statement of Work</h3>
+                <p>Every engagement starts with a clear SOW: deliverables, deadlines, revisions, license type. No vague verbal deals.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
+                <h3>Money-Back Promise</h3>
+                <p>If the first delivery is fundamentally off-brief and we can't course-correct within the contracted revisions, the deposit is refundable per our published refund policy.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-bolt"></i></div>
+                <h3>48-Hour Response</h3>
+                <p>Every inquiry gets a real reply from the founder within 48 hours. Not a chatbot. Not a sales rep. The composer.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-copyright"></i></div>
+                <h3>Clean Rights Chain</h3>
+                <p>Every track delivered with explicit license terms. Premium and Work-for-Hire tiers include Copyright Office registration.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- DELIVERY READY -->
+    <div class="section" style="padding-top:0;">
+        <div class="section-label">Delivery-Ready For</div>
+        <h2 class="section-title">Every Major Platform &amp; Use Case</h2>
+        <p class="section-sub">Stems, masters, and license formats prepared for wherever your project lives.</p>
+        <div class="clients-grid">
+            <div class="client-card"><i class="fab fa-youtube"></i><h4>YouTube</h4><p>Content ID-clear deliverables.</p></div>
+            <div class="client-card"><i class="fab fa-spotify"></i><h4>Spotify &amp; Apple Music</h4><p>Distribution-ready masters.</p></div>
+            <div class="client-card"><i class="fab fa-twitch"></i><h4>Twitch &amp; Streaming</h4><p>DMCA-safe broadcast tier.</p></div>
+            <div class="client-card"><i class="fas fa-gamepad"></i><h4>Steam &amp; Game Engines</h4><p>Looped &amp; adaptive stems.</p></div>
+            <div class="client-card"><i class="fas fa-tv"></i><h4>Broadcast &amp; Sync</h4><p>Premium-tier registered.</p></div>
+            <div class="client-card"><i class="fas fa-podcast"></i><h4>Podcast Networks</h4><p>Intro/outro packages.</p></div>
+        </div>
+    </div>
+
+    <!-- NEWSLETTER -->
+    <div class="section" style="padding-top:0;">
+        <div style="background:var(--bg2);border:1px solid var(--border);border-radius:20px;padding:3rem 2rem;text-align:center;max-width:720px;margin:0 auto;">
+            <div class="section-label" style="margin-bottom:0.5rem;">Stay in the Loop</div>
+            <h2 style="font-size:clamp(1.4rem,2.5vw,2rem);font-weight:800;margin-bottom:0.75rem;">New Tracks. Behind-the-Scenes. Pricing Updates.</h2>
+            <p style="color:var(--muted);font-size:0.95rem;margin-bottom:1.75rem;">One email a month. No spam. Unsubscribe anytime.</p>
+            <form onsubmit="return CSL.submitForm(event, 'newsletter')" style="display:flex;gap:0.5rem;flex-wrap:wrap;justify-content:center;max-width:480px;margin:0 auto;">
+                <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;">
+                <input type="email" name="email" required placeholder="you@email.com" style="flex:1;min-width:200px;padding:0.85rem 1rem;background:var(--bg3);border:1px solid var(--border);border-radius:10px;color:var(--text);font-size:0.95rem;font-family:inherit;">
+                <button type="submit" class="btn-primary" style="padding:0.85rem 1.5rem;border:none;cursor:pointer;font-family:inherit;"><i class="fas fa-paper-plane"></i> Subscribe</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- CTA BANNER -->
+    <div class="cta-banner">
+        <h2>Ready to Give Your Project<br>Its Own Sound?</h2>
+        <p>Tell us what you're building and we'll handle the rest. No stock music. No compromises.</p>
+        <a href="CSL_booking.html" class="btn-primary"><i class="fas fa-paper-plane"></i> Start a Project</a>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-logo"><img src="CSL_logo_clean.png" alt="Current Scoring Leaders LLC" style="height:36px;width:auto;"></div>
+        <ul class="footer-links">
+            <li><a href="CSL_index.html">Home</a></li>
+            <li><a href="CSL_pricing.html">Pricing</a></li>
+            <li><a href="CSL_portfolio.html">Portfolio</a></li>
+            <li><a href="CSL_about.html">About &amp; Contact</a></li>
+            <li><a href="CSL_faq.html">FAQ</a></li>
+            <li><a href="CSL_booking.html">Work With Us</a></li>
+            <li><a href="CSL_legal.html">Legal</a></li>
+            <li><a href="CSL_process.html">Our Process</a></li>
+            <li><a href="CSL_ip.html">IP &amp; Ownership</a></li>
+            <li><a href="CSL_contracts.html">Contracts</a></li>
+            <li><a href="CSL_signup.html">Client Intake</a></li>
+            <li><a href="CSL_legal.html?tab=privacy">Privacy Policy</a></li>
+            <li><a href="CSL_licensing.html">Licensing</a></li>
+        </ul>
+        <p>&copy; 2026 Current Scoring Leaders LLC &middot; Roslyn, PA &middot; All Rights Reserved</p>
+    </footer>
+
+<script src="csl-cookie-banner.js" defer></script>
+</body>
+</html>

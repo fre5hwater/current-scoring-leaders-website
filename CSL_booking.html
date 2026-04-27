@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work With Us | Current Scoring Leaders</title>
+    <meta name="description" content="Start a custom music project with Current Scoring Leaders. Fill out the project inquiry form and we'll respond within 48 hours.">
+    <link rel="canonical" href="https://currentscoringleaders.com/CSL_booking.html">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Current Scoring Leaders">
+    <meta property="og:title" content="Work With Us | Current Scoring Leaders">
+    <meta property="og:description" content="Start a custom music project. Fill out the inquiry form and we'll respond within 48 hours with scope and timeline.">
+    <meta property="og:image" content="https://currentscoringleaders.com/img_csl_studio.webp">
+    <meta property="og:url" content="https://currentscoringleaders.com/CSL_booking.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Work With Us | Current Scoring Leaders">
+    <meta name="twitter:description" content="Start a custom music project. 48-hour response.">
+    <meta name="twitter:image" content="https://currentscoringleaders.com/img_csl_studio.webp">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0a0a0f; --bg2: #0f0f18; --bg3: #14141f;
+            --blue: #3b82f6; --purple: #8b5cf6; --green: #10b981;
+            --gold: #f59e0b; --text: #f1f5f9; --muted: #94a3b8; --border: #1e1e2e;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text); overflow-x: hidden; }
+        body::after { content: ''; position: fixed; inset: 0; background: url('img_csl_studio.webp') left center / 58vh auto no-repeat, url('img_ranger_slayer.webp') right center / 52vh auto no-repeat; opacity: 0.14; pointer-events: none; z-index: 0; filter: brightness(1.6); }
+
+        nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+            background: rgba(10,10,15,0.92);
+            -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center;
+        }
+        .nav-logo { font-size: 1.2rem; font-weight: 800; background: linear-gradient(135deg, var(--blue), var(--purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-decoration: none; }
+        .nav-logo img { height: 56px; width: auto; display: block; }
+        .footer-logo img { height: 36px; width: auto; }
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+            opacity: 0.03;
+            pointer-events: none;
+            z-index: 9999;
+        }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
+        .nav-links a:hover, .nav-links a.active { color: var(--text); }
+        .nav-cta { background: var(--blue); color: white !important; padding: 0.5rem 1.25rem; border-radius: 8px; font-weight: 600 !important; transition: background 0.2s !important; }
+        .nav-cta:hover { background: var(--purple) !important; }
+
+        .page-header { padding: 9rem 2rem 3rem; text-align: center; max-width: 700px; margin: 0 auto; }
+        .page-label { font-size: 0.8rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--blue); margin-bottom: 1rem; }
+        .page-header h1 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; letter-spacing: -1px; margin-bottom: 1rem; }
+        .page-header p { color: var(--muted); font-size: 1rem; line-height: 1.7; }
+
+        .main { max-width: 1100px; margin: 0 auto; padding: 2rem 2rem 6rem; display: grid; grid-template-columns: 1fr 380px; gap: 3rem; align-items: start; }
+
+        /* FORM */
+        .form-card {
+            background: var(--bg2); border: 1px solid var(--border); border-radius: 20px; padding: 2.5rem;
+        }
+
+        .form-card h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: 0.5rem; }
+        .form-card p { color: var(--muted); font-size: 0.875rem; margin-bottom: 2rem; line-height: 1.6; }
+
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+        .form-group { margin-bottom: 1.25rem; }
+        .form-group label { display: block; font-size: 0.825rem; font-weight: 600; color: var(--muted); margin-bottom: 0.4rem; text-transform: uppercase; letter-spacing: 0.5px; }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%; background: var(--bg3); border: 1px solid var(--border);
+            color: var(--text); padding: 0.75rem 1rem; border-radius: 10px;
+            font-family: 'Inter', sans-serif; font-size: 0.9rem; transition: border-color 0.2s; outline: none;
+        }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus { border-color: var(--blue); }
+        .form-group select option { background: var(--bg3); }
+        .form-group textarea { resize: vertical; min-height: 120px; }
+
+        .checkbox-group { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 0.4rem; }
+        .checkbox-item { display: flex; align-items: center; gap: 0.4rem; }
+        .checkbox-item input[type="checkbox"] { accent-color: var(--blue); width: 16px; height: 16px; cursor: pointer; }
+        .checkbox-item label { font-size: 0.85rem; color: var(--muted); cursor: pointer; font-weight: 500; text-transform: none; letter-spacing: 0; }
+
+        .submit-btn {
+            width: 100%; background: linear-gradient(135deg, var(--blue), var(--purple));
+            color: white; border: none; padding: 1rem; border-radius: 12px;
+            font-size: 1rem; font-weight: 700; cursor: pointer; font-family: 'Inter', sans-serif;
+            display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+            transition: all 0.2s; margin-top: 0.5rem;
+        }
+        .submit-btn:hover { opacity: 0.9; transform: translateY(-2px); }
+
+        .form-note { font-size: 0.78rem; color: var(--muted); text-align: center; margin-top: 1rem; line-height: 1.5; }
+
+        /* SIDEBAR */
+        .sidebar { display: flex; flex-direction: column; gap: 1.25rem; }
+
+        .info-card {
+            background: var(--bg2); border: 1px solid var(--border); border-radius: 16px; padding: 1.5rem;
+        }
+        .info-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 1rem; }
+
+        .process-list { display: flex; flex-direction: column; gap: 0.75rem; }
+        .process-item { display: flex; gap: 0.75rem; align-items: flex-start; }
+        .process-num { width: 28px; height: 28px; background: linear-gradient(135deg, var(--blue), var(--purple)); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 800; flex-shrink: 0; }
+        .process-text h4 { font-size: 0.875rem; font-weight: 700; margin-bottom: 0.15rem; }
+        .process-text p { font-size: 0.78rem; color: var(--muted); line-height: 1.5; }
+
+        .contact-list { display: flex; flex-direction: column; gap: 0.75rem; }
+        .contact-item { display: flex; align-items: center; gap: 0.75rem; font-size: 0.875rem; }
+        .contact-item i { width: 32px; height: 32px; background: rgba(59,130,246,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--blue); font-size: 0.8rem; flex-shrink: 0; }
+        .contact-item a { color: var(--muted); text-decoration: none; transition: color 0.2s; }
+        .contact-item a:hover { color: var(--blue); }
+
+        .guarantee-card {
+            background: linear-gradient(135deg, rgba(16,185,129,0.08), rgba(59,130,246,0.08));
+            border: 1px solid rgba(16,185,129,0.2); border-radius: 16px; padding: 1.5rem; text-align: center;
+        }
+        .guarantee-card i { font-size: 2rem; color: var(--green); margin-bottom: 0.75rem; }
+        .guarantee-card h4 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .guarantee-card p { font-size: 0.8rem; color: var(--muted); line-height: 1.5; }
+
+        /* SUCCESS MESSAGE */
+        .success-msg { display: none; background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.3); border-radius: 12px; padding: 1.5rem; text-align: center; margin-top: 1rem; }
+        .success-msg i { font-size: 2rem; color: var(--green); margin-bottom: 0.5rem; }
+        .success-msg h3 { font-weight: 700; margin-bottom: 0.5rem; }
+        .success-msg p { font-size: 0.875rem; color: var(--muted); }
+
+        footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 3rem 2rem; text-align: center; }
+        .footer-logo { font-size: 1rem; font-weight: 800; background: linear-gradient(135deg, var(--blue), var(--purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 1rem; }
+        .footer-links { display: flex; justify-content: center; gap: 2rem; list-style: none; margin-bottom: 1.5rem; flex-wrap: wrap; }
+        .footer-links a { color: var(--muted); text-decoration: none; font-size: 0.875rem; transition: color 0.2s; }
+        .footer-links a:hover { color: var(--text); }
+        footer p { color: var(--muted); font-size: 0.8rem; }
+
+        @media (max-width: 900px) { .main { grid-template-columns: 1fr; } .nav-links { display: none; } .form-row { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="CSL_index.html" class="nav-logo"><img src="CSL_logo_dark.png" alt="Current Scoring Leaders"></a>
+        <ul class="nav-links">
+            <li><a href="CSL_pricing.html">Pricing</a></li>
+            <li><a href="CSL_portfolio.html">Portfolio</a></li>
+            <li><a href="CSL_process.html">Our Process</a></li>
+            <li><a href="CSL_about.html">About &amp; Contact</a></li>
+            <li><a href="CSL_booking.html" class="nav-cta active">Work With Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="page-header">
+        <div class="page-label">Project Inquiry</div>
+        <h1>Work With Us</h1>
+        <p>Tell us about your project. No commitment required — this form starts the conversation and we'll respond within 48 hours with a custom quote.</p>
+    </div>
+
+    <div class="main">
+
+        <!-- FORM -->
+        <div class="form-card">
+            <h2>Project Inquiry Form</h2>
+            <p>Fill out as much as you can. The more detail you give, the faster and more accurate your quote will be.</p>
+
+            <form id="inquiryForm" onsubmit="return CSL.submitForm(event, (this.service_type.value==='retainer' ? 'retainer' : 'booking'))">
+                <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;">
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>First Name *</label>
+                        <input type="text" name="first_name" placeholder="First name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Last Name *</label>
+                        <input type="text" name="last_name" placeholder="Last name" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Email Address *</label>
+                    <input type="email" name="email" placeholder="your@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Company / Channel / Project Name</label>
+                    <input type="text" name="company" placeholder="Optional">
+                </div>
+
+                <div class="form-group">
+                    <label>Service Type *</label>
+                    <select name="service_type" required>
+                        <option value="" disabled selected>Select a service...</option>
+                        <optgroup label="Catalog Licensing (existing tracks)">
+                            <option value="creator">Creator License ($149) — online use only</option>
+                            <option value="sync">Sync License ($500) — indie film/digital, broadcast-eligible</option>
+                            <option value="sync-premium">Sync License Premium ($900) — registered, broadcast-ready</option>
+                            <option value="customized">Customized Version of Catalog Track ($1,200)</option>
+                        </optgroup>
+                        <optgroup label="Custom Music (new tracks)">
+                            <option value="custom-single">Single Custom Track (starting $750)</option>
+                            <option value="custom-pkg">Custom Package — 2–5 tracks (starting $2,500)</option>
+                            <option value="exclusive">Exclusive Scoring Partnership (by quote)</option>
+                        </optgroup>
+                        <optgroup label="Ongoing">
+                            <option value="retainer">Monthly Retainer (by application, $1,000+/mo)</option>
+                        </optgroup>
+                        <option value="unsure">Not Sure — Need Guidance</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Project Description *</label>
+                    <textarea name="description" placeholder="Describe your project — what it is, who it's for, what feeling or tone you're going for..." required></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Estimated Length</label>
+                        <select name="length">
+                            <option value="" disabled selected>Select...</option>
+                            <option>Under 30 seconds</option>
+                            <option>30 sec – 2 min</option>
+                            <option>2 – 5 minutes</option>
+                            <option>5 – 15 minutes</option>
+                            <option>15+ minutes / Full project</option>
+                            <option>Not sure yet</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Budget Range</label>
+                        <select name="budget">
+                            <option value="" disabled selected>Select...</option>
+                            <option>Under $500</option>
+                            <option>$500 – $1,000</option>
+                            <option>$1,000 – $2,500</option>
+                            <option>$2,500 – $5,000</option>
+                            <option>$5,000+</option>
+                            <option>Flexible / Open</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Deadline</label>
+                    <input type="date" name="deadline">
+                </div>
+
+                <div class="form-group">
+                    <label>Genre / Mood Direction</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item"><input type="checkbox" name="genre" value="cinematic" id="g1"><label for="g1">Cinematic</label></div>
+                        <div class="checkbox-item"><input type="checkbox" name="genre" value="hiphop" id="g2"><label for="g2">Hip Hop</label></div>
+                        <div class="checkbox-item"><input type="checkbox" name="genre" value="rnb" id="g3"><label for="g3">R&amp;B / Soul</label></div>
+                        <div class="checkbox-item"><input type="checkbox" name="genre" value="electronic" id="g4"><label for="g4">Electronic</label></div>
+                        <div class="checkbox-item"><input type="checkbox" name="genre" value="ambient" id="g5"><label for="g5">Ambient</label></div>
+                        <div class="checkbox-item"><input type="checkbox" name="genre" value="orchestral" id="g6"><label for="g6">Orchestral</label></div>
+                        <div class="checkbox-item"><input type="checkbox" name="genre" value="experimental" id="g7"><label for="g7">Experimental</label></div>
+                        <div class="checkbox-item"><input type="checkbox" name="genre" value="unsure" id="g8"><label for="g8">Not Sure</label></div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Reference Tracks / Links (Optional)</label>
+                    <input type="text" name="references" placeholder="YouTube links, Spotify tracks, or anything that captures the vibe you want">
+                </div>
+
+                <div class="form-group">
+                    <label>Anything Else We Should Know?</label>
+                    <textarea name="notes" placeholder="Hard deadlines, special requirements, licensing needs, platform info, etc." style="min-height:80px;"></textarea>
+                </div>
+
+                <div style="background:rgba(30,30,46,0.6);border:1px solid var(--border);border-radius:10px;padding:0.85rem 1rem;margin-bottom:1rem;font-size:0.75rem;color:var(--muted);line-height:1.6;">
+                    By submitting this form you agree to our <a href="CSL_legal.html" style="color:var(--blue)">Terms of Service</a>, <a href="CSL_legal.html?tab=refund" style="color:var(--blue)">Refund Policy</a>, and <a href="CSL_legal.html?tab=privacy" style="color:var(--blue)">Privacy Policy</a>. Submitting this form does not constitute a binding contract — no payment or commitment is required until you sign a Statement of Work.
+                </div>
+                <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i> Submit Project Inquiry</button>
+                <p class="form-note">You'll receive an instant email confirmation. We respond within 48 business hours. No commitment until you approve the quote.</p>
+
+            </form>
+        </div>
+
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+
+            <div class="info-card">
+                <h3>What Happens Next</h3>
+                <div class="process-list">
+                    <div class="process-item">
+                        <div class="process-num">1</div>
+                        <div class="process-text"><h4>We Review Your Submission</h4><p>Within 48 hours we go through your project details carefully.</p></div>
+                    </div>
+                    <div class="process-item">
+                        <div class="process-num">2</div>
+                        <div class="process-text"><h4>You Receive a Custom Quote</h4><p>Detailed scope, timeline, and pricing tailored to your project.</p></div>
+                    </div>
+                    <div class="process-item">
+                        <div class="process-num">3</div>
+                        <div class="process-text"><h4>Contract & Deposit</h4><p>Sign the agreement, place your 50% deposit, and we begin.</p></div>
+                    </div>
+                    <div class="process-item">
+                        <div class="process-num">4</div>
+                        <div class="process-text"><h4>Delivery & Final Payment</h4><p>Review, revise, approve — then receive your stems and license.</p></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <h3>Prefer to Reach Out Directly?</h3>
+                <div class="contact-list">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:currentscoringleaders@gmail.com">currentscoringleaders@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-headphones"></i>
+                        <a href="CSL_portfolio.html">Browse the portfolio first</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-tag"></i>
+                        <a href="CSL_services.html">Review all pricing</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-file-signature"></i>
+                        <a href="CSL_contracts.html">View contract templates</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-user-plus"></i>
+                        <a href="CSL_signup.html">Full client intake form</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="guarantee-card">
+                <i class="fas fa-shield-alt"></i>
+                <h4>No Commitment Until You Approve</h4>
+                <p>Submitting this form is just the start of a conversation. You won't be charged anything until you review and approve the quote.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="footer-logo"><img src="CSL_logo_clean.png" alt="Current Scoring Leaders LLC"></div>
+        <ul class="footer-links">
+            <li><a href="CSL_index.html">Home</a></li>
+            <li><a href="CSL_pricing.html">Pricing</a></li>
+            <li><a href="CSL_portfolio.html">Portfolio</a></li>
+            <li><a href="CSL_pricing.html">Pricing</a></li>
+            <li><a href="CSL_about.html">About &amp; Contact</a></li>
+            <li><a href="CSL_faq.html">FAQ</a></li>
+            <li><a href="CSL_booking.html">Work With Us</a></li>
+            <li><a href="CSL_legal.html">Legal</a></li>
+            <li><a href="CSL_process.html">Our Process</a></li>
+            <li><a href="CSL_ip.html">IP &amp; Ownership</a></li>
+            <li><a href="CSL_contracts.html">Contracts</a></li>
+            <li><a href="CSL_signup.html">Client Intake</a></li>
+            <li><a href="CSL_legal.html?tab=privacy">Privacy Policy</a></li>
+            <li><a href="CSL_licensing.html">Licensing</a></li>
+        </ul>
+        <p>&copy; 2026 Current Scoring Leaders LLC · Roslyn, PA · All Rights Reserved</p>
+    </footer>
+
+<script src="csl-forms.js"></script>
+<script src="csl-cookie-banner.js" defer></script>
+</body>
+</html>
+
+
+
