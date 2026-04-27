@@ -17,32 +17,32 @@
 <meta property="og:url" content="https://currentscoringleaders.com/CSL_pricing.html">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Current Scoring Leaders Music Licensing & Composition","provider":{"@type":"Organization","name":"Current Scoring Leaders LLC"},"offers":{"@type":"AggregateOffer","priceCurrency":"USD","priceRange":"$599-$45000","lowPrice":"599","highPrice":"45000"}}</script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 <style>
-:root{--bg:#0a0a0f;--bg2:#0f0f18;--bg3:#14141f;--blue:#3b82f6;--purple:#8b5cf6;--gold:#c9a855;--green:#10b981;--text:#f1f5f9;--muted:#94a3b8;--border:#1e1e2e;}
+:root{--bg:#0a0a0f;--bg2:#0f1419;--bg3:#1a2332;--blue:#3b82f6;--blue-light:#60a5fa;--blue-deep:#1e40af;--cyan:#06b6d4;--steel:#64748b;--silver:#cbd5e1;--green:#10b981;--text:#f1f5f9;--muted:#94a3b8;--border:#1e293b;}
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden;}
-body::before{content:'';position:fixed;inset:0;background:radial-gradient(circle at 15% 20%,rgba(59,130,246,0.12),transparent 40%),radial-gradient(circle at 85% 70%,rgba(139,92,246,0.10),transparent 45%),radial-gradient(circle at 50% 100%,rgba(201,168,85,0.08),transparent 50%);pointer-events:none;z-index:0;}
+body::before{content:'';position:fixed;inset:0;background:radial-gradient(circle at 15% 20%,rgba(59,130,246,0.14),transparent 40%),radial-gradient(circle at 85% 70%,rgba(30,64,175,0.12),transparent 45%),radial-gradient(circle at 50% 100%,rgba(100,116,139,0.10),transparent 50%);pointer-events:none;z-index:0;}
 
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,15,0.94);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:0.9rem 2rem;display:flex;justify-content:space-between;align-items:center;}
-.nav-logo img{height:56px;width:auto;display:block;}
+.nav-logo img{height:84px;width:auto;display:block;filter:drop-shadow(0 2px 6px rgba(0,0,0,0.35));}
 .nav-links{display:flex;gap:2rem;list-style:none;}
 .nav-links a{color:var(--muted);text-decoration:none;font-size:0.875rem;font-weight:500;transition:color 0.2s;}
 .nav-links a:hover,.nav-links a.active{color:var(--text);}
 .nav-cta{background:var(--blue);color:white!important;padding:0.45rem 1.1rem;border-radius:8px;font-weight:600!important;}
-.nav-cta:hover{background:var(--purple)!important;}
+.nav-cta:hover{background:var(--blue-light)!important;}
 @media(max-width:720px){.nav-links li:not(:last-child){display:none;}}
 
 /* HERO */
 .hero{padding:7rem 2rem 2.5rem;max-width:1100px;margin:0 auto;text-align:center;position:relative;z-index:1;}
 .eyebrow{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(59,130,246,0.1);border:1px solid rgba(59,130,246,0.25);color:var(--blue);padding:0.35rem 0.9rem;border-radius:20px;font-size:0.72rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:1rem;}
-.hero h1{font-size:clamp(2.2rem,4.8vw,3.4rem);font-weight:900;letter-spacing:-1.5px;margin-bottom:1rem;line-height:1.05;}
-.hero h1 .grad{background:linear-gradient(135deg,var(--blue),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.hero h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(2.4rem,5.2vw,3.8rem);font-weight:700;letter-spacing:-2px;margin-bottom:1rem;line-height:1.0;text-transform:none;}
+.hero h1 .grad{background:linear-gradient(135deg,var(--blue),var(--blue-light) 50%,var(--silver));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
 .hero .lede{color:var(--muted);font-size:1.05rem;max-width:580px;margin:0 auto 0.6rem;}
-.hero .sub{color:var(--gold);font-size:0.92rem;font-weight:600;letter-spacing:0.4px;}
+.hero .sub{color:var(--silver);font-size:0.92rem;font-weight:600;letter-spacing:0.4px;}
 
 /* PATH CARDS */
 .paths{max-width:1240px;margin:0 auto;padding:0 2rem 3rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;position:relative;z-index:1;}
@@ -53,11 +53,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,15,0.9
 .path:hover{transform:translateY(-6px);border-color:var(--c1);box-shadow:0 20px 50px rgba(0,0,0,0.4);}
 .path:hover::after{opacity:0.18;}
 .path[data-path="catalog"]{--c1:#3b82f6;--c2:#06b6d4;}
-.path[data-path="commission"]{--c1:#8b5cf6;--c2:#ec4899;}
-.path[data-path="retainer"]{--c1:#c9a855;--c2:#f59e0b;}
+.path[data-path="commission"]{--c1:#1e40af;--c2:#60a5fa;}
+.path[data-path="retainer"]{--c1:#64748b;--c2:#cbd5e1;}
 .path-icon{width:60px;height:60px;border-radius:14px;background:linear-gradient(135deg,var(--c1),var(--c2));display:flex;align-items:center;justify-content:center;color:white;font-size:1.5rem;margin-bottom:1.25rem;box-shadow:0 8px 20px rgba(0,0,0,0.3);}
-.path h2{font-size:1.6rem;font-weight:800;margin-bottom:0.5rem;letter-spacing:-0.5px;}
-.path .tag{display:inline-block;background:rgba(201,168,85,0.1);color:var(--gold);font-size:0.7rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:0.25rem 0.65rem;border-radius:6px;margin-bottom:1rem;border:1px solid rgba(201,168,85,0.25);}
+.path h2{font-family:'Space Grotesk',sans-serif;font-size:1.7rem;font-weight:700;margin-bottom:0.5rem;letter-spacing:-0.8px;}
+.path .tag{display:inline-block;background:rgba(148,163,184,0.10);color:var(--silver);font-size:0.7rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:0.25rem 0.65rem;border-radius:6px;margin-bottom:1rem;border:1px solid rgba(148,163,184,0.25);}
 .path-desc{color:var(--muted);font-size:0.93rem;line-height:1.6;margin-bottom:1.25rem;}
 .path-fits-label{font-size:0.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px;font-weight:700;margin-bottom:0.5rem;}
 .path-fits ul{list-style:none;display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:1.25rem;}
@@ -75,11 +75,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,15,0.9
 .helper-card{display:inline-flex;align-items:center;gap:1rem;background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:14px;padding:1rem 1.5rem;flex-wrap:wrap;justify-content:center;}
 .helper-card span{color:var(--muted);font-size:0.92rem;}
 .helper-card a{color:var(--blue);text-decoration:none;font-weight:600;font-size:0.92rem;}
-.helper-card a:hover{color:var(--purple);}
+.helper-card a:hover{color:var(--blue-light);}
 
 /* COMPARISON CTA */
-.cta-strip{max-width:980px;margin:0 auto 5rem;padding:2.25rem 2rem;background:linear-gradient(135deg,rgba(59,130,246,0.08),rgba(139,92,246,0.08));border:1px solid var(--border);border-radius:20px;text-align:center;position:relative;z-index:1;}
-.cta-strip h3{font-size:1.45rem;font-weight:800;margin-bottom:0.5rem;}
+.cta-strip{max-width:980px;margin:0 auto 5rem;padding:2.25rem 2rem;background:linear-gradient(135deg,rgba(59,130,246,0.10),rgba(30,64,175,0.08));border:1px solid var(--border);border-radius:20px;text-align:center;position:relative;z-index:1;}
+.cta-strip h3{font-family:'Space Grotesk',sans-serif;font-size:1.55rem;font-weight:700;margin-bottom:0.5rem;letter-spacing:-0.5px;}
 .cta-strip p{color:var(--muted);margin-bottom:1.25rem;font-size:0.95rem;}
 .cta-strip-btn{display:inline-flex;align-items:center;gap:0.5rem;background:transparent;border:1px solid var(--border);color:var(--text);padding:0.85rem 1.75rem;border-radius:10px;font-weight:700;text-decoration:none;transition:all 0.2s;}
 .cta-strip-btn:hover{border-color:var(--blue);color:var(--blue);}
@@ -186,7 +186,7 @@ footer p{color:var(--muted);font-size:0.78rem;}
 
 <section class="helper">
     <div class="helper-card">
-        <i class="fas fa-circle-question" style="color:var(--gold);font-size:1.2rem;"></i>
+        <i class="fas fa-circle-question" style="color:var(--silver);font-size:1.2rem;"></i>
         <span>Not sure which path fits?</span>
         <a href="CSL_booking.html">Talk to us &rarr;</a>
         <span style="opacity:0.4;">&middot;</span>
