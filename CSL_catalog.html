@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>License a Catalog Track | Current Scoring Leaders</title>
+<meta name="description" content="Pick a track from our catalog and license it for your project. Four tiers from $599 (creator) to $4,500 (customized version), all with written licenses.">
+<link rel="canonical" href="https://currentscoringleaders.com/CSL_catalog.html">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="License a Catalog Track | Current Scoring Leaders">
+<meta property="og:description" content="Four catalog license tiers from $599. Pick a finished track, license it, deliver tomorrow.">
+<meta property="og:image" content="https://currentscoringleaders.com/img_csl_studio.webp">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<style>
+:root{--bg:#0a0a0f;--bg2:#0f0f18;--bg3:#14141f;--blue:#3b82f6;--purple:#8b5cf6;--gold:#c9a855;--green:#10b981;--text:#f1f5f9;--muted:#94a3b8;--border:#1e1e2e;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden;}
+body::before{content:'';position:fixed;inset:0;background:radial-gradient(circle at 20% 15%,rgba(59,130,246,0.14),transparent 45%),radial-gradient(circle at 85% 80%,rgba(6,182,212,0.10),transparent 50%);pointer-events:none;z-index:0;}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,15,0.94);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:0.9rem 2rem;display:flex;justify-content:space-between;align-items:center;}
+.nav-logo img{height:56px;}
+.nav-links{display:flex;gap:2rem;list-style:none;}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:0.875rem;font-weight:500;transition:color 0.2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--text);}
+.nav-cta{background:var(--blue);color:white!important;padding:0.45rem 1.1rem;border-radius:8px;font-weight:600!important;}
+.nav-cta:hover{background:var(--purple)!important;}
+@media(max-width:720px){.nav-links li:not(:last-child){display:none;}}
+
+.crumb{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:6.5rem 2rem 0;font-size:0.82rem;color:var(--muted);}
+.crumb a{color:var(--blue);text-decoration:none;}
+.crumb a:hover{color:var(--purple);}
+
+.hero{padding:1.5rem 2rem 2rem;max-width:1000px;margin:0 auto;text-align:center;position:relative;z-index:1;}
+.eyebrow{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(59,130,246,0.12);border:1px solid rgba(59,130,246,0.3);color:var(--blue);padding:0.35rem 0.9rem;border-radius:20px;font-size:0.72rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:1rem;}
+.hero h1{font-size:clamp(2rem,4.5vw,3.1rem);font-weight:900;letter-spacing:-1px;margin-bottom:1rem;line-height:1.1;}
+.hero h1 .grad{background:linear-gradient(135deg,var(--blue),#06b6d4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.hero .lede{color:var(--muted);font-size:1.05rem;max-width:620px;margin:0 auto 1.25rem;}
+.hero-actions{display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;}
+.btn-pri{background:var(--blue);color:white;padding:0.85rem 1.5rem;border-radius:10px;text-decoration:none;font-weight:700;display:inline-flex;align-items:center;gap:0.5rem;}
+.btn-pri:hover{background:var(--purple);}
+.btn-sec{background:transparent;color:var(--text);padding:0.85rem 1.5rem;border-radius:10px;text-decoration:none;font-weight:700;border:1px solid var(--border);display:inline-flex;align-items:center;gap:0.5rem;}
+.btn-sec:hover{border-color:var(--blue);color:var(--blue);}
+
+.main{max-width:1240px;margin:0 auto;padding:2rem 2rem 4rem;position:relative;z-index:1;}
+
+/* TIER CARDS */
+.tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.25rem;margin-bottom:3.5rem;}
+.tier{background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:1.75rem 1.5rem;position:relative;overflow:hidden;transition:transform 0.2s,border-color 0.2s;display:flex;flex-direction:column;}
+.tier:hover{transform:translateY(-4px);border-color:rgba(59,130,246,0.4);}
+.tier::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;}
+.tier.t1::before{background:linear-gradient(90deg,#10b981,#34d399);}
+.tier.t2::before{background:linear-gradient(90deg,var(--blue),#06b6d4);}
+.tier.t3::before{background:linear-gradient(90deg,var(--purple),#a78bfa);}
+.tier.t4::before{background:linear-gradient(90deg,var(--gold),#f59e0b);}
+.tier-icon{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;color:white;font-size:1.05rem;margin-bottom:1rem;}
+.tier.t1 .tier-icon{background:linear-gradient(135deg,#10b981,#34d399);}
+.tier.t2 .tier-icon{background:linear-gradient(135deg,var(--blue),#06b6d4);}
+.tier.t3 .tier-icon{background:linear-gradient(135deg,var(--purple),#a78bfa);}
+.tier.t4 .tier-icon{background:linear-gradient(135deg,var(--gold),#f59e0b);}
+.tier-for{font-size:0.7rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:0.4rem;}
+.tier h3{font-size:1.15rem;font-weight:800;margin-bottom:0.4rem;}
+.tier-price{font-family:'JetBrains Mono',monospace;font-size:1.85rem;font-weight:900;margin-bottom:0.6rem;letter-spacing:-0.5px;}
+.tier.t1 .tier-price{color:#10b981;}
+.tier.t2 .tier-price{color:var(--blue);}
+.tier.t3 .tier-price{color:var(--purple);}
+.tier.t4 .tier-price{color:var(--gold);}
+.tier-tag{font-size:0.85rem;color:var(--muted);margin-bottom:1rem;line-height:1.5;}
+.tier ul{list-style:none;margin-bottom:1.25rem;flex-grow:1;}
+.tier li{font-size:0.82rem;color:var(--text);padding:0.3rem 0;display:flex;gap:0.5rem;align-items:flex-start;}
+.tier li i{color:var(--green);font-size:0.75rem;margin-top:0.3rem;flex-shrink:0;}
+.tier li.no i{color:#ef4444;}
+.tier .pick{margin-top:auto;display:flex;align-items:center;justify-content:center;gap:0.5rem;background:transparent;border:1px solid var(--border);color:var(--text);padding:0.7rem 1rem;border-radius:8px;text-decoration:none;font-weight:700;font-size:0.85rem;transition:all 0.2s;}
+.tier .pick:hover{background:var(--blue);border-color:var(--blue);color:white;}
+
+/* HOW IT WORKS */
+.steps-block{background:var(--bg2);border:1px solid var(--border);border-radius:18px;padding:2rem;margin-bottom:3rem;}
+.steps-block h2{font-size:1.4rem;font-weight:800;margin-bottom:0.4rem;letter-spacing:-0.3px;}
+.steps-block .subt{color:var(--muted);font-size:0.9rem;margin-bottom:1.5rem;}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;}
+.step{background:var(--bg3);border:1px solid var(--border);border-radius:12px;padding:1.1rem;}
+.step-num{font-size:0.7rem;font-weight:800;color:var(--blue);text-transform:uppercase;letter-spacing:1px;margin-bottom:0.4rem;}
+.step h4{font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;}
+.step p{font-size:0.78rem;color:var(--muted);line-height:1.5;}
+
+/* COMPARE TABLE */
+.compare-block{margin-bottom:3rem;}
+.compare-block h2{font-size:1.4rem;font-weight:800;margin-bottom:0.4rem;letter-spacing:-0.3px;}
+.compare-block .subt{color:var(--muted);font-size:0.9rem;margin-bottom:1.5rem;}
+.compare-wrap{overflow-x:auto;border:1px solid var(--border);border-radius:14px;}
+.compare-table{width:100%;border-collapse:collapse;background:var(--bg2);font-size:0.85rem;min-width:680px;}
+.compare-table th{background:var(--bg3);color:var(--text);font-weight:700;padding:0.95rem 0.75rem;text-align:left;border-bottom:2px solid var(--border);font-size:0.78rem;}
+.compare-table td{padding:0.85rem 0.75rem;border-bottom:1px solid var(--border);color:var(--muted);}
+.compare-table td:first-child{color:var(--text);font-weight:600;}
+.cmp-yes{color:var(--green);font-weight:700;}
+.cmp-no{color:#ef4444;font-weight:700;}
+.cmp-opt{color:var(--gold);font-weight:700;}
+
+/* FINAL CTA */
+.final-cta{background:linear-gradient(135deg,rgba(59,130,246,0.1),rgba(6,182,212,0.1));border:1px solid rgba(59,130,246,0.25);border-radius:20px;padding:2.5rem 2rem;text-align:center;}
+.final-cta h2{font-size:1.5rem;font-weight:800;margin-bottom:0.5rem;}
+.final-cta p{color:var(--muted);margin-bottom:1.25rem;}
+.final-cta .row{display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;}
+
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:2.5rem 2rem;text-align:center;position:relative;z-index:1;}
+.footer-logo img{height:36px;margin-bottom:1rem;}
+.footer-links{display:flex;justify-content:center;gap:1.5rem;list-style:none;margin-bottom:1.25rem;flex-wrap:wrap;}
+.footer-links a{color:var(--muted);text-decoration:none;font-size:0.82rem;}
+.footer-links a:hover{color:var(--text);}
+footer p{color:var(--muted);font-size:0.78rem;}
+</style>
+</head>
+<body>
+
+<nav>
+    <a href="CSL_index.html" class="nav-logo"><img src="CSL_logo_dark.png" alt="Current Scoring Leaders"></a>
+    <ul class="nav-links">
+        <li><a href="CSL_pricing.html" class="active">Pricing</a></li>
+        <li><a href="CSL_portfolio.html">Portfolio</a></li>
+        <li><a href="CSL_process.html">Our Process</a></li>
+        <li><a href="CSL_about.html">About &amp; Contact</a></li>
+        <li><a href="CSL_booking.html" class="nav-cta">License Your Sound</a></li>
+    </ul>
+</nav>
+
+<div class="crumb"><a href="CSL_pricing.html">&larr; All pricing paths</a> &nbsp;&middot;&nbsp; License a Catalog Track</div>
+
+<section class="hero">
+    <div class="eyebrow"><i class="fas fa-music"></i> Catalog Licensing</div>
+    <h1>License a track that <span class="grad">already exists</span>.</h1>
+    <p class="lede">Browse our catalog, pick the track that fits, choose the license tier that matches how far it needs to travel. All written, all clear.</p>
+    <div class="hero-actions">
+        <a href="CSL_portfolio.html" class="btn-pri"><i class="fas fa-headphones"></i> Browse Catalog</a>
+        <a href="#tiers" class="btn-sec"><i class="fas fa-arrow-down"></i> See License Tiers</a>
+    </div>
+</section>
+
+<div class="main">
+
+    <div class="tiers" id="tiers">
+
+        <div class="tier t1">
+            <div class="tier-icon"><i class="fas fa-youtube"></i></div>
+            <div class="tier-for">Creators &amp; Podcasters</div>
+            <h3>Creator License</h3>
+            <div class="tier-price">$599</div>
+            <p class="tier-tag">Online use only. Perfect for YouTube, TikTok, podcasts, and social content.</p>
+            <ul>
+                <li><i class="fas fa-check"></i>YouTube, TikTok, IG, podcast background</li>
+                <li><i class="fas fa-check"></i>Non-exclusive, worldwide</li>
+                <li><i class="fas fa-check"></i>WAV + MP3 delivery</li>
+                <li><i class="fas fa-check"></i>License Certificate PDF</li>
+                <li class="no"><i class="fas fa-times"></i>Not broadcast-eligible</li>
+            </ul>
+            <a href="CSL_booking.html?service=creator" class="pick">Pick this tier <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="tier t2">
+            <div class="tier-icon"><i class="fas fa-film"></i></div>
+            <div class="tier-for">Indie Film &amp; Digital</div>
+            <h3>Sync License</h3>
+            <div class="tier-price">$1,800</div>
+            <p class="tier-tag">For indie film, digital ads, podcasts with broadcast reach, and small games.</p>
+            <ul>
+                <li><i class="fas fa-check"></i>Indie film, digital ads, web series</li>
+                <li><i class="fas fa-check"></i>Broadcast-eligible (non-national)</li>
+                <li><i class="fas fa-check"></i>WAV + MP3 + stems</li>
+                <li><i class="fas fa-check"></i>Non-exclusive, perpetual</li>
+                <li><i class="fas fa-check"></i>License Certificate PDF</li>
+            </ul>
+            <a href="CSL_booking.html?service=sync" class="pick">Pick this tier <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="tier t3">
+            <div class="tier-icon"><i class="fas fa-certificate"></i></div>
+            <div class="tier-for">Agency &amp; Broadcast</div>
+            <h3>Sync Premium</h3>
+            <div class="tier-price">$3,500</div>
+            <p class="tier-tag">DAW-reworked, U.S. Copyright Office registered, agency &amp; broadcast-ready.</p>
+            <ul>
+                <li><i class="fas fa-check"></i>Everything in Sync Standard</li>
+                <li><i class="fas fa-check"></i>Substantial DAW rework</li>
+                <li><i class="fas fa-check"></i>U.S. Copyright Office registered</li>
+                <li><i class="fas fa-check"></i>Exclusive upgrade available</li>
+                <li><i class="fas fa-check"></i>WFH upgrade available</li>
+                <li><i class="fas fa-check"></i>National broadcast-ready</li>
+            </ul>
+            <a href="CSL_booking.html?service=sync-premium" class="pick">Pick this tier <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="tier t4">
+            <div class="tier-icon"><i class="fas fa-wand-magic-sparkles"></i></div>
+            <div class="tier-for">Tailored to Your Project</div>
+            <h3>Customized Version</h3>
+            <div class="tier-price">$4,500</div>
+            <p class="tier-tag">A Premium catalog track, remixed to fit your specific project's length, key, and mood.</p>
+            <ul>
+                <li><i class="fas fa-check"></i>Everything in Sync Premium</li>
+                <li><i class="fas fa-check"></i>Length adjusted to project</li>
+                <li><i class="fas fa-check"></i>Mix tailored to your brief</li>
+                <li><i class="fas fa-check"></i>1 revision round included</li>
+                <li><i class="fas fa-check"></i>Alternate versions available</li>
+            </ul>
+            <a href="CSL_booking.html?service=customized" class="pick">Pick this tier <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+    </div>
+
+    <div class="steps-block">
+        <h2>How catalog licensing works.</h2>
+        <p class="subt">From "I want this track" to delivered files &mdash; usually same week.</p>
+        <div class="steps">
+            <div class="step"><div class="step-num">Step 01</div><h4>Find your track</h4><p>Browse the portfolio. Preview any track. Note the title.</p></div>
+            <div class="step"><div class="step-num">Step 02</div><h4>Submit your use case</h4><p>Tell us platform, territory, and term. Takes 2 minutes.</p></div>
+            <div class="step"><div class="step-num">Step 03</div><h4>Sign &amp; pay</h4><p>Receive a written license, sign it, pay the flat fee.</p></div>
+            <div class="step"><div class="step-num">Step 04</div><h4>Receive files</h4><p>WAV + MP3 (and stems for Sync+) delivered the same day payment clears.</p></div>
+        </div>
+    </div>
+
+    <div class="compare-block">
+        <h2>Which tier covers what?</h2>
+        <p class="subt">Match your use case to the right tier.</p>
+        <div class="compare-wrap">
+            <table class="compare-table">
+                <thead>
+                    <tr>
+                        <th>Use case</th>
+                        <th>Creator $599</th>
+                        <th>Sync $1,800</th>
+                        <th>Premium $3,500</th>
+                        <th>Customized $4,500</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Online (YouTube, podcast)</td><td><span class="cmp-yes">Yes</span></td><td><span class="cmp-yes">Yes</span></td><td><span class="cmp-yes">Yes</span></td><td><span class="cmp-yes">Yes</span></td></tr>
+                    <tr><td>Indie film &amp; digital ads</td><td><span class="cmp-no">No</span></td><td><span class="cmp-yes">Yes</span></td><td><span class="cmp-yes">Yes</span></td><td><span class="cmp-yes">Yes</span></td></tr>
+                    <tr><td>Broadcast TV / national ads</td><td><span class="cmp-no">No</span></td><td><span class="cmp-opt">Non-national</span></td><td><span class="cmp-yes">Yes</span></td><td><span class="cmp-yes">Yes</span></td></tr>
+                    <tr><td>U.S. Copyright Office registered</td><td><span class="cmp-no">No</span></td><td><span class="cmp-no">No</span></td><td><span class="cmp-yes">Yes</span></td><td><span class="cmp-yes">Yes</span></td></tr>
+                    <tr><td>Exclusive license available</td><td><span class="cmp-no">No</span></td><td><span class="cmp-opt">Upgrade</span></td><td><span class="cmp-yes">Yes</span></td><td><span class="cmp-yes">Yes</span></td></tr>
+                    <tr><td>Custom length / tailored mix</td><td><span class="cmp-no">No</span></td><td><span class="cmp-no">No</span></td><td><span class="cmp-no">No</span></td><td><span class="cmp-yes">Yes</span></td></tr>
+                    <tr><td>Delivery format</td><td>WAV + MP3</td><td>+ stems</td><td>+ stems</td><td>+ stems + alts</td></tr>
+                    <tr><td>Typical turnaround</td><td>Same day</td><td>Same day</td><td>2&ndash;3 days</td><td>5&ndash;7 days</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="final-cta">
+        <h2>Ready to license?</h2>
+        <p>Pick a track, pick a tier, license it. We'll handle the paperwork.</p>
+        <div class="row">
+            <a href="CSL_portfolio.html" class="btn-pri"><i class="fas fa-headphones"></i> Browse Catalog</a>
+            <a href="CSL_booking.html?service=catalog" class="btn-sec"><i class="fas fa-paper-plane"></i> Submit a Use Case</a>
+            <a href="CSL_commission.html" class="btn-sec"><i class="fas fa-pen-fancy"></i> Or Commission Custom</a>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <div class="footer-logo"><img src="CSL_logo_clean.png" alt="Current Scoring Leaders LLC"></div>
+    <ul class="footer-links">
+        <li><a href="CSL_index.html">Home</a></li>
+        <li><a href="CSL_pricing.html">Pricing</a></li>
+        <li><a href="CSL_portfolio.html">Portfolio</a></li>
+        <li><a href="CSL_process.html">Our Process</a></li>
+        <li><a href="CSL_about.html">About &amp; Contact</a></li>
+        <li><a href="CSL_faq.html">FAQ</a></li>
+        <li><a href="CSL_licensing.html">Licensing Types</a></li>
+        <li><a href="CSL_legal.html">Legal</a></li>
+    </ul>
+    <p>&copy; 2026 Current Scoring Leaders LLC &middot; Roslyn, PA &middot; All Rights Reserved</p>
+</footer>
+
+<script src="csl-shared.js" defer></script>
+<script src="csl-cookie-banner.js" defer></script>
+</body>
+</html>

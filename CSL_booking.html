@@ -380,6 +380,36 @@
 
 <script src="csl-forms.js"></script>
 <script src="csl-shared.js" defer></script><script src="csl-cookie-banner.js" defer></script>
+<script>
+// Pre-select service from ?service= URL param (e.g. ?service=creator)
+(function(){
+    var params = new URLSearchParams(window.location.search);
+    var svc = params.get('service');
+    if (!svc) return;
+    var sel = document.querySelector('select[name="service_type"]');
+    if (!sel) return;
+    // Map shorthand path keys to actual option values
+    var aliases = {
+        'catalog': 'creator', 'license': 'creator',
+        'custom': 'custom-single',
+        'commission': 'custom-single',
+        'package': 'custom-pkg',
+        'wfh': 'exclusive', 'work-for-hire': 'exclusive'
+    };
+    var target = aliases[svc] || svc;
+    var opt = Array.from(sel.options).find(function(o){ return o.value === target; });
+    if (opt) {
+        sel.value = target;
+        sel.dispatchEvent(new Event('change'));
+        // Subtle confirmation toast
+        var toast = document.createElement('div');
+        toast.textContent = 'Pre-selected: ' + opt.textContent.split('—')[0].trim();
+        toast.style.cssText = 'position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:rgba(59,130,246,0.95);color:#fff;padding:0.7rem 1.2rem;border-radius:10px;font-size:0.85rem;font-weight:600;z-index:9999;box-shadow:0 8px 24px rgba(0,0,0,0.4);transition:opacity 0.4s;';
+        document.body.appendChild(toast);
+        setTimeout(function(){ toast.style.opacity='0'; setTimeout(function(){ toast.remove(); },500); }, 3500);
+    }
+})();
+</script>
 </body>
 </html>
 
