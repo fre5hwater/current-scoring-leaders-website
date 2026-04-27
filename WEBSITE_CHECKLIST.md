@@ -49,6 +49,29 @@ A SEO-injection PowerShell script with a buggy `-replace ... ,1` argument zeroed
 
 ---
 
+## UPDATE — Apr 27, 2026 Launch-Blocker Sweep
+
+**Just completed:**
+- Created `csl-cookie-banner.js` — GDPR/CCPA-compliant consent banner with localStorage persistence, Accept/Reject parity, and `window.CSL_CONSENT` API for future analytics
+- Injected the banner script tag into all **19 HTML files** (validated edits with try/catch + non-empty checks)
+- Switched `csl-forms.js` from Google Apps Script to **Formspree** — single-placeholder config (just paste form ID), proper JSON POST, error parsing, honeypot enforcement
+- Created `vercel.json` — clean URL redirects (`/about`, `/pricing`, etc.), HSTS, X-Frame-Options, Permissions-Policy, smart cache headers per file type
+- **Initialized git repo** with `.gitignore` (excludes `.bak`, `.env`, `ARCHIVE/`, `.vercel/`)
+- Initial commit captures full website state — no more wipe risk
+
+**Decisions locked in:**
+- Domain: `currentscoringleaders.com` (confirmed)
+- Hosting: Vercel (free tier, MCP-deployable)
+- Form backend: Formspree (free tier)
+
+**Still needed from you:**
+- Sign up at [formspree.io](https://formspree.io) → create form → paste form ID into `csl-forms.js` line 24
+- Sign up at [vercel.com](https://vercel.com) → connect this folder → deploy
+- Drop founder headshot as `img_founder_avery.jpg` in WEBSITE folder
+- Sign printed IP Assignment page and file internally
+
+See `DEPLOYMENT_GUIDE.md` for step-by-step instructions on the above.
+
 ---
 
 ## 1. Core Pages
