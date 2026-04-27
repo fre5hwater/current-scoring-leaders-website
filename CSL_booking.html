@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Work With Us | Current Scoring Leaders</title>
+    <title>License Your Sound | Current Scoring Leaders</title>
     <meta name="description" content="Start a custom music project with Current Scoring Leaders. Fill out the project inquiry form and we'll respond within 48 hours.">
     <link rel="canonical" href="https://currentscoringleaders.com/CSL_booking.html">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -11,12 +11,12 @@
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Current Scoring Leaders">
-    <meta property="og:title" content="Work With Us | Current Scoring Leaders">
+    <meta property="og:title" content="License Your Sound | Current Scoring Leaders">
     <meta property="og:description" content="Start a custom music project. Fill out the inquiry form and we'll respond within 48 hours with scope and timeline.">
     <meta property="og:image" content="https://currentscoringleaders.com/img_csl_studio.webp">
     <meta property="og:url" content="https://currentscoringleaders.com/CSL_booking.html">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Work With Us | Current Scoring Leaders">
+    <meta name="twitter:title" content="License Your Sound | Current Scoring Leaders">
     <meta name="twitter:description" content="Start a custom music project. 48-hour response.">
     <meta name="twitter:image" content="https://currentscoringleaders.com/img_csl_studio.webp">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
@@ -57,7 +57,11 @@
         .nav-cta { background: var(--blue); color: white !important; padding: 0.5rem 1.25rem; border-radius: 8px; font-weight: 600 !important; transition: background 0.2s !important; }
         .nav-cta:hover { background: var(--purple) !important; }
 
-        .page-header { padding: 9rem 2rem 3rem; text-align: center; max-width: 700px; margin: 0 auto; }
+        .page-header { position: relative; padding: 9rem 2rem 3rem; text-align: center; overflow: hidden; background: linear-gradient(180deg, rgba(15,15,24,0) 0%, rgba(20,20,31,0.55) 100%); margin-bottom: 1rem; }
+        .page-header::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(59,130,246,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(59,130,246,0.06) 1px, transparent 1px); background-size: 48px 48px; -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%); mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%); pointer-events: none; }
+        .page-header::after { content: ''; position: absolute; width: 900px; height: 900px; border-radius: 50%; background: radial-gradient(circle, rgba(59,130,246,0.18) 0%, rgba(139,92,246,0.10) 40%, transparent 70%); top: 50%; left: 50%; transform: translate(-50%,-50%); animation: cslPulse 8s ease-in-out infinite; pointer-events: none; }
+        .page-header > * { position: relative; z-index: 1; max-width: 700px; margin-left: auto; margin-right: auto; }
+        @keyframes cslPulse { 0%,100% { opacity: .55; transform: translate(-50%,-50%) scale(1); } 50% { opacity: 1; transform: translate(-50%,-50%) scale(1.08); } }
         .page-label { font-size: 0.8rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--blue); margin-bottom: 1rem; }
         .page-header h1 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; letter-spacing: -1px; margin-bottom: 1rem; }
         .page-header p { color: var(--muted); font-size: 1rem; line-height: 1.7; }
@@ -159,14 +163,14 @@
             <li><a href="CSL_portfolio.html">Portfolio</a></li>
             <li><a href="CSL_process.html">Our Process</a></li>
             <li><a href="CSL_about.html">About &amp; Contact</a></li>
-            <li><a href="CSL_booking.html" class="nav-cta active">Work With Us</a></li>
+            <li><a href="CSL_booking.html" class="nav-cta active">License Your Sound</a></li>
         </ul>
     </nav>
 
     <div class="page-header">
-        <div class="page-label">Project Inquiry</div>
-        <h1>Work With Us</h1>
-        <p>Tell us about your project. No commitment required — this form starts the conversation and we'll respond within 48 hours with a custom quote.</p>
+        <div class="page-label">License &middot; Commission &middot; Retain</div>
+        <h1>License Your <span style="background:linear-gradient(135deg,var(--blue),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Sound</span></h1>
+        <p>Lock in a catalog track or commission something brand-new. Either way, this form starts the conversation &mdash; <strong style="color:var(--text);">48-hour response, no commitment.</strong></p>
     </div>
 
     <div class="main">
@@ -362,7 +366,7 @@
             <li><a href="CSL_pricing.html">Pricing</a></li>
             <li><a href="CSL_about.html">About &amp; Contact</a></li>
             <li><a href="CSL_faq.html">FAQ</a></li>
-            <li><a href="CSL_booking.html">Work With Us</a></li>
+            <li><a href="CSL_booking.html">License Your Sound</a></li>
             <li><a href="CSL_legal.html">Legal</a></li>
             <li><a href="CSL_process.html">Our Process</a></li>
             <li><a href="CSL_ip.html">IP &amp; Ownership</a></li>
