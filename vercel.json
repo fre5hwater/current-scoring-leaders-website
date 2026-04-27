@@ -3,7 +3,6 @@
   "trailingSlash": false,
   "cleanUrls": false,
   "redirects": [
-    { "source": "/", "destination": "/CSL_index.html", "statusCode": 200 },
     { "source": "/home", "destination": "/CSL_index.html", "permanent": true },
     { "source": "/about", "destination": "/CSL_about.html", "permanent": true },
     { "source": "/pricing", "destination": "/CSL_pricing.html", "permanent": true },
@@ -24,8 +23,7 @@
     { "source": "/intake", "destination": "/CSL_signup.html", "permanent": true }
   ],
   "rewrites": [
-    { "source": "/sitemap.xml", "destination": "/sitemap.xml" },
-    { "source": "/robots.txt", "destination": "/robots.txt" }
+    { "source": "/", "destination": "/CSL_index.html" }
   ],
   "headers": [
     {
