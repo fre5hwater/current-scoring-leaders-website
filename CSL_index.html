@@ -749,12 +749,44 @@
         </div>
     </div>
 
-    <!-- CTA BANNER -->
-    <div class="cta-banner">
-        <h2>Ready to Give Your Project<br>Its Own Sound?</h2>
-        <p>Tell us what you're building and we'll handle the rest. No stock music. No compromises.</p>
-        <a href="CSL_booking.html" class="btn-primary"><i class="fas fa-paper-plane"></i> Start a Project</a>
+    <!-- CTA BANNER WITH INLINE FORM -->
+    <div class="cta-banner" id="contact" style="background:linear-gradient(135deg,rgba(59,130,246,0.12),rgba(139,92,246,0.12));border:1px solid rgba(59,130,246,0.25);border-radius:24px;padding:3.5rem 2rem;margin:2rem auto 4rem;max-width:1100px;">
+        <div style="display:grid;grid-template-columns:1fr 1.1fr;gap:3rem;align-items:center;max-width:1000px;margin:0 auto;">
+            <div>
+                <h2 style="font-size:clamp(1.6rem,2.8vw,2.2rem);font-weight:900;letter-spacing:-0.5px;line-height:1.15;margin-bottom:1rem;">Ready to give your project<br><span style="background:linear-gradient(135deg,#3b82f6,#8b5cf6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">its own sound?</span></h2>
+                <p style="color:#94a3b8;font-size:0.98rem;line-height:1.65;margin-bottom:1.25rem;">Send us a quick brief. We respond within <strong style="color:#f1f5f9;">48 hours</strong> with a real quote &mdash; not a chatbot.</p>
+                <ul style="list-style:none;padding:0;margin:0;font-size:0.85rem;color:#cbd5e1;">
+                    <li style="margin-bottom:0.5rem;display:flex;align-items:center;gap:0.5rem;"><i class="fas fa-check" style="color:#10b981;"></i> 48-hour response guaranteed</li>
+                    <li style="margin-bottom:0.5rem;display:flex;align-items:center;gap:0.5rem;"><i class="fas fa-check" style="color:#10b981;"></i> Free quote, no commitment</li>
+                    <li style="margin-bottom:0;display:flex;align-items:center;gap:0.5rem;"><i class="fas fa-check" style="color:#10b981;"></i> Founder responds, not a sales bot</li>
+                </ul>
+            </div>
+            <form id="quickInquiry" onsubmit="return CSL.submitForm(event,'quick-inquiry')" style="background:rgba(15,15,24,0.7);border:1px solid #1e1e2e;border-radius:16px;padding:1.75rem;text-align:left;">
+                <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;">
+                <div style="margin-bottom:0.85rem;">
+                    <label style="display:block;font-size:0.72rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#94a3b8;margin-bottom:0.4rem;">Your Name</label>
+                    <input type="text" name="name" required placeholder="First &amp; Last" style="width:100%;background:#14141f;border:1px solid #1e1e2e;color:#f1f5f9;padding:0.7rem 0.9rem;border-radius:9px;font-family:inherit;font-size:0.9rem;outline:none;">
+                </div>
+                <div style="margin-bottom:0.85rem;">
+                    <label style="display:block;font-size:0.72rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#94a3b8;margin-bottom:0.4rem;">Email</label>
+                    <input type="email" name="email" required placeholder="you@email.com" style="width:100%;background:#14141f;border:1px solid #1e1e2e;color:#f1f5f9;padding:0.7rem 0.9rem;border-radius:9px;font-family:inherit;font-size:0.9rem;outline:none;">
+                </div>
+                <div style="margin-bottom:1rem;">
+                    <label style="display:block;font-size:0.72rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#94a3b8;margin-bottom:0.4rem;">What do you need?</label>
+                    <textarea name="message" required rows="3" placeholder="A quick description of your project, deadline, and budget if known..." style="width:100%;background:#14141f;border:1px solid #1e1e2e;color:#f1f5f9;padding:0.7rem 0.9rem;border-radius:9px;font-family:inherit;font-size:0.9rem;outline:none;resize:vertical;min-height:90px;"></textarea>
+                </div>
+                <button type="submit" style="width:100%;background:linear-gradient(135deg,#3b82f6,#8b5cf6);color:white;padding:0.85rem;border-radius:10px;border:none;font-weight:800;font-size:0.92rem;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:0.5rem;transition:transform 0.15s;" onmouseover="this.style.transform='translateY(-1px)'" onmouseout="this.style.transform='none'">
+                    <i class="fas fa-paper-plane"></i> Send Inquiry
+                </button>
+                <p style="font-size:0.72rem;color:#64748b;text-align:center;margin-top:0.85rem;">Or use the <a href="CSL_booking.html" style="color:#3b82f6;text-decoration:underline;">full project form</a> for more detail</p>
+            </form>
+        </div>
     </div>
+
+    <style>@media(max-width:780px){.cta-banner > div{grid-template-columns:1fr !important;gap:2rem !important;}}</style>
+
+    <!-- Form helper script -->
+    <script src="csl-forms.js" defer></script>
 
     <!-- FOOTER -->
     <footer>
@@ -777,6 +809,6 @@
         <p>&copy; 2026 Current Scoring Leaders LLC &middot; Roslyn, PA &middot; All Rights Reserved</p>
     </footer>
 
-<script src="csl-cookie-banner.js" defer></script>
+<script src="csl-shared.js" defer></script><script src="csl-cookie-banner.js" defer></script>
 </body>
 </html>

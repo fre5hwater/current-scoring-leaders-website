@@ -123,12 +123,12 @@ footer p{color:var(--muted);font-size:0.78rem;}
     <div class="step active" data-step="1">
         <h2><i class="fas fa-user"></i> About You</h2>
         <p class="sub">The basics, so we know who we're talking to.</p>
-        <div class="field"><label>Full Name *</label><input type="text" name="name" required></div>
-        <div class="field"><label>Email *</label><input type="email" name="email" required></div>
-        <div class="field"><label>Company / Project Name <span class="opt">(optional)</span></label><input type="text" name="company"></div>
-        <div class="field"><label>Phone <span class="opt">(optional)</span></label><input type="tel" name="phone"></div>
+        <div class="field"><label>Full Name *</label><input type="text" name="name" aria-label="Full Name" required></div>
+        <div class="field"><label>Email *</label><input type="email" name="email" aria-label="Email" required></div>
+        <div class="field"><label>Company / Project Name <span class="opt">(optional)</span></label><input type="text" name="company" aria-label="Company or Project Name"></div>
+        <div class="field"><label>Phone <span class="opt">(optional)</span></label><input type="tel" name="phone" aria-label="Phone"></div>
         <div class="field"><label>How did you hear about us?</label>
-            <select name="source"><option value="">Choose one</option><option>Search engine</option><option>Social media</option><option>Referral</option><option>YouTube / podcast</option><option>Other</option></select>
+            <select name="source" aria-label="How did you hear about us"><option value="">Choose one</option><option>Search engine</option><option>Social media</option><option>Referral</option><option>YouTube / podcast</option><option>Other</option></select>
         </div>
         <div class="btn-row"><span></span><button type="button" class="btn btn-primary" onclick="nextStep()">Continue <i class="fas fa-arrow-right"></i></button></div>
     </div>
@@ -147,8 +147,8 @@ footer p{color:var(--muted);font-size:0.78rem;}
                 <label class="radio-card"><input type="radio" name="project_type" value="Other"><span class="label-text">Other<small>Tell us</small></span></label>
             </div>
         </div>
-        <div class="field"><label>Brief Description *</label><textarea name="description" required placeholder="What are you making? Who is it for? What's the vibe?"></textarea></div>
-        <div class="field"><label>Reference Tracks / Vibes <span class="opt">(optional)</span></label><textarea name="references" placeholder="Links, song titles, descriptors. Helpful but not required."></textarea></div>
+        <div class="field"><label>Brief Description *</label><textarea name="description" aria-label="Brief Description" required placeholder="What are you making? Who is it for? What's the vibe?"></textarea></div>
+        <div class="field"><label>Reference Tracks / Vibes <span class="opt">(optional)</span></label><textarea name="references" aria-label="Reference Tracks or Vibes" placeholder="Links, song titles, descriptors. Helpful but not required."></textarea></div>
         <div class="btn-row"><button type="button" class="btn btn-ghost" onclick="prevStep()"><i class="fas fa-arrow-left"></i> Back</button><button type="button" class="btn btn-primary" onclick="nextStep()">Continue <i class="fas fa-arrow-right"></i></button></div>
     </div>
 
@@ -157,10 +157,10 @@ footer p{color:var(--muted);font-size:0.78rem;}
         <h2><i class="fas fa-cogs"></i> Scope</h2>
         <p class="sub">How big and what kind of license.</p>
         <div class="field"><label>Number of Tracks Needed *</label>
-            <select name="track_count" required><option value="">Choose</option><option>1</option><option>2&ndash;3</option><option>4&ndash;7</option><option>8&ndash;15</option><option>16+</option><option>Not sure yet</option></select>
+            <select name="track_count" aria-label="Number of Tracks Needed" required><option value="">Choose</option><option>1</option><option>2&ndash;3</option><option>4&ndash;7</option><option>8&ndash;15</option><option>16+</option><option>Not sure yet</option></select>
         </div>
         <div class="field"><label>Approximate Track Length</label>
-            <select name="track_length"><option value="">Choose</option><option>Under 30 seconds (sting/logo)</option><option>30&ndash;90 seconds (intro/loop)</option><option>1&ndash;3 minutes</option><option>3&ndash;5 minutes</option><option>5+ minutes</option></select>
+            <select name="track_length" aria-label="Approximate Track Length"><option value="">Choose</option><option>Under 30 seconds (sting/logo)</option><option>30&ndash;90 seconds (intro/loop)</option><option>1&ndash;3 minutes</option><option>3&ndash;5 minutes</option><option>5+ minutes</option></select>
         </div>
         <div class="field"><label>License Tier Preference *</label>
             <div class="radio-row">
@@ -178,12 +178,12 @@ footer p{color:var(--muted);font-size:0.78rem;}
     <div class="step" data-step="4">
         <h2><i class="fas fa-calendar-alt"></i> Logistics</h2>
         <p class="sub">Timeline and budget so we can match scope to reality.</p>
-        <div class="field"><label>Deadline *</label><input type="text" name="deadline" required placeholder="e.g. June 15, end of Q3, no hard deadline"></div>
+        <div class="field"><label>Deadline *</label><input type="text" name="deadline" aria-label="Deadline" required placeholder="e.g. June 15, end of Q3, no hard deadline"></div>
         <div class="field"><label>Approximate Budget</label>
-            <select name="budget"><option value="">Choose a range</option><option>Under $500</option><option>$500&ndash;$1,500</option><option>$1,500&ndash;$5,000</option><option>$5,000&ndash;$15,000</option><option>$15,000+</option><option>Need guidance</option></select>
+            <select name="budget" aria-label="Approximate Budget"><option value="">Choose a range</option><option>Under $500</option><option>$500&ndash;$1,500</option><option>$1,500&ndash;$5,000</option><option>$5,000&ndash;$15,000</option><option>$15,000+</option><option>Need guidance</option></select>
         </div>
-        <div class="field"><label>Distribution Platforms</label><textarea name="platforms" placeholder="Where will this play? YouTube, Spotify, Twitch, Steam, broadcast, theaters, internal..."></textarea></div>
-        <div class="field"><label>Anything else we should know?</label><textarea name="notes" placeholder="Special requirements, accessibility needs, prior contact, anything."></textarea></div>
+        <div class="field"><label>Distribution Platforms</label><textarea name="platforms" aria-label="Distribution Platforms" placeholder="Where will this play? YouTube, Spotify, Twitch, Steam, broadcast, theaters, internal..."></textarea></div>
+        <div class="field"><label>Anything else we should know?</label><textarea name="notes" aria-label="Additional Notes" placeholder="Special requirements, accessibility needs, prior contact, anything."></textarea></div>
         <div class="btn-row"><button type="button" class="btn btn-ghost" onclick="prevStep()"><i class="fas fa-arrow-left"></i> Back</button><button type="button" class="btn btn-primary" onclick="nextStep()">Review <i class="fas fa-arrow-right"></i></button></div>
     </div>
 
@@ -275,6 +275,6 @@ function submitIntake(e){
 showStep(1);
 </script>
 
-<script src="csl-cookie-banner.js" defer></script>
+<script src="csl-shared.js" defer></script><script src="csl-cookie-banner.js" defer></script>
 </body>
 </html>
