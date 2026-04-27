@@ -26,3 +26,4 @@ ARCHIVE/
 # Logs
 *.log
 npm-debug.log*
+.vercel

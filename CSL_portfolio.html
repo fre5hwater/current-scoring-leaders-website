@@ -627,6 +627,15 @@
     <!-- MAIN -->
     <div class="main">
 
+        <!-- AUDIO STATUS NOTICE -->
+        <div style="background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.3);border-radius:12px;padding:1rem 1.25rem;margin-bottom:1.25rem;display:flex;align-items:center;gap:0.85rem;">
+            <i class="fas fa-cloud-arrow-up" style="color:#f59e0b;font-size:1.1rem;flex-shrink:0;"></i>
+            <div style="flex:1;font-size:0.88rem;color:#fde68a;">
+                <strong style="color:#fff;">Audio samples are migrating to our cloud.</strong>
+                Click any track to <a href="CSL_booking.html?type=demo-reel" style="color:#fbbf24;text-decoration:underline;font-weight:600;">request the demo reel</a> &mdash; we'll send full samples within 24 hours.
+            </div>
+        </div>
+
         <!-- CATALOG PRICING BANNER -->
         <div class="catalog-banner">
             <div class="cb-icon"><i class="fas fa-compact-disc"></i></div>
@@ -1844,6 +1853,12 @@
             if (currentAudio === audio) { currentAudio = null; currentBtn = null; }
         }
 
+        function requestSampleFallback() {
+            if (confirm("Audio samples are migrating to our cloud and aren't streaming yet. Want us to send you the demo reel directly?\n\nClick OK to open the inquiry form.")) {
+                window.location.href = 'CSL_booking.html?type=demo-reel';
+            }
+        }
+
         function togglePlay(btn) {
             const audio = btn.closest('.track-card').querySelector('audio');
             if (!audio) return;
@@ -1863,11 +1878,15 @@
             }
             clearTimeout(previewTimer);
             audio.currentTime = 0;
-            audio.play().catch(() => {});
-            btn.innerHTML = '<i class="fas fa-pause"></i>';
-            btn.classList.add('playing');
-            currentAudio = audio;
-            currentBtn   = btn;
+            audio.play().then(() => {
+                btn.innerHTML = '<i class="fas fa-pause"></i>';
+                btn.classList.add('playing');
+                currentAudio = audio;
+                currentBtn   = btn;
+            }).catch(() => {
+                // Audio file not available — offer demo reel via inquiry form
+                requestSampleFallback();
+            });
         }
 
         // ── HOVER PREVIEW: plays first 4 seconds on mouseenter, stops on mouseleave ──
