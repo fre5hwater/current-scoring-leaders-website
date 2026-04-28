@@ -143,18 +143,31 @@
         .nav-cta:hover { background: var(--purple) !important; color: white !important; }
 
         /* HERO */
+        /* TOP BANNER */
+        .top-banner {
+            width: 100%;
+            padding: 2rem;
+            text-align: center;
+            background: var(--dark);
+            border-bottom: 1px solid rgba(59,130,246,0.2);
+        }
+        .top-banner img {
+            max-width: 300px;
+            height: auto;
+        }
+
         .hero {
-            min-height: 100vh;
+            min-height: 80vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 8rem 2rem 4rem;
+            padding: 4rem 2rem;
             position: relative;
             overflow: hidden;
             background-image: url('img_csl_studio.webp');
             background-size: cover;
-            background-position: center center;
+            background-position: center 40%;
             background-repeat: no-repeat;
         }
         .hero-img-overlay {
@@ -197,7 +210,7 @@
             pointer-events: none;
         }
 
-        .hero-content { position: relative; z-index: 1; max-width: 900px; margin-top: -60px; }
+        .hero-content { position: relative; z-index: 1; max-width: 900px; }
 
         .hero-badge {
             display: inline-flex;
@@ -548,13 +561,17 @@
         </ul>
     </nav>
 
+    <!-- TOP IMAGE BANNER -->
+    <section class="top-banner">
+        <img src="CSL_logo_dark.png" alt="Current Scoring Leaders">
+    </section>
+
     <!-- HERO -->
     <section class="hero">
         <div class="hero-img-overlay"></div>
         <div class="hero-grid"></div>
         <div class="hero-glow"></div>
         <div class="hero-content">
-            <div class="logo-placeholder"><i class="fas fa-music"></i></div>
             <div class="hero-badge"><i class="fas fa-map-marker-alt"></i> Willow Grove, PA — Premium Custom Music</div>
             <h1>Your Project Deserves<br><span class="grad">Its Own Sound</span></h1>
             <p>Current Scoring Leaders creates original music built around your vision. No stock libraries. No recycled loops. Custom composition for creators, studios, podcasters, and games that take their craft seriously.</p>
