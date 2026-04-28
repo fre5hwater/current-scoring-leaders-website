@@ -152,7 +152,7 @@
             border-bottom: 1px solid rgba(59,130,246,0.2);
         }
         .top-banner img {
-            max-width: 300px;
+            max-width: 280px;
             height: auto;
         }
 
@@ -162,12 +162,12 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 4rem 2rem;
+            padding: 2rem 2rem 8rem;
             position: relative;
             overflow: hidden;
             background-image: url('img_csl_studio.png');
             background-size: cover;
-            background-position: center 40%;
+            background-position: center 85%;
             background-repeat: no-repeat;
         }
         .hero-img-overlay {
@@ -210,7 +210,7 @@
             pointer-events: none;
         }
 
-        .hero-content { position: relative; z-index: 1; max-width: 900px; }
+        .hero-content { position: relative; z-index: 1; max-width: 900px; margin-top: -120px; }
 
         .hero-badge {
             display: inline-flex;
@@ -228,20 +228,28 @@
             margin-bottom: 2rem;
         }
 
-        .hero h1 {
-            font-size: clamp(2.5rem, 6vw, 5rem);
-            font-weight: 900;
-            line-height: 1.1;
-            letter-spacing: -1px;
-            margin-bottom: 1.5rem;
-        }
+            .hero h1 {
+                font-size: clamp(2.5rem, 6vw, 5rem);
+                font-weight: 900;
+                line-height: 1.1;
+                letter-spacing: -1px;
+                margin-bottom: 2rem;
+                margin-top: -2rem;
+            }
+            .hero h1 .grad {
+                background: linear-gradient(135deg, var(--blue), var(--purple));
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
 
-        .hero h1 .grad {
-            background: linear-gradient(135deg, var(--blue), var(--purple));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
+            .hero p {
+                font-size: 1.2rem;
+                color: var(--muted);
+                line-height: 1.7;
+                max-width: 650px;
+                margin: 0 auto 2.5rem;
+            }
 
         .hero p {
             font-size: 1.2rem;
