@@ -21,18 +21,20 @@
    ========================================================================= */
 
 // >>> PASTE YOUR FORMSPREE FORM ID HERE (e.g. "xyzabcde") <<<
-const CSL_FORMSPREE_ID = 'mgorbnyd';
-const CSL_BACKEND_URL  = 'https://formspree.io/f/' + CSL_FORMSPREE_ID;
+var CSL_FORMSPREE_ID = 'mgorbnyd';
+var CSL_BACKEND_URL  = 'https://formspree.io/f/' + CSL_FORMSPREE_ID;
 
 (function () {
-  const CSL = window.CSL || (window.CSL = {});
+  var CSL = window.CSL || (window.CSL = {});
 
   CSL.submitForm = function (event, formType) {
     if (event && event.preventDefault) event.preventDefault();
-    const form = event.target.closest('form') || event.target;
-    const data = {};
-    Array.from(form.elements).forEach(el => {
-      if (!el.name) return;
+    var form = event.target.closest('form') || event.target;
+    var data = {};
+    var elements = Array.prototype.slice.call(form.elements);
+    for (var i = 0; i < elements.length; i++) {
+      var el = elements[i];
+      if (!el.name) continue;
       if (el.type === 'checkbox') {
         if (!data[el.name]) data[el.name] = [];
         if (el.checked) data[el.name].push(el.value || 'yes');
@@ -41,16 +43,18 @@ const CSL_BACKEND_URL  = 'https://formspree.io/f/' + CSL_FORMSPREE_ID;
       } else {
         data[el.name] = el.value;
       }
-    });
+    }
     // Flatten checkbox arrays
-    Object.keys(data).forEach(k => {
+    var keys = Object.keys(data);
+    for (var j = 0; j < keys.length; j++) {
+      var k = keys[j];
       if (Array.isArray(data[k])) data[k] = data[k].join(', ');
-    });
+    }
     // Synthesize 'name' from split-name fields when a form only collects first/last
     if (!data.name) {
-      const first = data.first_name || data.firstname || '';
-      const last  = data.last_name  || data.lastname  || '';
-      const joined = (first + ' ' + last).trim();
+      var first = data.first_name || data.firstname || '';
+      var last  = data.last_name  || data.lastname  || '';
+      var joined = (first + ' ' + last).trim();
       if (joined) data.name = joined;
     }
     // Friendly aliases that align with the Apps Script sheet headers
@@ -62,8 +66,8 @@ const CSL_BACKEND_URL  = 'https://formspree.io/f/' + CSL_FORMSPREE_ID;
 
   CSL.submitData = function (data, formType, form) {
     data.form_type = formType;
-    const btn = form && form.querySelector('[type="submit"]');
-    const origBtnHtml = btn ? btn.innerHTML : '';
+    var btn = form && form.querySelector('[type="submit"]');
+    var origBtnHtml = btn ? btn.innerHTML : '';
     if (btn) {
       btn.disabled = true;
       btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>&nbsp; Sending...';
@@ -116,7 +120,7 @@ const CSL_BACKEND_URL  = 'https://formspree.io/f/' + CSL_FORMSPREE_ID;
 
   function _showMsg(form, text, kind) {
     if (!form) { alert(text); return; }
-    let box = form.querySelector('.csl-form-msg');
+    var box = form.querySelector('.csl-form-msg');
     if (!box) {
       box = document.createElement('div');
       box.className = 'csl-form-msg';

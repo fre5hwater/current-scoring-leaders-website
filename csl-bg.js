@@ -5,7 +5,7 @@
 (function () {
   if (document.querySelector('.csl-bg-collage')) return;
 
-  const images = [
+  var images = [
     'img_csl_studio.webp',
     'img_eagles_art1.webp',
     'img_genesis_art.webp',
@@ -14,23 +14,25 @@
     'img_ranger_slayer.webp'
   ];
 
-  const collage = document.createElement('div');
+  var collage = document.createElement('div');
   collage.className = 'csl-bg-collage';
   collage.setAttribute('aria-hidden', 'true');
-  images.forEach((src, i) => {
-    const img = document.createElement('img');
+  
+  for (var i = 0; i < images.length; i++) {
+    var src = images[i];
+    var img = document.createElement('img');
     img.className = 'c' + (i + 1);
     img.src = src;
     img.alt = '';
     img.loading = 'lazy';
     collage.appendChild(img);
-  });
+  }
 
-  const wave = document.createElement('div');
+  var wave = document.createElement('div');
   wave.className = 'csl-bg-wave';
   wave.setAttribute('aria-hidden', 'true');
 
-  const grid = document.createElement('div');
+  var grid = document.createElement('div');
   grid.className = 'csl-bg-grid';
   grid.setAttribute('aria-hidden', 'true');
 
