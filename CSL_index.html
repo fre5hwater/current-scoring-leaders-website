@@ -154,32 +154,51 @@
         }
 
         .hero {
-            min-height: 90vh;
+            min-height: 95vh;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: flex-start; /* Pulls content to TOP */
+            justify-content: flex-start;
             text-align: center;
-            padding: 4rem 2rem 5rem; /* Tight top padding */
+            padding: 0 2rem 5rem; /* Removed top padding */
             position: relative;
-            background: #000 url('img_csl_studio.png') center center / cover no-repeat;
+            background: #000 url('img_csl_studio.png') center top / cover no-repeat;
+            background-attachment: scroll;
             overflow: hidden;
-        }
-        .hero-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to bottom, 
-                rgba(10,10,15,0.9) 0%, 
-                rgba(10,10,15,0.4) 30%, 
-                rgba(10,10,15,0.2) 60%,
-                rgba(10,10,15,0.8) 100%);
-            z-index: 1;
         }
         .hero-content {
             position: relative;
             z-index: 10;
             max-width: 900px;
-            margin-top: 2rem; /* Pull it up near the nav */
+            margin-top: 1rem; /* Extremely tight to the top */
+        }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(10, 10, 15, 0.8); /* Darker background for badge */
+            border: 1px solid rgba(59,130,246,0.6);
+            color: var(--blue);
+            padding: 0.6rem 1.4rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+        .hero h1 {
+            font-size: clamp(2.8rem, 7vw, 5.5rem) !important;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.8);
+            margin-top: 0 !important;
+        }
+        .hero p {
+            font-size: 1.4rem !important;
+            font-weight: 500 !important;
+            text-shadow: 0 2px 12px rgba(0,0,0,0.9);
+            color: #fff !important;
+            opacity: 1 !important;
         }
         .hero-img-only {
             width: 100%;
