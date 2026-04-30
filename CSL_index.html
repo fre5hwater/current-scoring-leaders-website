@@ -165,7 +165,7 @@
             padding-right: 2rem;
             padding-bottom: 5rem;
             position: relative;
-            background: #000 url('img_csl_logo_art.png') center 12% / cover no-repeat;
+            background: #000 url('img_csl_logo_art.png') center 10% / cover no-repeat;
             background-attachment: scroll;
             overflow: hidden;
         }
@@ -420,20 +420,16 @@
         }
 
         .services-visualizer {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
+            display: flex;
+            gap: 1rem;
+            overflow-x: auto;
+            padding-bottom: 1rem;
+            scroll-snap-type: x mandatory;
         }
 
         @media (max-width: 900px) {
             .services-visualizer {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 600px) {
-            .services-visualizer {
-                grid-template-columns: 1fr;
+                flex-wrap: wrap;
             }
         }
 
@@ -445,6 +441,27 @@
             transition: all 0.3s;
             position: relative;
             overflow: hidden;
+            min-width: 200px;
+            flex: 1;
+            animation: fadeInUp 0.5s ease forwards;
+            opacity: 0;
+        }
+
+        .service-card-h:nth-child(1) { animation-delay: 0.1s; }
+        .service-card-h:nth-child(2) { animation-delay: 0.2s; }
+        .service-card-h:nth-child(3) { animation-delay: 0.3s; }
+        .service-card-h:nth-child(4) { animation-delay: 0.4s; }
+        .service-card-h:nth-child(5) { animation-delay: 0.5s; }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .service-card-h::before {
@@ -459,7 +476,8 @@
 
         .service-card-h:hover {
             border-color: rgba(59,130,246,0.4);
-            transform: translateY(-4px);
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 8px 30px rgba(59,130,246,0.15);
         }
 
         .service-card-h:hover::before {
@@ -550,10 +568,12 @@
 
         /* PROCESS */
         .process-timeline {
-            position: relative;
-            max-width: 600px;
-            margin: 3rem auto 0;
-            padding-left: 2rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 2rem;
+            margin: 3rem 0;
+            overflow-x: auto;
+            padding-bottom: 1rem;
         }
 
         .process-timeline::before {
@@ -568,50 +588,48 @@
 
         .process-item {
             position: relative;
-            margin-bottom: 2.5rem;
-            padding-left: 1.5rem;
+            flex: 1;
+            min-width: 200px;
+            padding: 1.5rem;
+            background: var(--bg2);
+            border: 1px solid var(--border);
+            border-radius: 16px;
             opacity: 0;
-            transform: translateX(-20px);
-            animation: slideIn 0.5s ease forwards;
+            transform: translateY(20px);
+            animation: slideInUp 0.5s ease forwards;
+            transition: all 0.3s;
         }
 
         .process-item:nth-child(1) { animation-delay: 0.1s; }
-        .process-item:nth-child(2) { animation-delay: 0.3s; }
-        .process-item:nth-child(3) { animation-delay: 0.5s; }
-        .process-item:nth-child(4) { animation-delay: 0.7s; }
+        .process-item:nth-child(2) { animation-delay: 0.2s; }
+        .process-item:nth-child(3) { animation-delay: 0.3s; }
+        .process-item:nth-child(4) { animation-delay: 0.4s; }
 
-        @keyframes slideIn {
+        @keyframes slideInUp {
             to {
                 opacity: 1;
-                transform: translateX(0);
+                transform: translateY(0);
             }
         }
 
-        .process-item::before {
-            content: '';
-            position: absolute;
-            left: -2.4rem;
-            top: 0.25rem;
-            width: 16px;
-            height: 16px;
-            background: var(--blue);
-            border: 3px solid var(--bg2);
-            border-radius: 50%;
-            z-index: 1;
+        .process-item:hover {
+            border-color: rgba(59,130,246,0.4);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(59,130,246,0.15);
         }
 
         .process-number {
             display: inline-block;
-            width: 28px;
-            height: 28px;
+            width: 32px;
+            height: 32px;
             background: linear-gradient(135deg, var(--blue), var(--purple));
             border-radius: 50%;
             color: white;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             font-weight: 700;
-            line-height: 28px;
+            line-height: 32px;
             text-align: center;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.75rem;
         }
 
         .process-item h4 {
@@ -621,48 +639,106 @@
         }
 
         .process-item p {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: var(--muted);
             line-height: 1.5;
         }
 
         /* FOUNDER'S PROMISE */
-        .promise-features {
+        .promise-poster {
+            background: linear-gradient(135deg, rgba(59,130,246,0.08), rgba(139,92,246,0.08));
+            border: 2px solid var(--border);
+            border-radius: 24px;
+            padding: 3rem;
             max-width: 700px;
             margin: 3rem auto 0;
+            position: relative;
+            overflow: hidden;
+            animation: posterGlow 3s ease-in-out infinite alternate;
         }
 
-        .promise-feature {
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
-            padding: 1rem 0;
-            border-bottom: 1px solid var(--border);
+        @keyframes posterGlow {
+            from {
+                box-shadow: 0 0 20px rgba(59,130,246,0.1);
+            }
+            to {
+                box-shadow: 0 0 40px rgba(139,92,246,0.2);
+            }
         }
 
-        .promise-feature:last-child {
-            border-bottom: none;
+        .promise-poster::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(circle, rgba(59,130,246,0.03) 0%, transparent 70%);
+            animation: posterRotate 20s linear infinite;
         }
 
-        .promise-bullet {
-            width: 8px;
-            height: 8px;
-            background: var(--blue);
-            border-radius: 50%;
-            flex-shrink: 0;
-            margin-top: 0.5rem;
+        @keyframes posterRotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
         }
 
-        .promise-feature h3 {
-            font-size: 1rem;
+        .promise-poster-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .promise-poster h3 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 2rem;
+            background: linear-gradient(135deg, var(--blue), var(--purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .promise-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .promise-item {
+            background: var(--bg2);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 1.25rem;
+            transition: all 0.3s;
+            animation: slideIn 0.5s ease forwards;
+            opacity: 0;
+        }
+
+        .promise-item:nth-child(1) { animation-delay: 0.1s; }
+        .promise-item:nth-child(2) { animation-delay: 0.2s; }
+        .promise-item:nth-child(3) { animation-delay: 0.3s; }
+        .promise-item:nth-child(4) { animation-delay: 0.4s; }
+
+        @keyframes slideIn {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .promise-item:hover {
+            border-color: rgba(59,130,246,0.4);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(59,130,246,0.15);
+        }
+
+        .promise-item h4 {
+            font-size: 0.95rem;
             font-weight: 700;
             margin-bottom: 0.35rem;
         }
 
-        .promise-feature p {
-            font-size: 0.85rem;
+        .promise-item p {
+            font-size: 0.8rem;
             color: var(--muted);
-            line-height: 1.5;
+            line-height: 1.4;
         }
 
         /* CTA BANNER */
@@ -680,6 +756,97 @@
 
         .cta-banner h2 { font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 800; margin-bottom: 1rem; }
         .cta-banner p { color: var(--muted); font-size: 1rem; margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto; }
+
+        /* FLOATING BUTTON */
+        .floating-btn {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--blue), var(--purple));
+            border: none;
+            border-radius: 50%;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(59,130,246,0.4);
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .floating-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 30px rgba(59,130,246,0.6);
+        }
+
+        /* MODAL */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.8);
+            z-index: 1001;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: var(--bg2);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 2rem;
+            max-width: 500px;
+            width: 100%;
+            position: relative;
+            animation: modalIn 0.3s ease;
+        }
+
+        @keyframes modalIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9) translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--bg3);
+            border: 1px solid var(--border);
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: var(--muted);
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .modal-close:hover {
+            background: var(--blue);
+            color: white;
+            border-color: var(--blue);
+        }
 
         /* FOOTER */
         footer {
@@ -742,7 +909,7 @@
         <div class="hero-content">
             <div class="hero-badge"><i class="fas fa-map-marker-alt"></i> Willow Grove, PA — Premium Custom Music</div>
             <h1>Your Project Deserves<br><span class="grad">Its Own Sound</span></h1>
-            <p style="max-width: 800px; margin: 0 auto 2.5rem; font-size: 1.3rem; line-height: 1.6; color: #fff; text-shadow: 0 2px 10px rgba(0,0,0,0.5);">Current Scoring Leaders creates original music built around your vision. No stock libraries. No recycled loops. Custom composition for creators, studios, podcasters, and games that take their craft seriously.</p>
+            <p style="max-width: 800px; margin: 0 auto 2.5rem; font-size: 1.3rem; line-height: 1.6; color: #fff; text-shadow: 0 2px 10px rgba(0,0,0,0.5);">Original Music. No Stock Libraries. No Recycled Loops.</p>
             <div class="hero-btns" style="margin-bottom: 4rem;">
                 <a href="CSL_booking.html" class="btn-primary"><i class="fas fa-paper-plane"></i> Start a Project</a>
                 <a href="CSL_portfolio.html" class="btn-secondary"><i class="fas fa-headphones"></i> Hear the Work</a>
@@ -772,7 +939,7 @@
     <div class="section">
         <div class="section-label">What We Do</div>
         <h2 class="section-title">Music Built for the Project,<br>Not Pulled from a Shelf</h2>
-        <p class="section-sub">Every sound delivered by CSL is composed specifically for the client. Your audience will never hear it anywhere else.</p>
+        <p class="section-sub">You won't ever hear it anywhere else.</p>
 
         <div class="services-visualizer">
             <div class="service-card-h">
@@ -839,12 +1006,58 @@
                     <textarea name="message" required rows="3" placeholder="A quick description of your project, deadline, and budget if known..." style="width:100%;background:#14141f;border:1px solid #1e1e2e;color:#f1f5f9;padding:0.7rem 0.9rem;border-radius:9px;font-family:inherit;font-size:0.9rem;outline:none;resize:vertical;min-height:90px;"></textarea>
                 </div>
                 <button type="submit" style="width:100%;background:linear-gradient(135deg,#3b82f6,#60a5fa);color:white;padding:0.85rem;border-radius:10px;border:none;font-weight:800;font-size:0.92rem;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:0.5rem;transition:transform 0.15s;" onmouseover="this.style.transform='translateY(-1px)'" onmouseout="this.style.transform='none'">
-                    <i class="fas fa-paper-plane"></i> Send Inquiry
+                    <i class="fas fa-paper-plane"></i> Send Quote Request
                 </button>
                 <p style="font-size:0.72rem;color:#64748b;text-align:center;margin-top:0.85rem;">Or use the <a href="CSL_booking.html" style="color:#3b82f6;text-decoration:underline;">full project form</a> for more detail</p>
             </form>
         </div>
     </div>
+
+    <!-- FLOATING BUTTON -->
+    <button class="floating-btn" onclick="toggleModal()">
+        <i class="fas fa-paper-plane"></i>
+    </button>
+
+    <!-- MODAL -->
+    <div class="modal-overlay" id="quoteModal" onclick="closeModalOutside(event)">
+        <div class="modal-content">
+            <button class="modal-close" onclick="toggleModal()">
+                <i class="fas fa-times"></i>
+            </button>
+            <h3 style="font-size:1.5rem;font-weight:800;margin-bottom:1.5rem;background:linear-gradient(135deg,var(--blue),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Get Your Quote</h3>
+            <form id="modalInquiry" onsubmit="return CSL.submitForm(event,'quick-inquiry')" style="background:var(--bg3);border:1px solid var(--border);border-radius:16px;padding:1.5rem;">
+                <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;">
+                <div style="margin-bottom:1rem;">
+                    <label style="display:block;font-size:0.7rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:0.4rem;">Your Name</label>
+                    <input type="text" name="name" required placeholder="First &amp; Last" style="width:100%;background:var(--bg2);border:1px solid var(--border);color:var(--text);padding:0.7rem 0.9rem;border-radius:9px;font-family:inherit;font-size:0.9rem;outline:none;">
+                </div>
+                <div style="margin-bottom:1rem;">
+                    <label style="display:block;font-size:0.7rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:0.4rem;">Email</label>
+                    <input type="email" name="email" required placeholder="you@email.com" style="width:100%;background:var(--bg2);border:1px solid var(--border);color:var(--text);padding:0.7rem 0.9rem;border-radius:9px;font-family:inherit;font-size:0.9rem;outline:none;">
+                </div>
+                <div style="margin-bottom:1rem;">
+                    <label style="display:block;font-size:0.7rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:0.4rem;">What do you need?</label>
+                    <textarea name="message" required rows="3" placeholder="A quick description of your project, deadline, and budget if known..." style="width:100%;background:var(--bg2);border:1px solid var(--border);color:var(--text);padding:0.7rem 0.9rem;border-radius:9px;font-family:inherit;font-size:0.9rem;outline:none;resize:vertical;min-height:90px;"></textarea>
+                </div>
+                <button type="submit" style="width:100%;background:linear-gradient(135deg,var(--blue),var(--purple));color:white;padding:0.85rem;border-radius:10px;border:none;font-weight:800;font-size:0.92rem;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:0.5rem;">
+                    <i class="fas fa-paper-plane"></i> Send Quote Request
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function toggleModal() {
+            const modal = document.getElementById('quoteModal');
+            modal.classList.toggle('active');
+        }
+
+        function closeModalOutside(event) {
+            if (event.target.classList.contains('modal-overlay')) {
+                toggleModal();
+            }
+        }
+    </script>
 
     <!-- WHO WE SERVE -->
     <div class="clients-section">
@@ -919,33 +1132,26 @@
         <div class="section-label">Founder's Promise</div>
         <h2 class="section-title">Why Trust a New Studio?</h2>
         <p class="section-sub">CSL is a young business but the work isn't. Here's what every client gets — in writing, every time.</p>
-        <div class="promise-features">
-            <div class="promise-feature">
-                <div class="promise-bullet"></div>
-                <div>
-                    <h3>Signed Statement of Work</h3>
-                    <p>Every engagement starts with a clear SOW: deliverables, deadlines, revisions, license type. No vague verbal deals.</p>
-                </div>
-            </div>
-            <div class="promise-feature">
-                <div class="promise-bullet"></div>
-                <div>
-                    <h3>Money-Back Promise</h3>
-                    <p>If the first delivery is fundamentally off-brief and we can't course-correct within the contracted revisions, the deposit is refundable per our published refund policy.</p>
-                </div>
-            </div>
-            <div class="promise-feature">
-                <div class="promise-bullet"></div>
-                <div>
-                    <h3>48-Hour Response</h3>
-                    <p>Every inquiry gets a real reply from the founder within 48 hours. Not a chatbot. Not a sales rep. The composer.</p>
-                </div>
-            </div>
-            <div class="promise-feature">
-                <div class="promise-bullet"></div>
-                <div>
-                    <h3>Clean Rights Chain</h3>
-                    <p>Every track delivered with explicit license terms. Premium and Work-for-Hire tiers include Copyright Office registration.</p>
+        <div class="promise-poster">
+            <div class="promise-poster-content">
+                <h3>Why Trust a New Studio?</h3>
+                <div class="promise-grid">
+                    <div class="promise-item">
+                        <h4>Signed SOW</h4>
+                        <p>Clear deliverables, deadlines, and terms in writing. No vague verbal deals.</p>
+                    </div>
+                    <div class="promise-item">
+                        <h4>Money-Back Promise</h4>
+                        <p>Refundable deposit if we can't deliver on-brief within contracted revisions.</p>
+                    </div>
+                    <div class="promise-item">
+                        <h4>48-Hour Response</h4>
+                        <p>Real replies from the founder, not chatbots or sales reps.</p>
+                    </div>
+                    <div class="promise-item">
+                        <h4>Clean Rights Chain</h4>
+                        <p>Explicit license terms. Premium tiers include Copyright Office registration.</p>
+                    </div>
                 </div>
             </div>
         </div>
