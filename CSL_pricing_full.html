@@ -290,6 +290,670 @@
 <div class="main">
 
     <!-- ═══════════════════════════════════════
+         INTERACTIVE PRICING PATHS
+    ════════════════════════════════════════ -->
+    <div class="sec" id="interactive-pricing">
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=Rajdhani:wght@400;500;600;700&display=swap");
+
+            .pricing-system {
+                position: relative;
+                overflow: hidden;
+                border: 1px solid rgba(0, 245, 255, 0.25);
+                border-radius: 28px;
+                background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.018)), rgba(7, 15, 31, 0.78);
+                box-shadow: 0 0 42px rgba(0, 245, 255, 0.18), inset 0 0 90px rgba(0,245,255,0.035);
+                max-width: 1460px;
+                margin: 0 auto;
+            }
+
+            .pricing-system::before {
+                content: "";
+                position: absolute;
+                inset: -2px;
+                pointer-events: none;
+                background: linear-gradient(112deg, transparent 0 24%, rgba(0,245,255,0.23) 32%, transparent 43% 69%, rgba(166,255,0,0.12) 76%, transparent 86%);
+                animation: sweep 8s linear infinite;
+                opacity: 0.62;
+            }
+
+            .pricing-hero {
+                position: relative;
+                z-index: 1;
+                display: grid;
+                grid-template-columns: minmax(0, 1fr) auto;
+                gap: 24px;
+                align-items: end;
+                padding: 34px 34px 24px;
+                border-bottom: 1px solid rgba(0,245,255,0.18);
+                background: rgba(3, 5, 11, 0.45);
+            }
+
+            .pricing-hero h1 {
+                margin: 0;
+                max-width: 980px;
+                font-family: "Orbitron", sans-serif;
+                font-size: clamp(2.1rem, 6vw, 6.4rem);
+                line-height: 0.88;
+                letter-spacing: -0.075em;
+                text-transform: uppercase;
+                text-shadow: 0 0 24px rgba(0,245,255,0.38);
+                color: #ecfbff;
+            }
+
+            .pricing-hero .subtitle {
+                margin: 18px 0 0;
+                max-width: 820px;
+                color: #cfedfb;
+                font-size: clamp(1.05rem, 2vw, 1.48rem);
+                line-height: 1.38;
+            }
+
+            .pricing-hero .speed-note {
+                min-width: 230px;
+                border: 1px solid rgba(0, 245, 255, 0.25);
+                border-radius: 20px;
+                padding: 17px;
+                background: rgba(0, 245, 255, 0.07);
+                color: #a6ff00;
+                font-family: "Orbitron", sans-serif;
+                font-size: 0.75rem;
+                line-height: 1.45;
+                letter-spacing: 0.11em;
+                text-transform: uppercase;
+                box-shadow: 0 0 22px rgba(0,245,255,0.12);
+            }
+
+            .tier-rail {
+                position: relative;
+                z-index: 1;
+                padding: 18px;
+                overflow-x: auto;
+                scrollbar-width: thin;
+                scrollbar-color: #00f5ff rgba(255,255,255,0.06);
+            }
+
+            .tier-menu {
+                display: grid;
+                grid-template-columns: repeat(5, minmax(204px, 1fr));
+                gap: 10px;
+                min-width: 1120px;
+            }
+
+            .tier-button {
+                position: relative;
+                min-height: 222px;
+                overflow: hidden;
+                border: 1px solid rgba(255, 255, 255, 0.11);
+                border-radius: 23px;
+                padding: 18px;
+                background: linear-gradient(145deg, rgba(255,255,255,0.09), rgba(255,255,255,0.02)), rgba(10, 22, 42, 0.94);
+                color: #ecfbff;
+                text-align: left;
+                cursor: pointer;
+                clip-path: polygon(0 0, calc(100% - 24px) 0, 100% 24px, 100% 100%, 18px 100%, 0 calc(100% - 18px));
+                transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+            }
+
+            .tier-button::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: radial-gradient(circle at 12% 0%, rgba(0,245,255,0.2), transparent 42%), linear-gradient(135deg, transparent 40%, rgba(255,43,214,0.12));
+                opacity: 0;
+                transition: opacity 220ms ease;
+            }
+
+            .tier-button:hover,
+            .tier-button.active {
+                transform: translateY(-6px);
+                border-color: #00f5ff;
+                box-shadow: 0 0 28px rgba(0,245,255,0.24);
+            }
+
+            .tier-button.active::before { opacity: 1; }
+
+            .tier-button .tag {
+                position: relative;
+                z-index: 1;
+                display: inline-flex;
+                width: fit-content;
+                border: 1px solid rgba(0,245,255,0.26);
+                border-radius: 999px;
+                padding: 7px 10px;
+                color: #00f5ff;
+                background: rgba(0,245,255,0.08);
+                font-family: "Orbitron", sans-serif;
+                font-size: 0.58rem;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+            }
+
+            .tier-button h2 {
+                position: relative;
+                z-index: 1;
+                margin: 19px 0 10px;
+                font-family: "Orbitron", sans-serif;
+                font-size: clamp(1.05rem, 1.55vw, 1.48rem);
+                line-height: 0.98;
+                letter-spacing: -0.045em;
+                text-transform: uppercase;
+            }
+
+            .tier-button .tier-price {
+                position: relative;
+                z-index: 1;
+                color: #00f5ff;
+                font-family: "Orbitron", sans-serif;
+                font-size: clamp(1.45rem, 2.45vw, 2.55rem);
+                font-weight: 900;
+                letter-spacing: -0.065em;
+                text-shadow: 0 0 18px rgba(0,245,255,0.38);
+            }
+
+            .tier-button .tier-note {
+                position: relative;
+                z-index: 1;
+                margin: 10px 0 0;
+                color: #8aacbd;
+                font-size: 0.98rem;
+                line-height: 1.24;
+            }
+
+            .detail-layout {
+                position: relative;
+                z-index: 1;
+                display: grid;
+                grid-template-columns: minmax(0, 1.1fr) minmax(370px, 0.9fr);
+                gap: 18px;
+                padding: 0 18px 18px;
+            }
+
+            .panel {
+                position: relative;
+                overflow: hidden;
+                border: 1px solid rgba(255, 255, 255, 0.11);
+                border-radius: 24px;
+                background: linear-gradient(135deg, rgba(255,255,255,0.075), rgba(255,255,255,0.018)), rgba(10, 22, 42, 0.94);
+                box-shadow: inset 0 0 42px rgba(0,245,255,0.04);
+            }
+
+            .main-detail {
+                min-height: 500px;
+                padding: 30px;
+            }
+
+            .main-detail::after,
+            .side-panel::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                pointer-events: none;
+                background: linear-gradient(90deg, transparent, rgba(255,255,255,0.055), transparent);
+                opacity: 0.46;
+            }
+
+            .detail-top {
+                position: relative;
+                z-index: 1;
+                display: grid;
+                grid-template-columns: 1fr auto;
+                gap: 20px;
+                align-items: start;
+            }
+
+            .detail-title {
+                margin: 0;
+                font-family: "Orbitron", sans-serif;
+                font-size: clamp(2rem, 5vw, 5.2rem);
+                line-height: 0.9;
+                letter-spacing: -0.07em;
+                text-transform: uppercase;
+                color: #ecfbff;
+            }
+
+            .price-module {
+                min-width: 178px;
+                border: 1px solid rgba(0, 245, 255, 0.25);
+                border-radius: 19px;
+                padding: 16px 18px;
+                background: rgba(0,0,0,0.26);
+                text-align: right;
+            }
+
+            .price-module small {
+                display: block;
+                color: #8aacbd;
+                font-family: "Orbitron", sans-serif;
+                font-size: 0.62rem;
+                letter-spacing: 0.13em;
+                text-transform: uppercase;
+            }
+
+            .price-module strong {
+                display: block;
+                margin-top: 6px;
+                color: #00f5ff;
+                font-family: "Orbitron", sans-serif;
+                font-size: clamp(1.45rem, 3vw, 2.85rem);
+                letter-spacing: -0.06em;
+                text-shadow: 0 0 20px rgba(0,245,255,0.38);
+            }
+
+            .detail-copy {
+                position: relative;
+                z-index: 1;
+                max-width: 900px;
+                margin: 22px 0 0;
+                color: #d5f3ff;
+                font-size: clamp(1.08rem, 1.7vw, 1.45rem);
+                line-height: 1.43;
+            }
+
+            .deliverables {
+                position: relative;
+                z-index: 1;
+                margin-top: 26px;
+            }
+
+            .section-label {
+                margin: 0 0 12px;
+                color: #a6ff00;
+                font-family: "Orbitron", sans-serif;
+                font-size: 0.68rem;
+                letter-spacing: 0.13em;
+                text-transform: uppercase;
+            }
+
+            .deliverable-list {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 10px;
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+
+            .deliverable-list li {
+                position: relative;
+                min-height: 48px;
+                border: 1px solid rgba(0,245,255,0.18);
+                border-radius: 16px;
+                padding: 13px 13px 13px 38px;
+                color: #ecfbff;
+                background: rgba(0,245,255,0.065);
+                font-size: 1.02rem;
+                font-weight: 700;
+                line-height: 1.22;
+            }
+
+            .deliverable-list li::before {
+                content: "//";
+                position: absolute;
+                left: 13px;
+                top: 13px;
+                color: #00f5ff;
+                font-family: "Orbitron", sans-serif;
+                font-size: 0.72rem;
+            }
+
+            .detail-cta-row {
+                position: relative;
+                z-index: 1;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 30px;
+            }
+
+            .cta {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 46px;
+                border: 1px solid rgba(0, 245, 255, 0.25);
+                border-radius: 999px;
+                padding: 12px 18px;
+                color: #ecfbff;
+                background: rgba(0,245,255,0.11);
+                font-family: "Orbitron", sans-serif;
+                font-size: 0.72rem;
+                letter-spacing: 0.11em;
+                text-transform: uppercase;
+                text-decoration: none;
+                transition: transform 180ms ease, background 180ms ease, box-shadow 180ms ease;
+            }
+
+            .cta:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 0 22px rgba(0,245,255,0.22);
+            }
+
+            .cta.primary {
+                color: #001116;
+                background: #00f5ff;
+                box-shadow: 0 0 24px rgba(0,245,255,0.32);
+            }
+
+            .side-panel {
+                padding: 24px;
+            }
+
+            .side-panel h3 {
+                position: relative;
+                z-index: 1;
+                margin: 0 0 18px;
+                font-family: "Orbitron", sans-serif;
+                font-size: 1rem;
+                letter-spacing: 0.04em;
+                text-transform: uppercase;
+                color: #ecfbff;
+            }
+
+            .signal-grid {
+                position: relative;
+                z-index: 1;
+                display: grid;
+                gap: 12px;
+            }
+
+            .signal {
+                display: grid;
+                grid-template-columns: 120px 1fr;
+                gap: 12px;
+                align-items: center;
+                border: 1px solid rgba(255,255,255,0.1);
+                border-radius: 16px;
+                padding: 13px;
+                background: rgba(255,255,255,0.045);
+            }
+
+            .signal span {
+                color: #8aacbd;
+                font-family: "Orbitron", sans-serif;
+                font-size: 0.6rem;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+            }
+
+            .signal strong {
+                color: #ecfbff;
+                font-size: 1.05rem;
+            }
+
+            .price-bars {
+                position: relative;
+                z-index: 1;
+                display: grid;
+                gap: 14px;
+                margin-top: 24px;
+                padding-top: 20px;
+                border-top: 1px solid rgba(255,255,255,0.1);
+            }
+
+            .bar-row {
+                display: grid;
+                grid-template-columns: 108px 1fr 72px;
+                align-items: center;
+                gap: 10px;
+                color: #8aacbd;
+                font-size: 0.92rem;
+            }
+
+            .bar-label {
+                overflow: hidden;
+                color: #ecfbff;
+                font-weight: 700;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+
+            .bar-track {
+                height: 12px;
+                overflow: hidden;
+                border: 1px solid rgba(255,255,255,0.1);
+                border-radius: 999px;
+                background: rgba(255,255,255,0.05);
+            }
+
+            .bar-fill {
+                display: block;
+                width: var(--w);
+                height: 100%;
+                background: linear-gradient(90deg, #00f5ff, #ff2bd6);
+                box-shadow: 0 0 16px #00f5ff;
+            }
+
+            @keyframes sweep {
+                from { transform: translateX(-72%); }
+                to { transform: translateX(72%); }
+            }
+
+            @media (max-width: 1080px) {
+                .pricing-hero,
+                .detail-layout {
+                    grid-template-columns: 1fr;
+                }
+                .price-module { text-align: left; }
+            }
+
+            @media (max-width: 820px) {
+                .pricing-hero { padding: 22px; }
+                .main-detail, .side-panel { padding: 20px; }
+                .signal { grid-template-columns: 1fr; }
+                .deliverable-list { grid-template-columns: 1fr; }
+                .bar-row { grid-template-columns: 88px 1fr 62px; }
+            }
+        </style>
+        <section class="pricing-system" aria-label="Interactive pricing tiers">
+            <header class="pricing-hero">
+                <div>
+                    <h1>Scoring License Matrix</h1>
+                    <p class="subtitle">Choose the license, commission, score, or retainer lane that matches the project. Every tier is built to make scope, delivery, and usage rights easy to understand.</p>
+                </div>
+                <div class="speed-note">Cyan cinematic motion mode // 5 pricing tiers</div>
+            </header>
+
+            <nav class="tier-rail" aria-label="Pricing tier menu">
+                <div class="tier-menu" id="tierMenu"></div>
+            </nav>
+
+            <section class="detail-layout">
+                <article class="panel main-detail">
+                    <div class="detail-top">
+                        <h2 class="detail-title" id="detailTitle"></h2>
+                        <div class="price-module">
+                            <small>Tier Price</small>
+                            <strong id="detailPrice"></strong>
+                        </div>
+                    </div>
+                    <p class="detail-copy" id="detailCopy"></p>
+                    <div class="deliverables">
+                        <p class="section-label">Included / Important Terms</p>
+                        <ul class="deliverable-list" id="deliverables"></ul>
+                    </div>
+                    <div class="detail-cta-row">
+                        <a class="cta primary" id="detailCta" href="#">Select Tier</a>
+                        <a class="cta" href="CSL_booking.html">Book a fit call</a>
+                        <a class="cta" href="CSL_faq.html">Read FAQ</a>
+                    </div>
+                </article>
+
+                <aside class="panel side-panel">
+                    <h3>Tier Signal Map</h3>
+                    <div class="signal-grid" id="signalGrid"></div>
+                    <div class="price-bars" id="priceBars"></div>
+                </aside>
+            </section>
+        </section>
+        <script>
+            const tiers = [
+                {
+                    id: "creator-license",
+                    code: "Tier 01",
+                    title: "Creator License",
+                    price: "$599",
+                    amount: 599,
+                    short: "Catalog track. Non-exclusive. Worldwide. Immediate delivery.",
+                    description: "Catalog track, non-exclusive. Online use only.",
+                    details: [
+                        "YouTube, TikTok, Instagram, podcasts",
+                        "Non-exclusive worldwide license",
+                        "WAV + MP3 delivery",
+                        "License Certificate PDF",
+                        "Not broadcast-eligible"
+                    ],
+                    signals: {
+                        Source: "Catalog track",
+                        Use: "Online only",
+                        License: "Non-exclusive",
+                        Delivery: "WAV + MP3"
+                    }
+                },
+                {
+                    id: "sync-license",
+                    code: "Tier 02",
+                    title: "Sync License",
+                    price: "$999",
+                    amount: 999,
+                    short: "Broadcast-eligible, with stems included.",
+                    description: "Broadcast-eligible, with stems included.",
+                    details: [
+                        "Indie film, TV, digital ads, games",
+                        "Broadcast-eligible",
+                        "WAV + MP3 + stems",
+                        "Non-exclusive, worldwide, perpetual",
+                        "License Certificate PDF"
+                    ],
+                    signals: {
+                        Source: "Catalog track",
+                        Use: "Broadcast-ready",
+                        Assets: "Stems included",
+                        License: "Perpetual"
+                    }
+                },
+                {
+                    id: "custom-music",
+                    code: "Tier 03",
+                    title: "Custom Music",
+                    price: "$1,499",
+                    amount: 1499,
+                    short: "Commissioned original tracks. Single tracks or packages for specific projects.",
+                    description: "Commissioned original tracks. Single track or package.",
+                    details: [
+                        "1 original composition (up to 3 min)",
+                        "2 revision rounds",
+                        "WAV + MP3 + stems",
+                        "Non-exclusive license (default)",
+                        "Exclusive upgrade available"
+                    ],
+                    signals: {
+                        Source: "Original music",
+                        Length: "Up to 3 min",
+                        Revisions: "2 rounds",
+                        Upgrade: "Exclusive option"
+                    }
+                },
+                {
+                    id: "full-score",
+                    code: "Tier 04",
+                    title: "Full Score",
+                    price: "$2,999",
+                    amount: 2999,
+                    short: "Complete soundtrack. Multiple tracks, cohesive theme, stems included.",
+                    description: "Complete soundtrack. Multiple tracks, cohesive theme.",
+                    details: [
+                        "3-5 original compositions",
+                        "Cohesive theme across all tracks",
+                        "2 revision rounds per track",
+                        "WAV + MP3 + stems",
+                        "Exclusive upgrade available"
+                    ],
+                    signals: {
+                        Source: "Original score",
+                        Tracks: "3-5 cues",
+                        Theme: "Cohesive",
+                        Stems: "Included"
+                    }
+                },
+                {
+                    id: "retainer",
+                    code: "Tier 05",
+                    title: "Retainer",
+                    price: "Custom",
+                    amount: 3600,
+                    short: "Ongoing scoring on a consistent schedule. Application required.",
+                    description: "Ongoing scoring on a consistent schedule. Application required.",
+                    details: [
+                        "Steady stream of original music",
+                        "Monthly track delivery",
+                        "Prioritized turnaround",
+                        "Flexible exclusivity options",
+                        "Application required"
+                    ],
+                    signals: {
+                        Cadence: "Ongoing",
+                        Delivery: "Monthly",
+                        Priority: "High",
+                        Access: "Application"
+                    }
+                }
+            ];
+
+            const tierMenu = document.getElementById("tierMenu");
+            const maxAmount = Math.max(...tiers.map(tier => tier.amount));
+            let activeIndex = 0;
+
+            function renderMenu() {
+                tierMenu.innerHTML = tiers.map((tier, index) => `
+                    <button class="tier-button ${index === activeIndex ? "active" : ""}" data-index="${index}" aria-pressed="${index === activeIndex}">
+                        <span class="tag">${tier.code}</span>
+                        <h2>${tier.title}</h2>
+                        <div class="tier-price">${tier.price}</div>
+                        <p class="tier-note">${tier.short}</p>
+                    </button>
+                `).join("");
+
+                tierMenu.querySelectorAll(".tier-button").forEach(button => {
+                    button.addEventListener("click", () => setActive(Number(button.dataset.index)));
+                });
+            }
+
+            function renderBars() {
+                document.getElementById("priceBars").innerHTML = tiers.map(tier => {
+                    const width = Math.max(14, Math.round((tier.amount / maxAmount) * 100));
+                    return `
+                        <div class="bar-row">
+                            <span class="bar-label">${tier.title}</span>
+                            <span class="bar-track"><span class="bar-fill" style="--w: ${width}%"></span></span>
+                            <span>${tier.price}</span>
+                        </div>
+                    `;
+                }).join("");
+            }
+
+            function setActive(index) {
+                activeIndex = index;
+                const tier = tiers[index];
+                document.getElementById("detailTitle").textContent = tier.title;
+                document.getElementById("detailPrice").textContent = tier.price;
+                document.getElementById("detailCopy").textContent = tier.description;
+                document.getElementById("deliverables").innerHTML = tier.details.map(item => `<li>${item}</li>`).join("");
+                document.getElementById("signalGrid").innerHTML = Object.entries(tier.signals).map(([label, value]) => `
+                    <div class="signal"><span>${label}</span><strong>${value}</strong></div>
+                `).join("");
+                const cta = document.getElementById("detailCta");
+                cta.href = `#packages`;
+                cta.textContent = tier.title === "Retainer" ? "Apply for Retainer" : "Select This Tier";
+                renderMenu();
+            }
+
+            renderBars();
+            setActive(0);
+        </script>
+    </div>
+
+    <!-- ═══════════════════════════════════════
          FIVE PACKAGES
     ════════════════════════════════════════ -->
     <div class="sec" id="packages">
