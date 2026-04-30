@@ -1233,7 +1233,12 @@
     <script>
         function toggleModal() {
             const modal = document.getElementById('quoteModal');
-            modal.classList.toggle('active');
+            if (modal) {
+                modal.classList.toggle('active');
+                console.log('Modal toggled:', modal.classList.contains('active'));
+            } else {
+                console.error('Modal not found');
+            }
         }
 
         function closeModalOutside(event) {
@@ -1246,7 +1251,7 @@
         document.addEventListener('keydown', function(event) {
             if (event.key === 'Escape') {
                 const modal = document.getElementById('quoteModal');
-                if (modal.classList.contains('active')) {
+                if (modal && modal.classList.contains('active')) {
                     toggleModal();
                 }
             }
