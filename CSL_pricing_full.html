@@ -63,8 +63,8 @@
         .sec-title{font-size:clamp(1.5rem,2.8vw,2rem);font-weight:900;letter-spacing:-0.5px;margin-bottom:0.5rem;}
         .sec-sub{color:var(--muted);font-size:0.95rem;line-height:1.65;max-width:720px;}
 
-        /* CATALOG TIER CARDS (4-card layout, lower-to-higher) */
-        .catalog-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;}
+        /* CATALOG TIER CARDS (5-card layout) */
+        .catalog-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;}
         .cat-card{
             background:var(--bg2);border:1px solid var(--border);border-radius:16px;
             padding:1.5rem;position:relative;overflow:hidden;
@@ -201,7 +201,7 @@
         .footer-links a:hover{color:var(--text);}
         footer p{color:var(--muted);font-size:0.8rem;}
 
-        @media(max-width:980px){.catalog-grid{grid-template-columns:repeat(2,1fr);}}
+        @media(max-width:1100px){.catalog-grid{grid-template-columns:repeat(3,1fr);}}
         @media(max-width:720px){.nav-links{display:none;}.catalog-grid{grid-template-columns:1fr;}.retainer-block{flex-direction:column;align-items:flex-start;}}
     </style>
 <link rel="stylesheet" href="csl-bg.css">
@@ -225,13 +225,6 @@
     <h1>Real prices.<br><span class="grad">Real licenses.</span></h1>
     <p>License a track, commission custom, or retain monthly. Every price below is final &mdash; no hidden fees.</p>
     <div class="hero-note"><i class="fas fa-lock"></i>&nbsp; Every license includes full legal documentation</div>
-    <div class="anchors">
-        <a href="#catalog" class="anchor-btn"><i class="fas fa-compact-disc"></i>&nbsp; Catalog Licensing</a>
-        <a href="#custom" class="anchor-btn"><i class="fas fa-music"></i>&nbsp; Custom Music</a>
-        <a href="#retainer" class="anchor-btn"><i class="fas fa-sync"></i>&nbsp; Retainers</a>
-        <a href="#addons" class="anchor-btn"><i class="fas fa-plus"></i>&nbsp; Add-Ons</a>
-        <a href="#compare" class="anchor-btn"><i class="fas fa-table"></i>&nbsp; Compare</a>
-    </div>
 </div>
 
 <!-- ─── PRICE SPECTRUM INFOGRAPHIC ─── -->
@@ -297,27 +290,25 @@
 <div class="main">
 
     <!-- ═══════════════════════════════════════
-         SECTION 1 — CATALOG LICENSING
+         FIVE PACKAGES
     ════════════════════════════════════════ -->
-    <div class="sec" id="catalog">
+    <div class="sec" id="packages">
         <div class="sec-header">
-            <div class="sec-label">Catalog Licensing</div>
-            <div class="sec-title">License a track that already exists.</div>
-            <div class="sec-sub">Two base tiers. Upgrade to Premium for DAW rework, Copyright Office registration, and national broadcast rights.</div>
+            <div class="sec-label">Five Ways to Work With Us</div>
+            <div class="sec-title">Choose your path.</div>
+            <div class="sec-sub">Five clear options. No hidden tiers. No confusing upgrades. Pick what fits your project.</div>
         </div>
 
         <div class="catalog-grid">
 
-            <!-- Tier 1: Creator License -->
+            <!-- Package 1: Creator License -->
             <div class="cat-card creator">
-                <span class="tier-ribbon standard">Base</span>
                 <div class="cat-icon"><i class="fas fa-youtube"></i></div>
-                <div class="cat-for">Creators &amp; Podcasters</div>
                 <div class="cat-name">Creator License</div>
                 <div class="cat-price">$599</div>
-                <div class="cat-tagline">Online use only. Perfect for YouTube channels, podcasts, and social content.</div>
+                <div class="cat-tagline">Catalog track, non-exclusive. Online use only.</div>
                 <ul class="cat-list">
-                    <li><i class="fas fa-check"></i>YouTube, TikTok, Instagram, podcast background</li>
+                    <li><i class="fas fa-check"></i>YouTube, TikTok, Instagram, podcasts</li>
                     <li><i class="fas fa-check"></i>Non-exclusive worldwide license</li>
                     <li><i class="fas fa-check"></i>WAV + MP3 delivery</li>
                     <li><i class="fas fa-check"></i>License Certificate PDF</li>
@@ -326,14 +317,12 @@
                 <a href="CSL_portfolio.html" class="cat-btn"><i class="fas fa-headphones"></i>&nbsp; Browse Catalog</a>
             </div>
 
-            <!-- Tier 2: Sync License -->
+            <!-- Package 2: Sync License -->
             <div class="cat-card sync">
-                <span class="tier-ribbon standard">Base</span>
                 <div class="cat-icon"><i class="fas fa-film"></i></div>
-                <div class="cat-for">Indie Film &amp; Broadcast</div>
                 <div class="cat-name">Sync License</div>
                 <div class="cat-price">$999</div>
-                <div class="cat-tagline">Broadcast-eligible with stems included. For indie film, TV, ads, and games.</div>
+                <div class="cat-tagline">Broadcast-eligible, with stems included.</div>
                 <ul class="cat-list">
                     <li><i class="fas fa-check"></i>Indie film, TV, digital ads, games</li>
                     <li><i class="fas fa-check"></i>Broadcast-eligible</li>
@@ -344,319 +333,54 @@
                 <a href="CSL_portfolio.html" class="cat-btn"><i class="fas fa-headphones"></i>&nbsp; Browse Catalog</a>
             </div>
 
-            <!-- Tier 3: Sync Premium -->
+            <!-- Package 3: Custom Music -->
             <div class="cat-card premium">
-                <span class="tier-ribbon premium">Premium Upgrade</span>
-                <div class="cat-icon"><i class="fas fa-certificate"></i></div>
-                <div class="cat-for">Agency &amp; National Broadcast</div>
-                <div class="cat-name">Sync Premium</div>
-                <div class="cat-price">$3,500</div>
-                <div class="cat-tagline">DAW-reworked, Copyright Office registered, national broadcast-ready.</div>
+                <div class="cat-icon"><i class="fas fa-music"></i></div>
+                <div class="cat-name">Custom Music</div>
+                <div class="cat-price">$1,499</div>
+                <div class="cat-tagline">Commissioned original tracks. Single track or package.</div>
                 <ul class="cat-list">
-                    <li><i class="fas fa-check"></i>Everything in Sync License</li>
-                    <li><i class="fas fa-check"></i>Substantial DAW rework by producer</li>
-                    <li><i class="fas fa-check"></i>U.S. Copyright Office registered</li>
+                    <li><i class="fas fa-check"></i>1 original composition (up to 3 min)</li>
+                    <li><i class="fas fa-check"></i>2 revision rounds</li>
+                    <li><i class="fas fa-check"></i>WAV + MP3 + stems</li>
+                    <li><i class="fas fa-check"></i>Non-exclusive license (default)</li>
                     <li><i class="fas fa-check"></i>Exclusive upgrade available</li>
-                    <li><i class="fas fa-check"></i>WFH / full ownership upgrade available</li>
-                    <li><i class="fas fa-check"></i>National broadcast-ready</li>
                 </ul>
-                <a href="CSL_portfolio.html" class="cat-btn"><i class="fas fa-star"></i>&nbsp; Browse Premium</a>
+                <a href="CSL_booking.html" class="cat-btn"><i class="fas fa-paper-plane"></i>&nbsp; Start a Single</a>
             </div>
 
-            <!-- Tier 4: Customized Version -->
+            <!-- Package 4: Full Score -->
             <div class="cat-card custom">
-                <span class="tier-ribbon premium">Premium +</span>
-                <div class="cat-icon"><i class="fas fa-wand-magic-sparkles"></i></div>
-                <div class="cat-for">Tailored to Your Project</div>
-                <div class="cat-name">Customized Version</div>
-                <div class="cat-price">$4,500</div>
-                <div class="cat-tagline">A Premium catalog track, remixed to fit your specific project's length, key, and mood.</div>
+                <div class="cat-icon"><i class="fas fa-globe"></i></div>
+                <div class="cat-name">Full Score</div>
+                <div class="cat-price">$2,999</div>
+                <div class="cat-tagline">Complete soundtrack. Multiple tracks, cohesive theme.</div>
                 <ul class="cat-list">
-                    <li><i class="fas fa-check"></i>Everything in Sync Premium</li>
-                    <li><i class="fas fa-check"></i>Length adjusted to your project</li>
-                    <li><i class="fas fa-check"></i>Mix tailored to your sonic brief</li>
-                    <li><i class="fas fa-check"></i>1 revision round included</li>
-                    <li><i class="fas fa-check"></i>Alternate versions available</li>
+                    <li><i class="fas fa-check"></i>3–5 original compositions</li>
+                    <li><i class="fas fa-check"></i>Cohesive theme across all tracks</li>
+                    <li><i class="fas fa-check"></i>2 revision rounds per track</li>
+                    <li><i class="fas fa-check"></i>WAV + MP3 + stems</li>
+                    <li><i class="fas fa-check"></i>Exclusive upgrade available</li>
                 </ul>
-                <a href="CSL_booking.html" class="cat-btn"><i class="fas fa-paper-plane"></i>&nbsp; Request Customization</a>
+                <a href="CSL_booking.html" class="cat-btn"><i class="fas fa-paper-plane"></i>&nbsp; Request Full Score</a>
             </div>
 
-        </div>
-    </div>
-
-    <!-- ═══════════════════════════════════════
-         SECTION 2 — CUSTOM MUSIC
-    ════════════════════════════════════════ -->
-    <div class="sec" id="custom">
-        <div class="sec-header">
-            <div class="sec-label">Custom Music</div>
-            <div class="sec-title">Commission something brand-new.</div>
-            <div class="sec-sub">Written for your project. Two base options: single track or complete soundtrack.</div>
-        </div>
-
-        <div class="custom-grid">
-
-            <div class="cm-card">
-                <div class="cm-icon"><i class="fas fa-music"></i></div>
-                <div class="cm-name">Custom Music</div>
-                <div class="cm-price">$1,499</div>
-                <div class="cm-tagline">Commissioned original tracks. Single track or package for specific projects.</div>
-                <ul class="cm-list">
-                    <li><i class="fas fa-check-circle"></i>1 original composition (up to 3 min)</li>
-                    <li><i class="fas fa-check-circle"></i>2 revision rounds</li>
-                    <li><i class="fas fa-check-circle"></i>WAV + MP3 + stems</li>
-                    <li><i class="fas fa-check-circle"></i>Non-exclusive license (default)</li>
-                    <li><i class="fas fa-check-circle"></i>Exclusive upgrade available</li>
+            <!-- Package 5: Retainer -->
+            <div class="cat-card" style="border-color:var(--gold);">
+                <div class="cat-icon" style="background:rgba(203, 213, 225,0.15);color:var(--gold);"><i class="fas fa-calendar-check"></i></div>
+                <div class="cat-name">Retainer</div>
+                <div class="cat-price" style="color:var(--gold);">Custom</div>
+                <div class="cat-tagline">Ongoing scoring on a consistent schedule. Application required.</div>
+                <ul class="cat-list">
+                    <li><i class="fas fa-check"></i>Steady stream of original music</li>
+                    <li><i class="fas fa-check"></i>Monthly track delivery</li>
+                    <li><i class="fas fa-check"></i>Prioritized turnaround</li>
+                    <li><i class="fas fa-check"></i>Flexible exclusivity options</li>
+                    <li><i class="fas fa-check"></i>Application required</li>
                 </ul>
-                <a href="CSL_booking.html" class="cm-btn"><i class="fas fa-arrow-right"></i>&nbsp; Start a Single</a>
+                <a href="CSL_booking.html" class="cat-btn" style="background:var(--gold);color:#0a0a0f;border:none;"><i class="fas fa-paper-plane"></i>&nbsp; Inquire About Retainer</a>
             </div>
 
-            <div class="cm-card pkg">
-                <div class="cm-icon"><i class="fas fa-globe"></i></div>
-                <div class="cm-name">Full Score</div>
-                <div class="cm-price">$2,999</div>
-                <div class="cm-tagline">Complete soundtrack. Multiple tracks, cohesive theme, stems included.</div>
-                <ul class="cm-list">
-                    <li><i class="fas fa-check-circle"></i>3–5 original compositions</li>
-                    <li><i class="fas fa-check-circle"></i>Cohesive theme across all tracks</li>
-                    <li><i class="fas fa-check-circle"></i>2 revision rounds per track</li>
-                    <li><i class="fas fa-check-circle"></i>WAV + MP3 + stems</li>
-                    <li><i class="fas fa-check-circle"></i>Exclusive upgrade available</li>
-                </ul>
-                <a href="CSL_booking.html" class="cm-btn"><i class="fas fa-arrow-right"></i>&nbsp; Request Full Score</a>
-            </div>
-
-            <div class="cm-card exclusive">
-                <div class="cm-icon"><i class="fas fa-layer-group"></i></div>
-                <div class="cm-name">Custom Package</div>
-                <div class="cm-price">Starting at $8,500</div>
-                <div class="cm-tagline">2–5 original tracks for series, film, campaign. Priced by scope with consultation.</div>
-                <ul class="cm-list">
-                    <li><i class="fas fa-check-circle"></i>2–5 original compositions</li>
-                    <li><i class="fas fa-check-circle"></i>2 revision rounds per track</li>
-                    <li><i class="fas fa-check-circle"></i>WAV + MP3 + stems</li>
-                    <li><i class="fas fa-check-circle"></i>30-min project consultation call</li>
-                    <li><i class="fas fa-check-circle"></i>Milestone-based timeline</li>
-                </ul>
-                <a href="CSL_booking.html" class="cm-btn"><i class="fas fa-arrow-right"></i>&nbsp; Request a Package</a>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- ═══════════════════════════════════════
-         SECTION 3 — RETAINER (quiet, by application)
-    ════════════════════════════════════════ -->
-    <div class="sec" id="retainer">
-        <div class="sec-header">
-            <div class="sec-label">Monthly Retainers</div>
-            <div class="sec-title">Ongoing music for brands and studios.</div>
-            <div class="sec-sub">Steady stream of original music. Four tiers scoped by track count, turnaround SLA, and exclusivity.</div>
-        </div>
-
-        <div class="retainer-block">
-            <div class="retainer-icon"><i class="fas fa-calendar-check"></i></div>
-            <div class="retainer-body">
-                <h3>By application only.</h3>
-                <p>Retainers are a long-term relationship, not a casual purchase. We accept a small number of retainer clients at a time so each one gets proper attention. Submit a short application and we'll book a discovery call to figure out which tier fits, exclusivity scope, and starting month.</p>
-                <div class="retainer-tiers">
-                    <span class="rt-chip"><strong>Creator</strong> &middot; $3,000/mo &middot; 2 tracks</span>
-                    <span class="rt-chip"><strong>Standard</strong> &middot; $6,500/mo &middot; 3 tracks</span>
-                    <span class="rt-chip"><strong>Studio</strong> &middot; $11,000/mo &middot; 5 tracks</span>
-                    <span class="rt-chip"><strong>Full-Service</strong> &middot; $18,000+/mo &middot; scoped</span>
-                </div>
-            </div>
-            <a href="CSL_booking.html?type=retainer" class="retainer-cta"><i class="fas fa-paper-plane"></i>&nbsp; Inquire About Retainer</a>
-        </div>
-    </div>
-
-    <!-- ═══════════════════════════════════════
-         SECTION 4 — ADD-ONS
-    ════════════════════════════════════════ -->
-    <div class="sec" id="addons">
-        <div class="sec-header">
-            <div class="sec-label">Add-Ons</div>
-            <div class="sec-title">Upgrade any project.</div>
-            <div class="sec-sub">Flat fees added at or before delivery. Rush only if achievable.</div>
-        </div>
-
-        <div class="addon-grid">
-            <div class="addon-card">
-                <div class="addon-icon"><i class="fas fa-sync"></i></div>
-                <div class="addon-text">
-                    <div class="addon-name">Extra revision round</div>
-                    <div class="addon-price">$150 per round</div>
-                </div>
-            </div>
-            <div class="addon-card">
-                <div class="addon-icon"><i class="fas fa-sliders-h"></i></div>
-                <div class="addon-text">
-                    <div class="addon-name">Alternate mix</div>
-                    <div class="addon-price">$250</div>
-                </div>
-            </div>
-            <div class="addon-card">
-                <div class="addon-icon"><i class="fas fa-bolt"></i></div>
-                <div class="addon-text">
-                    <div class="addon-name">Rush delivery (48hr)</div>
-                    <div class="addon-price">+100% of base</div>
-                </div>
-            </div>
-            <div class="addon-card">
-                <div class="addon-icon"><i class="fas fa-rocket"></i></div>
-                <div class="addon-text">
-                    <div class="addon-name">Rush delivery (24hr)</div>
-                    <div class="addon-price">+200% of base</div>
-                </div>
-            </div>
-            <div class="addon-card">
-                <div class="addon-icon"><i class="fas fa-layer-group"></i></div>
-                <div class="addon-text">
-                    <div class="addon-name">Stem-derivative license</div>
-                    <div class="addon-price">+$1,000</div>
-                </div>
-            </div>
-            <div class="addon-card">
-                <div class="addon-icon"><i class="fas fa-lock"></i></div>
-                <div class="addon-text">
-                    <div class="addon-name">Exclusive upgrade</div>
-                    <div class="addon-price">By quote</div>
-                </div>
-            </div>
-            <div class="addon-card">
-                <div class="addon-icon"><i class="fas fa-crown"></i></div>
-                <div class="addon-text">
-                    <div class="addon-name">Work-for-Hire upgrade</div>
-                    <div class="addon-price">By quote (Premium only)</div>
-                </div>
-            </div>
-            <div class="addon-card">
-                <div class="addon-icon"><i class="fas fa-clock"></i></div>
-                <div class="addon-text">
-                    <div class="addon-name">Track hold fee</div>
-                    <div class="addon-price">50% of license fee · 60 days</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- ═══════════════════════════════════════
-         SECTION 5 — COMPARISON TABLE
-    ════════════════════════════════════════ -->
-    <div class="sec" id="compare">
-        <div class="sec-header">
-            <div class="sec-label">Side-by-Side</div>
-            <div class="sec-title">Which option covers what?</div>
-            <div class="sec-sub">Match your use case to the right option. In doubt? <a href="CSL_booking.html" style="color:var(--blue);">send a brief &rsaquo;</a></div>
-        </div>
-
-        <div class="compare-wrap">
-            <table class="compare-table">
-                <thead>
-                    <tr>
-                        <th>Feature</th>
-                        <th>Creator $599</th>
-                        <th>Sync $999</th>
-                        <th>Custom $1,499</th>
-                        <th>Full Score $2,999</th>
-                        <th>Retainer Custom</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Online content (YouTube, podcast)</td>
-                        <td><span class="cmp-yes">Yes</span></td>
-                        <td><span class="cmp-yes">Yes</span></td>
-                        <td><span class="cmp-yes">Yes</span></td>
-                        <td><span class="cmp-yes">Yes</span></td>
-                        <td><span class="cmp-yes">Yes</span></td>
-                    </tr>
-                    <tr>
-                        <td>Indie film &amp; digital ads</td>
-                        <td><span class="cmp-no">No</span></td>
-                        <td><span class="cmp-yes">Yes</span></td>
-                        <td><span class="cmp-yes">Yes</span></td>
-                        <td><span class="cmp-yes">Yes</span></td>
-                        <td><span class="cmp-yes">Yes</span></td>
-                    </tr>
-                    <tr>
-                        <td>Broadcast TV / national ads</td>
-                        <td><span class="cmp-no">No</span></td>
-                        <td><span class="cmp-yes">Yes</span></td>
-                        <td><span class="cmp-yes">Yes</span></td>
-                        <td><span class="cmp-yes">Yes</span></td>
-                        <td><span class="cmp-yes">Yes</span></td>
-                    </tr>
-                    <tr>
-                        <td>Stems included</td>
-                        <td><span class="cmp-no">No</span></td>
-                        <td><span class="cmp-yes">Yes</span></td>
-                        <td><span class="cmp-yes">Yes</span></td>
-                        <td><span class="cmp-yes">Yes</span></td>
-                        <td><span class="cmp-yes">Yes</span></td>
-                    </tr>
-                    <tr>
-                        <td>Custom composition</td>
-                        <td><span class="cmp-no">No</span></td>
-                        <td><span class="cmp-no">No</span></td>
-                        <td><span class="cmp-yes">Yes</span></td>
-                        <td><span class="cmp-yes">Yes</span></td>
-                        <td><span class="cmp-yes">Yes</span></td>
-                    </tr>
-                    <tr>
-                        <td>Multiple tracks</td>
-                        <td><span class="cmp-no">No</span></td>
-                        <td><span class="cmp-no">No</span></td>
-                        <td><span class="cmp-no">No</span></td>
-                        <td><span class="cmp-yes">Yes</span></td>
-                        <td><span class="cmp-yes">Yes</span></td>
-                    </tr>
-                    <tr>
-                        <td>Cohesive theme</td>
-                        <td><span class="cmp-no">No</span></td>
-                        <td><span class="cmp-no">No</span></td>
-                        <td><span class="cmp-no">No</span></td>
-                        <td><span class="cmp-yes">Yes</span></td>
-                        <td><span class="cmp-yes">Yes</span></td>
-                    </tr>
-                    <tr>
-                        <td>Ongoing capacity</td>
-                        <td><span class="cmp-no">No</span></td>
-                        <td><span class="cmp-no">No</span></td>
-                        <td><span class="cmp-no">No</span></td>
-                        <td><span class="cmp-no">No</span></td>
-                        <td><span class="cmp-yes">Yes</span></td>
-                    </tr>
-                    <tr>
-                        <td>Delivery format</td>
-                        <td>WAV + MP3</td>
-                        <td>WAV + MP3 + stems</td>
-                        <td>WAV + MP3 + stems</td>
-                        <td>WAV + MP3 + stems</td>
-                        <td>WAV + MP3 + stems</td>
-                    </tr>
-                    <tr>
-                        <td>Typical turnaround</td>
-                        <td>Immediate</td>
-                        <td>Immediate</td>
-                        <td>5–10 business days</td>
-                        <td>10–15 business days</td>
-                        <td>Monthly schedule</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-
-    <!-- VALUE STRIP — compact icon row -->
-    <div class="sec">
-        <div class="explainer">
-            <div class="explainer-grid">
-                <div class="expl-item"><div class="expl-icon"><i class="fas fa-file-signature"></i></div><div><h4>Written license</h4><p>Territory, term, media in writing.</p></div></div>
-                <div class="expl-item"><div class="expl-icon"><i class="fas fa-certificate"></i></div><div><h4>License Certificate</h4><p>Branded PDF for broadcasters &amp; platforms.</p></div></div>
-                <div class="expl-item"><div class="expl-icon"><i class="fas fa-shield-halved"></i></div><div><h4>Indemnification</h4><p>Contractual protection on every track.</p></div></div>
-                <div class="expl-item"><div class="expl-icon"><i class="fas fa-circle-info"></i></div><div><h4>AI transparency</h4><p>Hybrid workflow disclosed in every contract.</p></div></div>
-            </div>
         </div>
     </div>
 
