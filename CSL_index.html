@@ -795,39 +795,43 @@
         /* MODAL */
         .modal-overlay {
             position: fixed;
-            right: 0;
-            bottom: 6.25rem;
-            width: min(640px, calc(100vw - 2rem));
-            max-height: calc(100vh - 8.5rem);
+            inset: 0;
             z-index: 10040;
             display: block;
-            padding: 0 2rem 0 0;
             opacity: 0;
+            visibility: hidden;
             pointer-events: none;
-            transform: translateY(18px) scale(0.98);
-            transition: opacity 0.24s ease, transform 0.24s ease;
+            transition: opacity 0.2s ease, visibility 0.2s ease;
         }
 
         .modal-overlay.active {
             opacity: 1;
+            visibility: visible;
             pointer-events: auto;
-            transform: translateY(0) scale(1);
         }
 
         .modal-content {
+            position: fixed;
+            right: 2rem;
+            bottom: 6.25rem;
             background:
                 linear-gradient(145deg, rgba(11,20,38,0.98), rgba(3,8,18,0.98)),
                 var(--bg2);
             border: 1px solid rgba(59,130,246,0.35);
             border-radius: 22px;
             padding: 1.35rem;
-            max-width: none;
-            width: 100%;
+            width: min(640px, calc(100vw - 4rem));
             max-height: calc(100vh - 8.5rem);
             overflow-y: auto;
-            position: relative;
             box-shadow: 0 24px 70px rgba(0,0,0,0.55), 0 0 36px rgba(59,130,246,0.24);
             backdrop-filter: blur(16px);
+            pointer-events: auto;
+            transform: translateY(18px) scale(0.98);
+            transition: transform 0.24s ease;
+        }
+
+        .modal-overlay.active .modal-content {
+            transform: translateY(0) scale(1);
         }
 
         @keyframes slideInRight {
@@ -850,14 +854,13 @@
             }
 
             .modal-overlay {
-                right: 0;
-                bottom: 5.75rem;
-                width: 100vw;
-                max-height: calc(100vh - 7rem);
-                padding: 0 1rem;
+                inset: 0;
             }
 
             .modal-content {
+                right: 1rem;
+                bottom: 5.75rem;
+                width: calc(100vw - 2rem);
                 max-height: calc(100vh - 7rem);
                 padding: 1.1rem;
             }
@@ -1765,13 +1768,16 @@
             }
 
             .poster-hero {
-                display: flex;
-                flex-direction: column;
+                display: grid;
+                grid-template-columns: minmax(0, 1fr) minmax(220px, 340px);
                 align-items: center;
-                text-align: center;
-                gap: 18px;
+                gap: 24px;
                 padding: 20px 0 18px;
                 border-bottom: 1px solid rgba(255,255,255,0.1);
+            }
+
+            .poster-hero-copy {
+                text-align: left;
             }
 
             .poster-hero h1 {
@@ -1793,31 +1799,35 @@
                 letter-spacing: -0.04em;
             }
 
-            .seal {
-                width: 200px;
-                height: auto;
-                display: block;
+            .promise-picture {
+                position: relative;
+                margin: 0;
+                min-height: 250px;
                 border-radius: 12px;
                 overflow: hidden;
-                box-shadow: 0 0 30px rgba(0,245,255,0.3);
+                border: 1px solid rgba(0,245,255,0.34);
+                box-shadow: 0 0 30px rgba(0,245,255,0.3), inset 0 0 42px rgba(0,0,0,0.36);
+                background: #050d1b;
             }
 
-            .seal img {
+            .promise-picture::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                pointer-events: none;
+                background:
+                    linear-gradient(135deg, rgba(0,245,255,0.18), transparent 34%),
+                    linear-gradient(0deg, rgba(0,0,0,0.36), transparent 44%);
+                mix-blend-mode: screen;
+            }
+
+            .promise-picture img {
                 width: 100%;
-                height: auto;
+                height: 100%;
                 display: block;
+                object-fit: cover;
+                object-position: center;
                 border-radius: 12px;
-            }
-
-            .seal span {
-                max-width: 86px;
-                color: #a6ff00;
-                font-family: "Orbitron", sans-serif;
-                font-size: 0.6rem;
-                line-height: 1.35;
-                letter-spacing: 0.12em;
-                text-align: center;
-                text-transform: uppercase;
             }
 
             .manifesto-bar {
@@ -1968,7 +1978,8 @@
             @media (max-width: 760px) {
                 .poster-inner { padding: 18px; }
                 .poster-topline, .poster-hero, .manifesto-bar, .bottom-statement { grid-template-columns: 1fr; }
-                .seal { width: 108px; }
+                .poster-hero-copy { text-align: center; }
+                .promise-picture { min-height: 220px; }
                 .rule-row { grid-template-columns: 64px 1fr; min-height: 128px; }
                 .rule-number { font-size: 1.72rem; }
                 .rule-tag { grid-column: 2; justify-self: start; margin: 0 0 12px; }
@@ -1982,10 +1993,13 @@
                 </div>
 
                 <header class="poster-hero">
-                    <div>
+                    <div class="poster-hero-copy">
                         <h1>Founder's Promise</h1>
                         <h2>Why trust a new studio?</h2>
                     </div>
+                    <figure class="promise-picture" aria-label="Founder's Promise featured image">
+                        <img src="seal-image.jpg" alt="PlayStation themed studio visual for Founder's Promise">
+                    </figure>
                 </header>
 
                 <div class="manifesto-bar">
