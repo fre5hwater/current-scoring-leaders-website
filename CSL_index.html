@@ -773,7 +773,7 @@
             font-size: 0.95rem;
             font-weight: 800;
             cursor: pointer;
-            z-index: 999;
+            z-index: 10050;
             box-shadow: 0 4px 20px rgba(59,130,246,0.4);
             transition: all 0.3s;
             display: flex;
@@ -786,42 +786,48 @@
 
         .floating-btn i { font-size: 1.1rem; }
 
-        .floating-btn:hover {
-            transform: scale(1.1);
+        .floating-btn:hover,
+        .floating-btn.active {
+            transform: translateY(-2px) scale(1.04);
             box-shadow: 0 6px 30px rgba(59,130,246,0.6);
         }
 
         /* MODAL */
         .modal-overlay {
             position: fixed;
-            top: 0;
-            left: 0;
             right: 0;
-            bottom: 0;
-            background: rgba(0,0,0,0.8);
-            z-index: 10000;
-            display: none;
-            align-items: center;
-            justify-content: flex-end;
-            padding: 0;
+            bottom: 6.25rem;
+            width: min(640px, calc(100vw - 2rem));
+            max-height: calc(100vh - 8.5rem);
+            z-index: 10040;
+            display: block;
+            padding: 0 2rem 0 0;
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(18px) scale(0.98);
+            transition: opacity 0.24s ease, transform 0.24s ease;
         }
 
         .modal-overlay.active {
-            display: flex;
+            opacity: 1;
+            pointer-events: auto;
+            transform: translateY(0) scale(1);
         }
 
         .modal-content {
-            background: var(--bg2);
-            border: 1px solid var(--border);
-            border-left: none;
-            border-radius: 20px 0 0 20px;
-            padding: 3rem 2rem;
-            max-width: 600px;
+            background:
+                linear-gradient(145deg, rgba(11,20,38,0.98), rgba(3,8,18,0.98)),
+                var(--bg2);
+            border: 1px solid rgba(59,130,246,0.35);
+            border-radius: 22px;
+            padding: 1.35rem;
+            max-width: none;
             width: 100%;
-            max-height: 100vh;
+            max-height: calc(100vh - 8.5rem);
             overflow-y: auto;
             position: relative;
-            animation: slideInRight 0.4s ease;
+            box-shadow: 0 24px 70px rgba(0,0,0,0.55), 0 0 36px rgba(59,130,246,0.24);
+            backdrop-filter: blur(16px);
         }
 
         @keyframes slideInRight {
@@ -832,6 +838,33 @@
             to {
                 opacity: 1;
                 transform: translateX(0);
+            }
+        }
+
+        @media (max-width: 760px) {
+            .floating-btn {
+                right: 1rem;
+                bottom: 1rem;
+                width: calc(100vw - 2rem);
+                min-width: 0;
+            }
+
+            .modal-overlay {
+                right: 0;
+                bottom: 5.75rem;
+                width: 100vw;
+                max-height: calc(100vh - 7rem);
+                padding: 0 1rem;
+            }
+
+            .modal-content {
+                max-height: calc(100vh - 7rem);
+                padding: 1.1rem;
+            }
+
+            .modal-content > div {
+                grid-template-columns: 1fr !important;
+                gap: 1rem !important;
             }
         }
 
@@ -1194,14 +1227,14 @@
 
 
     <!-- FLOATING BUTTON -->
-    <button class="floating-btn" onclick="toggleModal()">
+    <button class="floating-btn" type="button" onclick="toggleModal()" aria-controls="quoteModal" aria-expanded="false">
         <i class="fas fa-file-invoice"></i> Request Quote
     </button>
 
     <!-- MODAL -->
     <div class="modal-overlay" id="quoteModal" onclick="closeModalOutside(event)">
         <div class="modal-content">
-            <button class="modal-close" onclick="toggleModal()">
+            <button class="modal-close" type="button" onclick="toggleModal()" aria-label="Close quote form">
                 <i class="fas fa-times"></i>
             </button>
             <div style="display:grid;grid-template-columns:1fr 1.1fr;gap:2rem;align-items:start;">
@@ -1238,15 +1271,27 @@
     </div>
 
     <script>
+        function setQuoteModalOpen(open) {
+            const modal = document.getElementById('quoteModal');
+            const button = document.querySelector('.floating-btn');
+            if (!modal) return;
+
+            modal.classList.toggle('active', open);
+            if (button) {
+                button.classList.toggle('active', open);
+                button.setAttribute('aria-expanded', String(open));
+            }
+        }
+
         function toggleModal() {
             const modal = document.getElementById('quoteModal');
             if (!modal) return;
-            modal.classList.toggle('active');
+            setQuoteModalOpen(!modal.classList.contains('active'));
         }
 
         function closeModalOutside(event) {
             if (event.target.classList.contains('modal-overlay')) {
-                toggleModal();
+                setQuoteModalOpen(false);
             }
         }
 
@@ -1255,7 +1300,7 @@
             if (event.key === 'Escape') {
                 const modal = document.getElementById('quoteModal');
                 if (modal && modal.classList.contains('active')) {
-                    toggleModal();
+                    setQuoteModalOpen(false);
                 }
             }
         });
@@ -1670,11 +1715,12 @@
             .poster-sheet {
                 position: relative;
                 width: min(940px, 100%);
+                min-height: 680px;
                 overflow: hidden;
                 border: 1px solid rgba(0, 245, 255, 0.28);
                 border-radius: 26px;
                 background:
-                    linear-gradient(135deg, rgba(5, 13, 27, 0.5), rgba(5, 13, 27, 0.28)),
+                    linear-gradient(90deg, rgba(5, 13, 27, 0.84) 0%, rgba(5, 13, 27, 0.58) 48%, rgba(5, 13, 27, 0.2) 100%),
                     url('seal-image.jpg') center center / cover no-repeat;
                 box-shadow: 0 0 44px rgba(0,245,255,0.2), inset 0 0 88px rgba(0,245,255,0.035);
                 margin: 0 auto;
@@ -1697,8 +1743,11 @@
             .poster-inner {
                 position: relative;
                 z-index: 2;
+                min-height: 680px;
                 padding: 26px;
-                background: linear-gradient(90deg, rgba(5, 13, 27, 0.78), rgba(5, 13, 27, 0.44));
+                background:
+                    radial-gradient(circle at 82% 20%, rgba(0,245,255,0.12), transparent 34%),
+                    linear-gradient(90deg, rgba(5, 13, 27, 0.68), rgba(5, 13, 27, 0.18));
             }
 
             .poster-topline {
