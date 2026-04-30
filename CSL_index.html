@@ -1752,17 +1752,21 @@
             .seal {
                 width: 60px;
                 aspect-ratio: 1;
-                display: grid;
-                place-items: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 border: 1px solid rgba(0, 245, 255, 0.28);
                 border-radius: 50%;
                 background: radial-gradient(circle, rgba(0,245,255,0.18), transparent 62%), rgba(0,0,0,0.28);
                 box-shadow: 0 0 25px rgba(0,245,255,0.2), inset 0 0 25px rgba(0,245,255,0.08);
+                overflow: hidden;
             }
 
-            .seal i {
-                font-size: 1.5rem;
-                color: #00f5ff;
+            .seal img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 50%;
             }
 
             .seal span {
@@ -1942,7 +1946,7 @@
                         <h1>Founder's Promise</h1>
                         <h2>Why trust a new studio?</h2>
                     </div>
-                    <div class="seal"><i class="fas fa-certificate"></i></div>
+                    <div class="seal"><img src="seal-image.jpg" alt="Seal"></div>
                 </header>
 
                 <div class="manifesto-bar">
