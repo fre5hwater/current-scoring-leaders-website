@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Study: 7-Level Gaming Soundtrack | Current Scoring Leaders</title>
+<meta name="description" content="How Current Scoring Leaders built an escalating 7-level adaptive soundtrack — from chiptune nostalgia to boss-fight tension — designed to feel like one continuous journey.">
+<link rel="canonical" href="https://currentscoringleaders.com/CSL_case_study_gaming.html">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Current Scoring Leaders">
+<meta property="og:title" content="Case Study: Building a 7-Level Adaptive Game Score">
+<meta property="og:description" content="Inside the brief, the build, and the deliverables for an escalating 7-part adaptive gaming soundtrack.">
+<meta property="og:image" content="https://currentscoringleaders.com/img_csl_studio.webp">
+<meta property="og:url" content="https://currentscoringleaders.com/CSL_case_study_gaming.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Case Study: 7-Level Gaming Soundtrack">
+<meta name="twitter:description" content="Inside the brief, build, and deliverables for an escalating 7-part adaptive gaming soundtrack.">
+<meta name="twitter:image" content="https://currentscoringleaders.com/img_csl_studio.webp">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<style>
+:root{--bg:#0a0a0f;--bg2:#0f0f18;--bg3:#14141f;--blue:#3b82f6;--purple: #60a5fa;--green:#10b981;--gold: #cbd5e1;--text:#f1f5f9;--muted:#94a3b8;--border:#1e1e2e;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;overflow-x:hidden;}
+body::after{content:'';position:fixed;inset:0;background:url('img_csl_studio.webp') right bottom / 480px auto no-repeat;opacity:0.06;pointer-events:none;z-index:0;filter:brightness(1.5);}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,15,0.94);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center;}
+.nav-logo img{height:120px;width:auto;}
+.nav-links{display:flex;gap:2rem;list-style:none;}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:0.9rem;font-weight:500;}
+.nav-links a:hover{color:var(--text);}
+.nav-cta{background:var(--blue);color:white !important;padding:0.5rem 1.25rem;border-radius:8px;font-weight:600 !important;}
+
+.hero{padding:8rem 2rem 3rem;max-width:1100px;margin:0 auto;text-align:center;position:relative;}
+.eyebrow{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(59,130,246,0.1);border:1px solid rgba(59,130,246,0.3);color:var(--blue);padding:0.4rem 1rem;border-radius:20px;font-size:0.78rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:1.5rem;}
+h1{font-size:clamp(2.2rem,5vw,3.8rem);font-weight:900;letter-spacing:-1px;line-height:1.15;margin-bottom:1rem;}
+h1 .grad{background:linear-gradient(135deg,var(--blue),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.lede{color:var(--muted);font-size:1.1rem;max-width:720px;margin:0 auto 2rem;}
+
+.meta-strip{display:flex;justify-content:center;gap:2.5rem;flex-wrap:wrap;padding:1.5rem 0;margin:0 0 3rem;border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.meta-item{text-align:center;}
+.meta-label{font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:0.3rem;}
+.meta-value{font-weight:700;font-size:0.95rem;}
+
+.section{max-width:850px;margin:0 auto;padding:3rem 2rem;position:relative;z-index:1;}
+.section-label{font-size:0.78rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--blue);margin-bottom:0.75rem;}
+.section h2{font-size:clamp(1.6rem,2.8vw,2.2rem);font-weight:800;letter-spacing:-0.5px;margin-bottom:1.25rem;}
+.section p{color:#cbd5e1;font-size:1rem;margin-bottom:1.25rem;}
+.section ul{margin:0 0 1.5rem 1.5rem;color:#cbd5e1;}
+.section li{margin-bottom:0.5rem;}
+
+.callout{background:var(--bg2);border-left:3px solid var(--blue);border-radius:8px;padding:1.5rem 1.75rem;margin:2rem 0;}
+.callout p:last-child{margin-bottom:0;}
+.callout .label{font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--blue);font-weight:700;margin-bottom:0.5rem;}
+
+.track-list{background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:2rem;margin:2rem 0;}
+.track{display:grid;grid-template-columns:60px 1fr;gap:1.25rem;padding:1.25rem 0;border-bottom:1px solid var(--border);align-items:start;}
+.track:last-child{border-bottom:none;}
+.track-num{width:48px;height:48px;background:linear-gradient(135deg,var(--blue),var(--purple));border-radius:12px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:0.95rem;}
+.track-info h4{font-size:1rem;font-weight:700;margin-bottom:0.3rem;}
+.track-role{font-size:0.78rem;color:var(--blue);font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:0.5rem;}
+.track-info p{font-size:0.9rem;color:var(--muted);margin-bottom:0.75rem;}
+.track audio{width:100%;height:36px;}
+
+.deliverables{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin:1.5rem 0;}
+.deliv-card{background:var(--bg3);border:1px solid var(--border);border-radius:12px;padding:1.25rem;}
+.deliv-card i{color:var(--blue);font-size:1.25rem;margin-bottom:0.5rem;}
+.deliv-card h4{font-size:0.95rem;font-weight:700;margin-bottom:0.3rem;}
+.deliv-card p{font-size:0.85rem;color:var(--muted);margin:0;line-height:1.5;}
+
+.cta-banner{background:linear-gradient(135deg,rgba(59,130,246,0.15),rgba(96, 165, 250,0.15));border:1px solid rgba(59,130,246,0.2);border-radius:20px;padding:3rem 2rem;text-align:center;margin:3rem auto;max-width:800px;}
+.cta-banner h2{font-size:clamp(1.6rem,2.8vw,2.2rem);font-weight:800;margin-bottom:1rem;}
+.cta-banner p{color:var(--muted);margin-bottom:1.5rem;}
+.btn-primary{background:var(--blue);color:white;padding:0.85rem 2rem;border-radius:10px;text-decoration:none;font-weight:700;display:inline-flex;align-items:center;gap:0.5rem;transition:all 0.2s;}
+.btn-primary:hover{background:var(--purple);transform:translateY(-2px);}
+
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:2.5rem 2rem;text-align:center;}
+.footer-logo img{height:36px;}
+.footer-links{display:flex;justify-content:center;gap:1.5rem;list-style:none;margin:1rem 0;flex-wrap:wrap;}
+.footer-links a{color:var(--muted);text-decoration:none;font-size:0.82rem;}
+.footer-links a:hover{color:var(--text);}
+footer p{color:var(--muted);font-size:0.78rem;}
+
+@media(max-width:720px){.nav-links{display:none;}.meta-strip{gap:1.5rem;}}
+</style>
+<link rel="stylesheet" href="csl-bg.css">
+</head>
+<body>
+
+<nav>
+    <a href="CSL_index.html" class="nav-logo"><img src="CSL_logo_dark.png" alt="Current Scoring Leaders"></a>
+    <ul class="nav-links">
+        <li><a href="CSL_pricing.html">Pricing</a></li>
+        <li><a href="CSL_portfolio.html">Portfolio</a></li>
+        <li><a href="CSL_process.html">Our Process</a></li>
+        <li><a href="CSL_about.html">About &amp; Contact</a></li>
+        <li><a href="CSL_booking.html" class="nav-cta">License Your Sound</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+    <div class="eyebrow"><i class="fas fa-gamepad"></i> Case Study · Game Audio</div>
+    <h1>Building a <span class="grad">7-Level Adaptive Score</span><br>From Pixels to Boss Fight</h1>
+    <p class="lede">A complete game soundtrack built as one continuous arc — seven escalating levels that share DNA, rise in intensity, and never repeat. Here's how it was scoped, scored, and delivered.</p>
+    <div class="meta-strip">
+        <div class="meta-item"><div class="meta-label">Project Type</div><div class="meta-value">Indie Game OST</div></div>
+        <div class="meta-item"><div class="meta-label">Tracks</div><div class="meta-value">7 Levels</div></div>
+        <div class="meta-item"><div class="meta-label">Service Tier</div><div class="meta-value">Custom Music + Sync</div></div>
+        <div class="meta-item"><div class="meta-label">Turnaround</div><div class="meta-value">~3 weeks</div></div>
+        <div class="meta-item"><div class="meta-label">License</div><div class="meta-value">Exclusive WFH option</div></div>
+    </div>
+</section>
+
+<div class="section">
+    <div class="section-label">The Brief</div>
+    <h2>One game. Seven worlds. One emotional arc.</h2>
+    <p>The brief: a side-scrolling indie game with seven distinct levels, each with its own visual world, but all part of one continuous narrative. The studio wanted music that felt like progression — Level 1 should hint at what's coming in Level 7, not feel like a separate track.</p>
+    <p>The constraints:</p>
+    <ul>
+        <li><strong>Loopable.</strong> Each level needed clean loop points so a player could spend 30 seconds or 30 minutes there without the music feeling repetitive or jarringly resetting.</li>
+        <li><strong>Memorable but not distracting.</strong> The score had to support gameplay focus, not pull attention from puzzles or platforming.</li>
+        <li><strong>Stylistically unified.</strong> Different worlds, but all clearly the same composer's hand — shared melodic DNA across all seven tracks.</li>
+        <li><strong>Escalating tension.</strong> Levels 1–3 establish, 4–5 build, 6 turns the corner, 7 resolves.</li>
+    </ul>
+
+    <div class="callout">
+        <div class="label">The Real Challenge</div>
+        <p>Anyone can write seven loops. The hard part is making seven loops that <em>belong together</em> — that share a motif so subtle the player doesn't consciously notice it but feels the cohesion. That's what separates a soundtrack from a playlist.</p>
+    </div>
+</div>
+
+<div class="section">
+    <div class="section-label">The Score — Track by Track</div>
+    <h2>Listen to the full arc.</h2>
+    <p>Each track below is the actual delivered loop. Played in order, they tell the story of the score the way the player experiences it.</p>
+
+    <div class="track-list">
+        <div class="track">
+            <div class="track-num">01</div>
+            <div class="track-info">
+                <h4>Gaming Level 1</h4>
+                <div class="track-role">Establish · Curiosity</div>
+                <p>Light, bouncy, melodic — the player's first contact with the world. Plants the central motif quietly so the brain locks onto it without realizing.</p>
+                <audio controls preload="metadata" src="../MEDIA/songs/Gaming Level 1 vid.mp3"></audio>
+            </div>
+        </div>
+        <div class="track">
+            <div class="track-num">02</div>
+            <div class="track-info">
+                <h4>Gaming Level 2</h4>
+                <div class="track-role">Build · Confidence</div>
+                <p>Same DNA, more rhythmic drive. The player has the mechanics down, the score reflects it.</p>
+                <audio controls preload="metadata" src="../MEDIA/songs/Gaming Level 2 vid.mp3"></audio>
+            </div>
+        </div>
+        <div class="track">
+            <div class="track-num">03</div>
+            <div class="track-info">
+                <h4>Gaming Level 3</h4>
+                <div class="track-role">Pivot · First Threat</div>
+                <p>Shifts to a minor variation of the central motif. First hint that the world is more dangerous than it looked.</p>
+                <audio controls preload="metadata" src="../MEDIA/songs/Gaming Level 3 vid.mp3"></audio>
+            </div>
+        </div>
+        <div class="track">
+            <div class="track-num">04</div>
+            <div class="track-info">
+                <h4>Gaming Level 4</h4>
+                <div class="track-role">Atmosphere · Disorientation</div>
+                <p>Texture-led. Pads and ambient layers replace clear melody. The player should feel slightly lost.</p>
+                <audio controls preload="metadata" src="../MEDIA/songs/Gaming Level 4 vid.mp3"></audio>
+            </div>
+        </div>
+        <div class="track">
+            <div class="track-num">05</div>
+            <div class="track-info">
+                <h4>Gaming Level 5</h4>
+                <div class="track-role">Tension · Stakes Raised</div>
+                <p>The motif returns, now in a tense rhythmic cell. Driving but not yet at full power.</p>
+                <audio controls preload="metadata" src="../MEDIA/songs/Gaming Level 5 vid.mp3"></audio>
+            </div>
+        </div>
+        <div class="track">
+            <div class="track-num">06</div>
+            <div class="track-info">
+                <h4>Gaming Level 6</h4>
+                <div class="track-role">Escalation · Pre-Boss</div>
+                <p>Almost the boss theme. Frantic, dense, unresolved. The player should feel the inevitability of the final encounter.</p>
+                <audio controls preload="metadata" src="../MEDIA/songs/Gaming Level 6 vid.mp3"></audio>
+            </div>
+        </div>
+        <div class="track">
+            <div class="track-num">07</div>
+            <div class="track-info">
+                <h4>Gaming Level 7</h4>
+                <div class="track-role">Resolution · Boss / Finale</div>
+                <p>Full deployment of the motif at maximum intensity. Resolves the harmonic question that's been hanging since Level 1.</p>
+                <audio controls preload="metadata" src="../MEDIA/songs/Gaming Level 7 vid.mp3"></audio>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="section-label">The Deliverables</div>
+    <h2>Everything the dev needed to ship.</h2>
+    <p>Music is only useful if it's actually integrable. Each track was delivered with the assets a real game developer needs:</p>
+    <div class="deliverables">
+        <div class="deliv-card"><i class="fas fa-file-audio"></i><h4>Master Files</h4><p>WAV 24-bit/48kHz + MP3 320 kbps</p></div>
+        <div class="deliv-card"><i class="fas fa-redo"></i><h4>Seamless Loops</h4><p>Pre-trimmed loop points, sample-accurate</p></div>
+        <div class="deliv-card"><i class="fas fa-layer-group"></i><h4>Stems</h4><p>Drums, bass, leads, pads — for engine layering</p></div>
+        <div class="deliv-card"><i class="fas fa-music"></i><h4>MIDI &amp; Project Files</h4><p>For future remixes or adaptive cues</p></div>
+        <div class="deliv-card"><i class="fas fa-file-contract"></i><h4>License Document</h4><p>Sync + WFH option, signed PDF</p></div>
+        <div class="deliv-card"><i class="fas fa-copyright"></i><h4>Registration</h4><p>U.S. Copyright Office submission for premium tier</p></div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="section-label">The Process</div>
+    <h2>How three weeks felt like a partnership.</h2>
+    <p><strong>Week 1.</strong> Discovery call, brief lock, motif sketches. Three 30-second sketches for the central motif sent on day three; client picked one.</p>
+    <p><strong>Week 2.</strong> Full-length tracks for Levels 1, 4, and 7 delivered first — the anchors of the arc. Levels 2, 3, 5, 6 then composed to bridge between them. Two rounds of revisions per track included.</p>
+    <p><strong>Week 3.</strong> Stem export, loop-point engineering, license docs, copyright registration. Final delivery with a written authorship statement covering production methodology and rights chain.</p>
+
+    <div class="callout">
+        <div class="label">What made it work</div>
+        <p>Anchoring the arc with Levels 1, 4, and 7 first — instead of writing in order — meant every middle track had a destination. Composers usually drift. Anchoring kills drift.</p>
+    </div>
+</div>
+
+<div class="cta-banner">
+    <h2>Building Something That Needs Its Own Sound?</h2>
+    <p>Game scores, podcast packages, indie film cues — whatever it is, we'll scope it honestly and deliver something the player remembers.</p>
+    <a href="CSL_booking.html" class="btn-primary"><i class="fas fa-paper-plane"></i> Start a Project</a>
+</div>
+
+<footer>
+    <div class="footer-logo"><img src="CSL_logo_clean.png" alt="Current Scoring Leaders LLC"></div>
+    <ul class="footer-links">
+        <li><a href="CSL_index.html">Home</a></li>
+        <li><a href="CSL_pricing.html">Pricing</a></li>
+        <li><a href="CSL_portfolio.html">Portfolio</a></li>
+        <li><a href="CSL_about.html">About &amp; Contact</a></li>
+        <li><a href="CSL_legal.html">Legal</a></li>
+    </ul>
+    <p>&copy; 2026 Current Scoring Leaders LLC &middot; Roslyn, PA &middot; All Rights Reserved</p>
+</footer>
+
+<script src="csl-shared.js" defer></script><script src="csl-cookie-banner.js" defer></script>
+<script src="csl-bg.js" defer></script>
+</body>
+</html>
