@@ -419,66 +419,66 @@
             margin-bottom: 3rem;
         }
 
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
+        .services-visualizer {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
         }
 
-        .service-card {
+        .service-bar {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 1.5rem;
             background: var(--bg2);
             border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 2rem;
-            transition: all 0.3s;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0;
-            height: 2px;
-            background: linear-gradient(90deg, var(--blue), var(--purple));
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-
-        .service-card:hover { border-color: rgba(59,130,246,0.4); transform: translateY(-4px); }
-        .service-card:hover::before { opacity: 1; }
-
-        .service-icon {
-            width: 52px;
-            height: 52px;
-            background: rgba(59,130,246,0.1);
             border-radius: 12px;
+            transition: all 0.3s;
+        }
+
+        .service-bar:hover {
+            border-color: rgba(59,130,246,0.4);
+            background: rgba(59,130,246,0.05);
+        }
+
+        .service-bar-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(59,130,246,0.1);
+            border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.3rem;
-            color: var(--blue);
-            margin-bottom: 1.25rem;
-        }
-
-        .service-card h3 {
             font-size: 1.1rem;
+            color: var(--blue);
+            flex-shrink: 0;
+        }
+
+        .service-bar-content {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .service-bar-title {
+            font-size: 0.95rem;
             font-weight: 700;
-            margin-bottom: 0.5rem;
         }
 
-        .service-card p {
+        .service-bar-desc {
+            font-size: 0.8rem;
             color: var(--muted);
-            font-size: 0.9rem;
-            line-height: 1.6;
-            margin-bottom: 1rem;
+            max-width: 400px;
         }
 
-        .service-price {
+        .service-bar-price {
             font-family: 'JetBrains Mono', monospace;
             font-size: 0.85rem;
             color: var(--blue);
             font-weight: 600;
+            white-space: nowrap;
         }
 
         /* WHO WE SERVE */
@@ -494,61 +494,181 @@
             margin: 0 auto;
         }
 
-        .clients-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        .clients-visualizer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: 1.5rem;
             margin-top: 3rem;
         }
 
-        .client-card {
-            background: var(--bg3);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 1.5rem;
-            text-align: center;
-            transition: all 0.3s;
-        }
-
-        .client-card:hover { border-color: var(--purple); }
-
-        .client-card i {
-            font-size: 2rem;
-            color: var(--purple);
-            margin-bottom: 1rem;
-        }
-
-        .client-card h4 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem; }
-        .client-card p { font-size: 0.8rem; color: var(--muted); line-height: 1.5; }
-
-        /* PROCESS */
-        .process-steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .step {
+        .client-badge {
             display: flex;
             flex-direction: column;
-            gap: 1rem;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 1.5rem;
+            background: var(--bg3);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            transition: all 0.3s;
+            min-width: 120px;
         }
 
-        .step-num {
-            width: 40px;
-            height: 40px;
+        .client-badge:hover {
+            border-color: var(--purple);
+            transform: translateY(-2px);
+        }
+
+        .client-badge i {
+            font-size: 1.8rem;
+            color: var(--purple);
+        }
+
+        .client-badge span {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        /* PROCESS */
+        .process-visualizer {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 3rem;
+            overflow-x: auto;
+            padding-bottom: 1rem;
+        }
+
+        .process-step {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            flex-shrink: 0;
+        }
+
+        .process-step-icon {
+            width: 50px;
+            height: 50px;
             background: linear-gradient(135deg, var(--blue), var(--purple));
-            border-radius: 10px;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: 800;
-            font-size: 0.95rem;
+            font-size: 1rem;
+            color: white;
+            font-weight: 700;
         }
 
-        .step h4 { font-size: 1rem; font-weight: 700; }
-        .step p { font-size: 0.875rem; color: var(--muted); line-height: 1.6; }
+        .process-step-arrow {
+            font-size: 1.2rem;
+            color: var(--muted);
+        }
+
+        .process-step-content {
+            max-width: 200px;
+        }
+
+        .process-step-title {
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+
+        .process-step-desc {
+            font-size: 0.75rem;
+            color: var(--muted);
+            line-height: 1.4;
+        }
+
+        /* FOUNDER'S PROMISE */
+        .promise-visualizer {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
+            margin-top: 3rem;
+        }
+
+        .promise-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.25rem;
+            background: var(--bg2);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            transition: all 0.3s;
+        }
+
+        .promise-item:hover {
+            border-color: rgba(59,130,246,0.4);
+            background: rgba(59,130,246,0.05);
+        }
+
+        .promise-check {
+            width: 28px;
+            height: 28px;
+            background: linear-gradient(135deg, var(--blue), var(--purple));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 0.85rem;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .promise-content h3 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            margin-bottom: 0.35rem;
+        }
+
+        .promise-content p {
+            font-size: 0.8rem;
+            color: var(--muted);
+            line-height: 1.5;
+        }
+
+        /* DELIVERY READY */
+        .delivery-visualizer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 3rem;
+        }
+
+        .delivery-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 1.5rem;
+            background: var(--bg2);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            transition: all 0.3s;
+            min-width: 100px;
+        }
+
+        .delivery-item:hover {
+            border-color: rgba(96, 165, 250, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .delivery-item i {
+            font-size: 1.6rem;
+            color: var(--blue);
+        }
+
+        .delivery-item span {
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-align: center;
+        }
 
         /* CTA BANNER */
         .cta-banner {
@@ -659,36 +779,56 @@
         <h2 class="section-title">Music Built for the Project,<br>Not Pulled from a Shelf</h2>
         <p class="section-sub">Every sound delivered by CSL is composed specifically for the client. Your audience will never hear it anywhere else.</p>
 
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="service-icon"><i class="fas fa-youtube"></i></div>
-                <h3>Creator License</h3>
-                <p>License a catalog track for YouTube, podcasts, and social media. Non-exclusive, worldwide, immediate delivery.</p>
-                <div class="service-price">$599</div>
+        <div class="services-visualizer">
+            <div class="service-bar">
+                <div class="service-bar-icon"><i class="fas fa-youtube"></i></div>
+                <div class="service-bar-content">
+                    <div>
+                        <div class="service-bar-title">Creator License</div>
+                        <div class="service-bar-desc">License a catalog track for YouTube, podcasts, and social media. Non-exclusive, worldwide, immediate delivery.</div>
+                    </div>
+                    <div class="service-bar-price">$599</div>
+                </div>
             </div>
-            <div class="service-card">
-                <div class="service-icon"><i class="fas fa-film"></i></div>
-                <h3>Sync License</h3>
-                <p>For indie film, digital ads, web series, and small games. Broadcast-eligible, with stems included.</p>
-                <div class="service-price">$1,800</div>
+            <div class="service-bar">
+                <div class="service-bar-icon"><i class="fas fa-film"></i></div>
+                <div class="service-bar-content">
+                    <div>
+                        <div class="service-bar-title">Sync License</div>
+                        <div class="service-bar-desc">For indie film, digital ads, web series, and small games. Broadcast-eligible, with stems included.</div>
+                    </div>
+                    <div class="service-bar-price">$1,800</div>
+                </div>
             </div>
-            <div class="service-card">
-                <div class="service-icon"><i class="fas fa-certificate"></i></div>
-                <h3>Sync License — Premium</h3>
-                <p>DAW-reworked, Copyright Office registered, agency and broadcast-ready. Exclusive and WFH upgrades available.</p>
-                <div class="service-price">$3,500</div>
+            <div class="service-bar">
+                <div class="service-bar-icon"><i class="fas fa-certificate"></i></div>
+                <div class="service-bar-content">
+                    <div>
+                        <div class="service-bar-title">Sync License — Premium</div>
+                        <div class="service-bar-desc">DAW-reworked, Copyright Office registered, agency and broadcast-ready. Exclusive and WFH upgrades available.</div>
+                    </div>
+                    <div class="service-bar-price">$3,500</div>
+                </div>
             </div>
-            <div class="service-card">
-                <div class="service-icon"><i class="fas fa-music"></i></div>
-                <h3>Custom Music</h3>
-                <p>Commissioned original tracks for your specific project. Single tracks or full packages for series, film, and campaigns.</p>
-                <div class="service-price">Starting at $3,500</div>
+            <div class="service-bar">
+                <div class="service-bar-icon"><i class="fas fa-music"></i></div>
+                <div class="service-bar-content">
+                    <div>
+                        <div class="service-bar-title">Custom Music</div>
+                        <div class="service-bar-desc">Commissioned original tracks for your specific project. Single tracks or full packages for series, film, and campaigns.</div>
+                    </div>
+                    <div class="service-bar-price">Starting at $3,500</div>
+                </div>
             </div>
-            <div class="service-card">
-                <div class="service-icon"><i class="fas fa-calendar-check"></i></div>
-                <h3>Monthly Retainer</h3>
-                <p>Ongoing scoring for brands and studios who need music on a consistent schedule. Application required.</p>
-                <div class="service-price">Starting at $3,000/mo</div>
+            <div class="service-bar">
+                <div class="service-bar-icon"><i class="fas fa-calendar-check"></i></div>
+                <div class="service-bar-content">
+                    <div>
+                        <div class="service-bar-title">Monthly Retainer</div>
+                        <div class="service-bar-desc">Ongoing scoring for brands and studios who need music on a consistent schedule. Application required.</div>
+                    </div>
+                    <div class="service-bar-price">Starting at $3,000/mo</div>
+                </div>
             </div>
         </div>
 
@@ -702,41 +842,34 @@
         <div class="clients-inner">
             <div class="section-label">Who We Work With</div>
             <h2 class="section-title">Built for Creators Who Take Quality Seriously</h2>
-            <div class="clients-grid">
-                <div class="client-card">
+            <div class="clients-visualizer">
+                <div class="client-badge">
                     <i class="fas fa-video"></i>
-                    <h4>Commercials &amp; TV</h4>
-                    <p>Original music for commercials, TV shows, and digital campaigns that need memorable sound.</p>
+                    <span>Commercials &amp; TV</span>
                 </div>
-                <div class="client-card">
+                <div class="client-badge">
                     <i class="fas fa-film"></i>
-                    <h4>Film &amp; Production</h4>
-                    <p>Custom scores for indie films, web series, documentaries, and production companies of all sizes.</p>
+                    <span>Film &amp; Production</span>
                 </div>
-                <div class="client-card">
+                <div class="client-badge">
                     <i class="fas fa-gamepad"></i>
-                    <h4>Game Developers</h4>
-                    <p>Full soundtracks and adaptive music for indie studios and AAA publishers like EA, Rockstar, and beyond.</p>
+                    <span>Game Developers</span>
                 </div>
-                <div class="client-card">
+                <div class="client-badge">
                     <i class="fas fa-mobile-alt"></i>
-                    <h4>Content Creators</h4>
-                    <p>YouTube, TikTok, Instagram, Twitch — signature themes for creators building a real brand identity.</p>
+                    <span>Content Creators</span>
                 </div>
-                <div class="client-card">
+                <div class="client-badge">
                     <i class="fas fa-microphone-alt"></i>
-                    <h4>Podcasters</h4>
-                    <p>Intro/outro packages that make your show sound professional from day one.</p>
+                    <span>Podcasters</span>
                 </div>
-                <div class="client-card">
+                <div class="client-badge">
                     <i class="fas fa-music"></i>
-                    <h4>Music Artists</h4>
-                    <p>Ghostwriting and production for artists who need custom tracks or full song development.</p>
+                    <span>Music Artists</span>
                 </div>
-                <div class="client-card">
+                <div class="client-badge">
                     <i class="fas fa-cut"></i>
-                    <h4>Video Editors &amp; Agencies</h4>
-                    <p>Referral partnerships for editors and agencies who want to offer clients something premium.</p>
+                    <span>Video Editors &amp; Agencies</span>
                 </div>
             </div>
         </div>
@@ -748,26 +881,37 @@
         <h2 class="section-title">Simple Process. No Guesswork.</h2>
         <p class="section-sub">From first contact to final delivery, everything is handled with clarity and precision.</p>
 
-        <div class="process-steps">
-            <div class="step">
-                <div class="step-num">01</div>
-                <h4>Tell Us About Your Project</h4>
-                <p>Fill out the inquiry form with your project type, genre direction, length, and deadline. No commitment yet.</p>
+        <div class="process-visualizer">
+            <div class="process-step">
+                <div class="process-step-icon">01</div>
+                <div class="process-step-content">
+                    <div class="process-step-title">Tell Us About Your Project</div>
+                    <div class="process-step-desc">Fill out the inquiry form with your project type, genre direction, length, and deadline. No commitment yet.</div>
+                </div>
             </div>
-            <div class="step">
-                <div class="step-num">02</div>
-                <h4>We Send a Custom Quote</h4>
-                <p>Within 48 hours we review your submission and send a detailed quote with scope and timeline.</p>
+            <div class="process-step-arrow"><i class="fas fa-chevron-right"></i></div>
+            <div class="process-step">
+                <div class="process-step-icon">02</div>
+                <div class="process-step-content">
+                    <div class="process-step-title">We Send a Custom Quote</div>
+                    <div class="process-step-desc">Within 48 hours we review your submission and send a detailed quote with scope and timeline.</div>
+                </div>
             </div>
-            <div class="step">
-                <div class="step-num">03</div>
-                <h4>Agree &amp; We Get to Work</h4>
-                <p>Contract signed, deposit placed, composition begins. We keep you in the loop throughout.</p>
+            <div class="process-step-arrow"><i class="fas fa-chevron-right"></i></div>
+            <div class="process-step">
+                <div class="process-step-icon">03</div>
+                <div class="process-step-content">
+                    <div class="process-step-title">Agree &amp; We Get to Work</div>
+                    <div class="process-step-desc">Contract signed, deposit placed, composition begins. We keep you in the loop throughout.</div>
+                </div>
             </div>
-            <div class="step">
-                <div class="step-num">04</div>
-                <h4>Revisions &amp; Final Delivery</h4>
-                <p>Review the work, request revisions within your package, and receive final stems + license.</p>
+            <div class="process-step-arrow"><i class="fas fa-chevron-right"></i></div>
+            <div class="process-step">
+                <div class="process-step-icon">04</div>
+                <div class="process-step-content">
+                    <div class="process-step-title">Revisions &amp; Final Delivery</div>
+                    <div class="process-step-desc">Review the work, request revisions within your package, and receive final stems + license.</div>
+                </div>
             </div>
         </div>
     </div>
@@ -777,26 +921,34 @@
         <div class="section-label">Founder's Promise</div>
         <h2 class="section-title">Why Trust a New Studio?</h2>
         <p class="section-sub">CSL is a young business but the work isn't. Here's what every client gets — in writing, every time.</p>
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="service-icon"><i class="fas fa-handshake"></i></div>
-                <h3>Signed Statement of Work</h3>
-                <p>Every engagement starts with a clear SOW: deliverables, deadlines, revisions, license type. No vague verbal deals.</p>
+        <div class="promise-visualizer">
+            <div class="promise-item">
+                <div class="promise-check"><i class="fas fa-check"></i></div>
+                <div class="promise-content">
+                    <h3>Signed Statement of Work</h3>
+                    <p>Every engagement starts with a clear SOW: deliverables, deadlines, revisions, license type. No vague verbal deals.</p>
+                </div>
             </div>
-            <div class="service-card">
-                <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
-                <h3>Money-Back Promise</h3>
-                <p>If the first delivery is fundamentally off-brief and we can't course-correct within the contracted revisions, the deposit is refundable per our published refund policy.</p>
+            <div class="promise-item">
+                <div class="promise-check"><i class="fas fa-check"></i></div>
+                <div class="promise-content">
+                    <h3>Money-Back Promise</h3>
+                    <p>If the first delivery is fundamentally off-brief and we can't course-correct within the contracted revisions, the deposit is refundable per our published refund policy.</p>
+                </div>
             </div>
-            <div class="service-card">
-                <div class="service-icon"><i class="fas fa-bolt"></i></div>
-                <h3>48-Hour Response</h3>
-                <p>Every inquiry gets a real reply from the founder within 48 hours. Not a chatbot. Not a sales rep. The composer.</p>
+            <div class="promise-item">
+                <div class="promise-check"><i class="fas fa-check"></i></div>
+                <div class="promise-content">
+                    <h3>48-Hour Response</h3>
+                    <p>Every inquiry gets a real reply from the founder within 48 hours. Not a chatbot. Not a sales rep. The composer.</p>
+                </div>
             </div>
-            <div class="service-card">
-                <div class="service-icon"><i class="fas fa-copyright"></i></div>
-                <h3>Clean Rights Chain</h3>
-                <p>Every track delivered with explicit license terms. Premium and Work-for-Hire tiers include Copyright Office registration.</p>
+            <div class="promise-item">
+                <div class="promise-check"><i class="fas fa-check"></i></div>
+                <div class="promise-content">
+                    <h3>Clean Rights Chain</h3>
+                    <p>Every track delivered with explicit license terms. Premium and Work-for-Hire tiers include Copyright Office registration.</p>
+                </div>
             </div>
         </div>
     </div>
@@ -806,13 +958,31 @@
         <div class="section-label">Delivery-Ready For</div>
         <h2 class="section-title">Every Major Platform &amp; Use Case</h2>
         <p class="section-sub">Stems, masters, and license formats prepared for wherever your project lives.</p>
-        <div class="clients-grid">
-            <div class="client-card"><i class="fab fa-youtube"></i><h4>YouTube</h4><p>Content ID-clear deliverables.</p></div>
-            <div class="client-card"><i class="fab fa-spotify"></i><h4>Spotify &amp; Apple Music</h4><p>Distribution-ready masters.</p></div>
-            <div class="client-card"><i class="fab fa-twitch"></i><h4>Twitch &amp; Streaming</h4><p>DMCA-safe broadcast tier.</p></div>
-            <div class="client-card"><i class="fas fa-gamepad"></i><h4>Steam &amp; Game Engines</h4><p>Looped &amp; adaptive stems.</p></div>
-            <div class="client-card"><i class="fas fa-tv"></i><h4>Broadcast &amp; Sync</h4><p>Premium-tier registered.</p></div>
-            <div class="client-card"><i class="fas fa-podcast"></i><h4>Podcast Networks</h4><p>Intro/outro packages.</p></div>
+        <div class="delivery-visualizer">
+            <div class="delivery-item">
+                <i class="fab fa-youtube"></i>
+                <span>YouTube</span>
+            </div>
+            <div class="delivery-item">
+                <i class="fab fa-spotify"></i>
+                <span>Spotify</span>
+            </div>
+            <div class="delivery-item">
+                <i class="fab fa-twitch"></i>
+                <span>Twitch</span>
+            </div>
+            <div class="delivery-item">
+                <i class="fas fa-gamepad"></i>
+                <span>Steam</span>
+            </div>
+            <div class="delivery-item">
+                <i class="fas fa-tv"></i>
+                <span>Broadcast</span>
+            </div>
+            <div class="delivery-item">
+                <i class="fas fa-podcast"></i>
+                <span>Podcasts</span>
+            </div>
         </div>
     </div>
 
