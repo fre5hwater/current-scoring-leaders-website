@@ -63,8 +63,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,15,0.9
 .hero .sub{color:var(--silver);font-size:0.92rem;font-weight:600;letter-spacing:0.4px;}
 
 /* PATH CARDS */
-.paths{max-width:1240px;margin:0 auto;padding:0 2rem 3rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;position:relative;z-index:1;}
-@media(max-width:980px){.paths{grid-template-columns:1fr;}}
+.paths{max-width:1400px;margin:0 auto;padding:0 2rem 3rem;display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;position:relative;z-index:1;}
+@media(max-width:1200px){.paths{grid-template-columns:repeat(3,1fr);}}
+@media(max-width:768px){.paths{grid-template-columns:1fr;}}
 .path{background:linear-gradient(180deg,var(--bg2),var(--bg3));border:1px solid var(--border);border-radius:20px;padding:2.25rem 2rem 2rem;position:relative;overflow:hidden;transition:transform 0.25s ease,border-color 0.25s ease,box-shadow 0.25s ease;cursor:pointer;display:flex;flex-direction:column;text-decoration:none;color:inherit;}
 .path::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--c1),var(--c2));}
 .path::after{content:'';position:absolute;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,var(--c1),transparent 65%);opacity:0.08;top:-100px;right:-100px;transition:opacity 0.3s;}
@@ -140,79 +141,71 @@ footer p{color:var(--muted);font-size:0.78rem;}
 
 <section class="hero">
     <div class="eyebrow"><i class="fas fa-route"></i> Choose your path</div>
-    <h1>Three ways to <span class="grad">work with us</span>.</h1>
+    <h1>Five ways to <span class="grad">work with us</span>.</h1>
     <p class="lede">Tell us what you're after &mdash; we'll show you only what matters for that path.</p>
     <p class="sub">Most clients pick in under 30 seconds.</p>
 </section>
 
 <section class="paths">
 
-    <a class="path" data-path="catalog" href="CSL_catalog.html">
-        <div class="path-icon"><i class="fas fa-music"></i></div>
-        <span class="tag">Catalog &middot; Ready Today</span>
-        <h2>License a Track</h2>
-        <p class="path-desc">Pick from our existing catalog of finished, mixed, mastered tracks. Get a license, deliver tomorrow.</p>
-        <div class="path-fits">
-            <div class="path-fits-label">Best for</div>
-            <ul>
-                <li>YouTube creators</li>
-                <li>Indie films</li>
-                <li>Podcasts</li>
-                <li>Ad spots</li>
-                <li>Trailers</li>
-            </ul>
-        </div>
+    <a class="path" data-path="creator" href="CSL_catalog.html">
+        <div class="path-icon"><i class="fas fa-youtube"></i></div>
+        <span class="tag">Catalog</span>
+        <h2>Creator License</h2>
+        <p class="path-desc">Catalog track. Non-exclusive. Worldwide. Immediate delivery.</p>
         <div class="path-price">
-            <div class="path-price-label">Price range</div>
-            <div class="path-price-range">$599<span class="sep">&ndash;</span>$4,500</div>
-            <div class="path-price-note">4 license tiers &middot; flat fee, no royalties</div>
+            <div class="path-price-label">Price</div>
+            <div class="path-price-range">$599</div>
         </div>
-        <span class="path-cta">Browse catalog &amp; license <i class="fas fa-arrow-right"></i></span>
+        <span class="path-cta">Get started <i class="fas fa-arrow-right"></i></span>
     </a>
 
-    <a class="path" data-path="commission" href="CSL_commission.html">
-        <div class="path-icon"><i class="fas fa-pen-fancy"></i></div>
-        <span class="tag">Custom &middot; 5-14 Days</span>
-        <h2>Commission Original Music</h2>
-        <p class="path-desc">We score your project from scratch &mdash; built around your scenes, brand, or product. Optional exclusivity and full IP transfer.</p>
-        <div class="path-fits">
-            <div class="path-fits-label">Best for</div>
-            <ul>
-                <li>Game studios</li>
-                <li>Brand campaigns</li>
-                <li>Films / shorts</li>
-                <li>Series themes</li>
-                <li>Live events</li>
-            </ul>
-        </div>
+    <a class="path" data-path="sync" href="CSL_catalog.html">
+        <div class="path-icon"><i class="fas fa-film"></i></div>
+        <span class="tag">Broadcast</span>
+        <h2>Sync License</h2>
+        <p class="path-desc">Broadcast-eligible, with stems included.</p>
         <div class="path-price">
-            <div class="path-price-label">Price range</div>
-            <div class="path-price-range">$3,500<span class="sep">&ndash;</span>$9,500+</div>
-            <div class="path-price-note">Single track, package, or work-for-hire</div>
+            <div class="path-price-label">Price</div>
+            <div class="path-price-range">$999</div>
         </div>
-        <span class="path-cta">Start a commission <i class="fas fa-arrow-right"></i></span>
+        <span class="path-cta">Get started <i class="fas fa-arrow-right"></i></span>
+    </a>
+
+    <a class="path" data-path="custom" href="CSL_commission.html">
+        <div class="path-icon"><i class="fas fa-music"></i></div>
+        <span class="tag">Custom</span>
+        <h2>Custom Music</h2>
+        <p class="path-desc">Commissioned original tracks. Single tracks or packages for specific projects.</p>
+        <div class="path-price">
+            <div class="path-price-label">Price</div>
+            <div class="path-price-range">$1,499</div>
+        </div>
+        <span class="path-cta">Get started <i class="fas fa-arrow-right"></i></span>
+    </a>
+
+    <a class="path" data-path="fullscore" href="CSL_commission.html">
+        <div class="path-icon"><i class="fas fa-globe"></i></div>
+        <span class="tag">Complete</span>
+        <h2>Full Score</h2>
+        <p class="path-desc">Complete soundtrack. Multiple tracks, cohesive theme, stems included.</p>
+        <div class="path-price">
+            <div class="path-price-label">Price</div>
+            <div class="path-price-range">$2,999</div>
+        </div>
+        <span class="path-cta">Get started <i class="fas fa-arrow-right"></i></span>
     </a>
 
     <a class="path" data-path="retainer" href="CSL_retainer.html">
-        <div class="path-icon"><i class="fas fa-infinity"></i></div>
-        <span class="tag">Monthly &middot; By Application</span>
-        <h2>Ongoing Retainer</h2>
-        <p class="path-desc">Reserved monthly capacity for studios, brands, and series teams who need consistent music without per-project negotiation.</p>
-        <div class="path-fits">
-            <div class="path-fits-label">Best for</div>
-            <ul>
-                <li>Production studios</li>
-                <li>Streaming series</li>
-                <li>Brand content engines</li>
-                <li>Game devs in production</li>
-            </ul>
-        </div>
+        <div class="path-icon"><i class="fas fa-calendar-alt"></i></div>
+        <span class="tag">Monthly</span>
+        <h2>Retainer</h2>
+        <p class="path-desc">Ongoing scoring on a consistent schedule. Application required.</p>
         <div class="path-price">
-            <div class="path-price-label">Price range</div>
-            <div class="path-price-range">$3K<span class="sep">&ndash;</span>$18K+/mo</div>
-            <div class="path-price-note">4 tiers &middot; 3-month minimum &middot; application required</div>
+            <div class="path-price-label">Price</div>
+            <div class="path-price-range">Custom</div>
         </div>
-        <span class="path-cta">Apply for retainer <i class="fas fa-arrow-right"></i></span>
+        <span class="path-cta">Apply <i class="fas fa-arrow-right"></i></span>
     </a>
 
 </section>
