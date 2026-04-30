@@ -531,10 +531,11 @@
         }
 
         .clients-visualizer {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
+            display: flex;
+            gap: 1rem;
             margin-top: 3rem;
+            overflow-x: auto;
+            padding-bottom: 1rem;
         }
 
         .client-image-card {
@@ -794,8 +795,8 @@
             z-index: 1001;
             display: none;
             align-items: center;
-            justify-content: center;
-            padding: 1rem;
+            justify-content: flex-end;
+            padding: 0;
         }
 
         .modal-overlay.active {
@@ -805,41 +806,45 @@
         .modal-content {
             background: var(--bg2);
             border: 1px solid var(--border);
-            border-radius: 20px;
-            padding: 2rem;
-            max-width: 500px;
+            border-left: none;
+            border-radius: 20px 0 0 20px;
+            padding: 3rem 2rem;
+            max-width: 600px;
             width: 100%;
+            max-height: 100vh;
+            overflow-y: auto;
             position: relative;
-            animation: modalIn 0.3s ease;
+            animation: slideInRight 0.4s ease;
         }
 
-        @keyframes modalIn {
+        @keyframes slideInRight {
             from {
                 opacity: 0;
-                transform: scale(0.9) translateY(20px);
+                transform: translateX(100%);
             }
             to {
                 opacity: 1;
-                transform: scale(1) translateY(0);
+                transform: translateX(0);
             }
         }
 
         .modal-close {
             position: absolute;
-            top: 1rem;
-            right: 1rem;
+            top: 1.5rem;
+            right: 1.5rem;
             background: var(--bg3);
             border: 1px solid var(--border);
             border-radius: 50%;
-            width: 32px;
-            height: 32px;
+            width: 36px;
+            height: 36px;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
             color: var(--muted);
-            font-size: 1rem;
+            font-size: 1.1rem;
             transition: all 0.3s;
+            z-index: 10;
         }
 
         .modal-close:hover {
@@ -945,32 +950,32 @@
             <div class="service-card-h">
                 <div class="service-card-h-icon"><i class="fas fa-youtube"></i></div>
                 <h3>Creator License</h3>
-                <p>License a catalog track for YouTube, podcasts, and social media. Non-exclusive, worldwide, immediate delivery.</p>
+                <p>Catalog track. Non-exclusive. Worldwide. Immediate delivery.</p>
                 <div class="service-card-h-price">$599</div>
             </div>
             <div class="service-card-h">
                 <div class="service-card-h-icon"><i class="fas fa-film"></i></div>
                 <h3>Sync License</h3>
-                <p>For indie film, digital ads, web series, and small games. Broadcast-eligible, with stems included.</p>
-                <div class="service-card-h-price">$1,800</div>
-            </div>
-            <div class="service-card-h">
-                <div class="service-card-h-icon"><i class="fas fa-certificate"></i></div>
-                <h3>Sync License — Premium</h3>
-                <p>DAW-reworked, Copyright Office registered, agency and broadcast-ready. Exclusive and WFH upgrades available.</p>
-                <div class="service-card-h-price">$3,500</div>
+                <p>Broadcast-eligible, with stems included.</p>
+                <div class="service-card-h-price">$999</div>
             </div>
             <div class="service-card-h">
                 <div class="service-card-h-icon"><i class="fas fa-music"></i></div>
                 <h3>Custom Music</h3>
-                <p>Commissioned original tracks for your specific project. Single tracks or full packages for series, film, and campaigns.</p>
-                <div class="service-card-h-price">Starting at $3,500</div>
+                <p>Commissioned original tracks. Single tracks or packages for specific projects.</p>
+                <div class="service-card-h-price">$1,499</div>
             </div>
             <div class="service-card-h">
-                <div class="service-card-h-icon"><i class="fas fa-calendar-check"></i></div>
-                <h3>Monthly Retainer</h3>
-                <p>Ongoing scoring for brands and studios who need music on a consistent schedule. Application required.</p>
-                <div class="service-card-h-price">Starting at $3,000/mo</div>
+                <div class="service-card-h-icon"><i class="fas fa-globe"></i></div>
+                <h3>Full Score</h3>
+                <p>Complete soundtrack. Multiple tracks, cohesive theme, stems included.</p>
+                <div class="service-card-h-price">$2,999</div>
+            </div>
+            <div class="service-card-h">
+                <div class="service-card-h-icon"><i class="fas fa-calendar-alt"></i></div>
+                <h3>Retainer</h3>
+                <p>Ongoing scoring on a consistent schedule. Application required.</p>
+                <div class="service-card-h-price">Custom</div>
             </div>
         </div>
 
@@ -979,39 +984,6 @@
         </div>
     </div>
 
-    <!-- CTA BANNER WITH INLINE FORM -->
-    <div class="cta-banner" id="contact" style="background:linear-gradient(135deg,rgba(59,130,246,0.12),rgba(96, 165, 250,0.12));border:1px solid rgba(59,130,246,0.25);border-radius:24px;padding:3.5rem 2rem;margin:2rem auto 4rem;max-width:1100px;">
-        <div style="display:grid;grid-template-columns:1fr 1.1fr;gap:3rem;align-items:center;max-width:1000px;margin:0 auto;">
-            <div>
-                <h2 style="font-size:clamp(1.6rem,2.8vw,2.2rem);font-weight:900;letter-spacing:-0.5px;line-height:1.15;margin-bottom:1rem;">Get Your Custom Quote</h2>
-                <p style="color:#94a3b8;font-size:0.98rem;line-height:1.65;margin-bottom:1.25rem;">Send us a quick brief. We respond within <strong style="color:#f1f5f9;">48 hours</strong> with a real quote &mdash; not a chatbot.</p>
-                <ul style="list-style:none;padding:0;margin:0;font-size:0.85rem;color:#cbd5e1;">
-                    <li style="margin-bottom:0.5rem;display:flex;align-items:center;gap:0.5rem;"><i class="fas fa-check" style="color:#10b981;"></i> 48-hour response guaranteed</li>
-                    <li style="margin-bottom:0.5rem;display:flex;align-items:center;gap:0.5rem;"><i class="fas fa-check" style="color:#10b981;"></i> Free quote, no commitment</li>
-                    <li style="margin-bottom:0;display:flex;align-items:center;gap:0.5rem;"><i class="fas fa-check" style="color:#10b981;"></i> Founder responds, not a sales bot</li>
-                </ul>
-            </div>
-            <form id="quickInquiry" onsubmit="return CSL.submitForm(event,'quick-inquiry')" style="background:rgba(15,15,24,0.7);border:1px solid #1e1e2e;border-radius:16px;padding:1.75rem;text-align:left;">
-                <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;">
-                <div style="margin-bottom:0.85rem;">
-                    <label style="display:block;font-size:0.72rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#94a3b8;margin-bottom:0.4rem;">Your Name</label>
-                    <input type="text" name="name" required placeholder="First &amp; Last" style="width:100%;background:#14141f;border:1px solid #1e1e2e;color:#f1f5f9;padding:0.7rem 0.9rem;border-radius:9px;font-family:inherit;font-size:0.9rem;outline:none;">
-                </div>
-                <div style="margin-bottom:0.85rem;">
-                    <label style="display:block;font-size:0.72rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#94a3b8;margin-bottom:0.4rem;">Email</label>
-                    <input type="email" name="email" required placeholder="you@email.com" style="width:100%;background:#14141f;border:1px solid #1e1e2e;color:#f1f5f9;padding:0.7rem 0.9rem;border-radius:9px;font-family:inherit;font-size:0.9rem;outline:none;">
-                </div>
-                <div style="margin-bottom:1rem;">
-                    <label style="display:block;font-size:0.72rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#94a3b8;margin-bottom:0.4rem;">What do you need?</label>
-                    <textarea name="message" required rows="3" placeholder="A quick description of your project, deadline, and budget if known..." style="width:100%;background:#14141f;border:1px solid #1e1e2e;color:#f1f5f9;padding:0.7rem 0.9rem;border-radius:9px;font-family:inherit;font-size:0.9rem;outline:none;resize:vertical;min-height:90px;"></textarea>
-                </div>
-                <button type="submit" style="width:100%;background:linear-gradient(135deg,#3b82f6,#60a5fa);color:white;padding:0.85rem;border-radius:10px;border:none;font-weight:800;font-size:0.92rem;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:0.5rem;transition:transform 0.15s;" onmouseover="this.style.transform='translateY(-1px)'" onmouseout="this.style.transform='none'">
-                    <i class="fas fa-paper-plane"></i> Send Quote Request
-                </button>
-                <p style="font-size:0.72rem;color:#64748b;text-align:center;margin-top:0.85rem;">Or use the <a href="CSL_booking.html" style="color:#3b82f6;text-decoration:underline;">full project form</a> for more detail</p>
-            </form>
-        </div>
-    </div>
 
     <!-- FLOATING BUTTON -->
     <button class="floating-btn" onclick="toggleModal()">
@@ -1024,25 +996,36 @@
             <button class="modal-close" onclick="toggleModal()">
                 <i class="fas fa-times"></i>
             </button>
-            <h3 style="font-size:1.5rem;font-weight:800;margin-bottom:1.5rem;background:linear-gradient(135deg,var(--blue),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Get Your Quote</h3>
-            <form id="modalInquiry" onsubmit="return CSL.submitForm(event,'quick-inquiry')" style="background:var(--bg3);border:1px solid var(--border);border-radius:16px;padding:1.5rem;">
-                <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;">
-                <div style="margin-bottom:1rem;">
-                    <label style="display:block;font-size:0.7rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:0.4rem;">Your Name</label>
-                    <input type="text" name="name" required placeholder="First &amp; Last" style="width:100%;background:var(--bg2);border:1px solid var(--border);color:var(--text);padding:0.7rem 0.9rem;border-radius:9px;font-family:inherit;font-size:0.9rem;outline:none;">
+            <div style="display:grid;grid-template-columns:1fr 1.1fr;gap:2rem;align-items:start;">
+                <div>
+                    <h2 style="font-size:clamp(1.4rem,2.5vw,2rem);font-weight:900;letter-spacing:-0.5px;line-height:1.15;margin-bottom:1rem;background:linear-gradient(135deg,var(--blue),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Get Your Custom Quote</h2>
+                    <p style="color:var(--muted);font-size:0.9rem;line-height:1.6;margin-bottom:1.25rem;">Send us a quick brief. We respond within <strong style="color:var(--text);">48 hours</strong> with a real quote &mdash; not a chatbot.</p>
+                    <ul style="list-style:none;padding:0;margin:0;font-size:0.8rem;color:var(--muted);">
+                        <li style="margin-bottom:0.5rem;display:flex;align-items:center;gap:0.5rem;"><i class="fas fa-check" style="color:#10b981;"></i> 48-hour response guaranteed</li>
+                        <li style="margin-bottom:0.5rem;display:flex;align-items:center;gap:0.5rem;"><i class="fas fa-check" style="color:#10b981;"></i> Free quote, no commitment</li>
+                        <li style="margin-bottom:0;display:flex;align-items:center;gap:0.5rem;"><i class="fas fa-check" style="color:#10b981;"></i> Founder responds, not a sales bot</li>
+                    </ul>
                 </div>
-                <div style="margin-bottom:1rem;">
-                    <label style="display:block;font-size:0.7rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:0.4rem;">Email</label>
-                    <input type="email" name="email" required placeholder="you@email.com" style="width:100%;background:var(--bg2);border:1px solid var(--border);color:var(--text);padding:0.7rem 0.9rem;border-radius:9px;font-family:inherit;font-size:0.9rem;outline:none;">
-                </div>
-                <div style="margin-bottom:1rem;">
-                    <label style="display:block;font-size:0.7rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:0.4rem;">What do you need?</label>
-                    <textarea name="message" required rows="3" placeholder="A quick description of your project, deadline, and budget if known..." style="width:100%;background:var(--bg2);border:1px solid var(--border);color:var(--text);padding:0.7rem 0.9rem;border-radius:9px;font-family:inherit;font-size:0.9rem;outline:none;resize:vertical;min-height:90px;"></textarea>
-                </div>
-                <button type="submit" style="width:100%;background:linear-gradient(135deg,var(--blue),var(--purple));color:white;padding:0.85rem;border-radius:10px;border:none;font-weight:800;font-size:0.92rem;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:0.5rem;">
-                    <i class="fas fa-paper-plane"></i> Send Quote Request
-                </button>
-            </form>
+                <form id="modalInquiry" onsubmit="return CSL.submitForm(event,'quick-inquiry')" style="background:var(--bg3);border:1px solid var(--border);border-radius:16px;padding:1.5rem;">
+                    <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;">
+                    <div style="margin-bottom:0.85rem;">
+                        <label style="display:block;font-size:0.7rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:0.4rem;">Your Name</label>
+                        <input type="text" name="name" required placeholder="First &amp; Last" style="width:100%;background:var(--bg2);border:1px solid var(--border);color:var(--text);padding:0.7rem 0.9rem;border-radius:9px;font-family:inherit;font-size:0.9rem;outline:none;">
+                    </div>
+                    <div style="margin-bottom:0.85rem;">
+                        <label style="display:block;font-size:0.7rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:0.4rem;">Email</label>
+                        <input type="email" name="email" required placeholder="you@email.com" style="width:100%;background:var(--bg2);border:1px solid var(--border);color:var(--text);padding:0.7rem 0.9rem;border-radius:9px;font-family:inherit;font-size:0.9rem;outline:none;">
+                    </div>
+                    <div style="margin-bottom:1rem;">
+                        <label style="display:block;font-size:0.7rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:0.4rem;">What do you need?</label>
+                        <textarea name="message" required rows="3" placeholder="A quick description of your project, deadline, and budget if known..." style="width:100%;background:var(--bg2);border:1px solid var(--border);color:var(--text);padding:0.7rem 0.9rem;border-radius:9px;font-family:inherit;font-size:0.9rem;outline:none;resize:vertical;min-height:90px;"></textarea>
+                    </div>
+                    <button type="submit" style="width:100%;background:linear-gradient(135deg,var(--blue),var(--purple));color:white;padding:0.85rem;border-radius:10px;border:none;font-weight:800;font-size:0.92rem;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:0.5rem;">
+                        <i class="fas fa-paper-plane"></i> Send Quote Request
+                    </button>
+                    <p style="font-size:0.7rem;color:var(--muted);text-align:center;margin-top:0.85rem;">Or use the <a href="CSL_booking.html" style="color:var(--blue);text-decoration:underline;">full project form</a> for more detail</p>
+                </form>
+            </div>
         </div>
     </div>
 
@@ -1057,13 +1040,23 @@
                 toggleModal();
             }
         }
+
+        // Close on escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                const modal = document.getElementById('quoteModal');
+                if (modal.classList.contains('active')) {
+                    toggleModal();
+                }
+            }
+        });
     </script>
 
     <!-- WHO WE SERVE -->
     <div class="clients-section">
         <div class="clients-inner">
             <div class="section-label">Who We Work With</div>
-            <h2 class="section-title">Built for Creators Who Take Quality Seriously</h2>
+            <h2 class="section-title">Built for Quality</h2>
             <div class="clients-visualizer">
                 <div class="client-image-card">
                     <img src="commercials&tv.png" alt="Commercials & TV">
@@ -1100,8 +1093,7 @@
     <!-- PROCESS -->
     <div class="section">
         <div class="section-label">How It Works</div>
-        <h2 class="section-title">Simple Process. No Guesswork.</h2>
-        <p class="section-sub">From first contact to final delivery, everything is handled with clarity and precision.</p>
+        <h2 class="section-title">Simple Process</h2>
 
         <div class="process-timeline">
             <div class="process-item">
@@ -1130,8 +1122,7 @@
     <!-- FOUNDER'S PROMISE -->
     <div class="section">
         <div class="section-label">Founder's Promise</div>
-        <h2 class="section-title">Why Trust a New Studio?</h2>
-        <p class="section-sub">CSL is a young business but the work isn't. Here's what every client gets — in writing, every time.</p>
+        <h2 class="section-title">Why Trust Us?</h2>
         <div class="promise-poster">
             <div class="promise-poster-content">
                 <h3>Why Trust a New Studio?</h3>
@@ -1161,8 +1152,7 @@
     <div class="section" style="padding-top:0;">
         <div style="background:var(--bg2);border:1px solid var(--border);border-radius:20px;padding:3rem 2rem;text-align:center;max-width:720px;margin:0 auto;">
             <div class="section-label" style="margin-bottom:0.5rem;">Stay in the Loop</div>
-            <h2 style="font-size:clamp(1.4rem,2.5vw,2rem);font-weight:800;margin-bottom:0.75rem;">New Tracks. Behind-the-Scenes. Pricing Updates.</h2>
-            <p style="color:var(--muted);font-size:0.95rem;margin-bottom:1.75rem;">One email a month. No spam. Unsubscribe anytime.</p>
+            <h2 style="font-size:clamp(1.4rem,2.5vw,2rem);font-weight:800;margin-bottom:0.75rem;">New Tracks. Updates. Pricing.</h2>
             <form onsubmit="return CSL.submitForm(event, 'newsletter')" style="display:flex;gap:0.5rem;flex-wrap:wrap;justify-content:center;max-width:480px;margin:0 auto;">
                 <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;">
                 <input type="email" name="email" required placeholder="you@email.com" style="flex:1;min-width:200px;padding:0.85rem 1rem;background:var(--bg3);border:1px solid var(--border);border-radius:10px;color:var(--text);font-size:0.95rem;font-family:inherit;">
