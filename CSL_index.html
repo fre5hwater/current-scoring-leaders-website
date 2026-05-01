@@ -1767,16 +1767,14 @@
 
             .promise-layout {
                 display: grid;
-                grid-template-columns: 350px minmax(0, 1fr);
-                gap: 16px;
-                align-items: stretch;
-                margin-top: 16px;
+                gap: 14px;
+                margin-top: 14px;
             }
 
             .promise-lead {
                 display: grid;
                 gap: 12px;
-                align-content: start;
+                justify-items: center;
                 border: 1px solid rgba(255,255,255,0.12);
                 border-radius: 20px;
                 padding: 14px;
@@ -1854,9 +1852,11 @@
 
             .manifesto-bar {
                 display: grid;
+                grid-template-columns: auto minmax(0, 1fr);
                 gap: 8px;
-                align-items: start;
+                align-items: center;
                 margin: 0;
+                width: min(760px, 100%);
                 border: 1px solid rgba(255, 255, 255, 0.12);
                 border-radius: 18px;
                 padding: 13px 14px;
@@ -1879,7 +1879,7 @@
 
             .rules-list {
                 display: grid;
-                grid-template-columns: repeat(2, minmax(0, 1fr));
+                grid-template-columns: repeat(4, minmax(0, 1fr));
                 gap: 10px;
                 margin: 0;
             }
@@ -1888,10 +1888,10 @@
                 position: relative;
                 overflow: hidden;
                 display: grid;
-                grid-template-columns: 58px 1fr;
+                grid-template-rows: auto 1fr auto;
                 gap: 10px;
-                align-items: stretch;
-                min-height: 170px;
+                min-height: 230px;
+                padding: 14px;
                 border: 1px solid rgba(255, 255, 255, 0.12);
                 border-radius: 18px;
                 background: linear-gradient(135deg, rgba(255,255,255,0.075), rgba(255,255,255,0.018)), rgba(8, 20, 38, 0.95);
@@ -1908,10 +1908,12 @@
             .rule-number {
                 position: relative;
                 z-index: 1;
-                height: 100%;
+                width: 46px;
+                height: 46px;
                 display: grid;
                 place-items: center;
-                border-right: 1px solid rgba(0,245,255,0.18);
+                border: 1px solid rgba(0,245,255,0.22);
+                border-radius: 14px;
                 color: #00f5ff;
                 background: rgba(0,0,0,0.22);
                 font-family: "Orbitron", sans-serif;
@@ -1923,7 +1925,7 @@
             .rule-main {
                 position: relative;
                 z-index: 1;
-                padding: 14px 10px 50px 0;
+                padding: 0;
             }
 
             .rule-main h3 {
@@ -1944,10 +1946,9 @@
             }
 
             .rule-tag {
-                position: absolute;
+                position: relative;
                 z-index: 1;
-                right: 10px;
-                bottom: 10px;
+                justify-self: start;
                 border: 1px solid rgba(0, 245, 255, 0.28);
                 border-radius: 999px;
                 padding: 7px 9px;
@@ -2008,9 +2009,8 @@
                     background-size: cover, cover, 90% auto;
                 }
                 .poster-hero-copy { text-align: center; }
-                .rule-row { grid-template-columns: 64px 1fr; min-height: 128px; }
+                .rule-row { min-height: 0; }
                 .rule-number { font-size: 1.72rem; }
-                .rule-tag { position: relative; right: auto; bottom: auto; grid-column: 2; justify-self: start; margin: 0 0 12px; }
                 .rule-main { padding-bottom: 12px; }
             }
         </style>
