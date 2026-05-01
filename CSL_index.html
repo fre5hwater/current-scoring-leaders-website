@@ -1717,8 +1717,7 @@
 
             .poster-sheet {
                 position: relative;
-                width: min(940px, 100%);
-                min-height: 680px;
+                width: min(980px, 100%);
                 overflow: hidden;
                 border: 1px solid rgba(0, 245, 255, 0.28);
                 border-radius: 26px;
@@ -1746,8 +1745,7 @@
             .poster-inner {
                 position: relative;
                 z-index: 2;
-                min-height: 680px;
-                padding: 26px;
+                padding: 22px;
                 background:
                     radial-gradient(circle at 82% 20%, rgba(0,245,255,0.12), transparent 34%),
                     linear-gradient(90deg, rgba(5, 13, 27, 0.68), rgba(5, 13, 27, 0.18));
@@ -1767,6 +1765,24 @@
                 text-transform: uppercase;
             }
 
+            .promise-layout {
+                display: grid;
+                grid-template-columns: 350px minmax(0, 1fr);
+                gap: 16px;
+                align-items: stretch;
+                margin-top: 16px;
+            }
+
+            .promise-lead {
+                display: grid;
+                gap: 12px;
+                align-content: start;
+                border: 1px solid rgba(255,255,255,0.12);
+                border-radius: 20px;
+                padding: 14px;
+                background: linear-gradient(135deg, rgba(0,245,255,0.08), rgba(255,255,255,0.018)), rgba(0,0,0,0.2);
+            }
+
             .poster-hero {
                 position: relative;
                 display: grid;
@@ -1774,7 +1790,7 @@
                 width: min(322px, 100%);
                 aspect-ratio: 562 / 750;
                 min-height: 0;
-                margin: 18px auto 0;
+                margin: 0 auto;
                 overflow: hidden;
                 isolation: isolate;
                 text-align: center;
@@ -1838,13 +1854,12 @@
 
             .manifesto-bar {
                 display: grid;
-                grid-template-columns: 150px 1fr;
-                gap: 16px;
-                align-items: center;
-                margin: 14px 0;
+                gap: 8px;
+                align-items: start;
+                margin: 0;
                 border: 1px solid rgba(255, 255, 255, 0.12);
                 border-radius: 18px;
-                padding: 13px 15px;
+                padding: 13px 14px;
                 background: rgba(0,0,0,0.22);
             }
 
@@ -1864,18 +1879,19 @@
 
             .rules-list {
                 display: grid;
-                gap: 8px;
-                margin-top: 12px;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 10px;
+                margin: 0;
             }
 
             .rule-row {
                 position: relative;
                 overflow: hidden;
                 display: grid;
-                grid-template-columns: 86px 1fr 130px;
-                gap: 14px;
-                align-items: center;
-                min-height: 106px;
+                grid-template-columns: 58px 1fr;
+                gap: 10px;
+                align-items: stretch;
+                min-height: 170px;
                 border: 1px solid rgba(255, 255, 255, 0.12);
                 border-radius: 18px;
                 background: linear-gradient(135deg, rgba(255,255,255,0.075), rgba(255,255,255,0.018)), rgba(8, 20, 38, 0.95);
@@ -1899,7 +1915,7 @@
                 color: #00f5ff;
                 background: rgba(0,0,0,0.22);
                 font-family: "Orbitron", sans-serif;
-                font-size: 2.35rem;
+                font-size: 1.55rem;
                 font-weight: 900;
                 letter-spacing: -0.08em;
             }
@@ -1907,14 +1923,14 @@
             .rule-main {
                 position: relative;
                 z-index: 1;
-                padding: 14px 0;
+                padding: 14px 10px 50px 0;
             }
 
             .rule-main h3 {
                 margin: 0;
                 font-family: "Orbitron", sans-serif;
-                font-size: clamp(1.18rem, 2.5vw, 1.86rem);
-                line-height: 0.95;
+                font-size: clamp(1rem, 1.65vw, 1.32rem);
+                line-height: 1;
                 letter-spacing: -0.055em;
                 text-transform: uppercase;
                 color: #ecfbff;
@@ -1923,22 +1939,22 @@
             .rule-main p {
                 margin: 8px 0 0;
                 color: #8eacbd;
-                font-size: clamp(0.96rem, 1.55vw, 1.12rem);
-                line-height: 1.25;
+                font-size: 0.9rem;
+                line-height: 1.3;
             }
 
             .rule-tag {
-                position: relative;
+                position: absolute;
                 z-index: 1;
-                justify-self: end;
-                margin-right: 13px;
+                right: 10px;
+                bottom: 10px;
                 border: 1px solid rgba(0, 245, 255, 0.28);
                 border-radius: 999px;
-                padding: 10px 11px;
+                padding: 7px 9px;
                 color: #a6ff00;
                 background: rgba(0,245,255,0.07);
                 font-family: "Orbitron", sans-serif;
-                font-size: 0.58rem;
+                font-size: 0.52rem;
                 letter-spacing: 0.1em;
                 text-transform: uppercase;
                 text-align: center;
@@ -1952,7 +1968,7 @@
                 margin-top: 14px;
                 border: 1px solid rgba(0, 245, 255, 0.28);
                 border-radius: 18px;
-                padding: 14px 15px;
+                padding: 12px 14px;
                 background: linear-gradient(135deg, rgba(0,245,255,0.12), rgba(255,43,214,0.06)), rgba(0,0,0,0.24);
             }
 
@@ -1983,7 +1999,8 @@
 
             @media (max-width: 760px) {
                 .poster-inner { padding: 18px; }
-                .poster-topline, .poster-hero, .manifesto-bar, .bottom-statement { grid-template-columns: 1fr; }
+                .poster-topline, .promise-layout, .manifesto-bar, .rules-list, .bottom-statement { grid-template-columns: 1fr; }
+                .promise-lead { justify-items: center; }
                 .poster-hero {
                     width: min(253px, 100%);
                     aspect-ratio: 562 / 750;
@@ -1993,7 +2010,8 @@
                 .poster-hero-copy { text-align: center; }
                 .rule-row { grid-template-columns: 64px 1fr; min-height: 128px; }
                 .rule-number { font-size: 1.72rem; }
-                .rule-tag { grid-column: 2; justify-self: start; margin: 0 0 12px; }
+                .rule-tag { position: relative; right: auto; bottom: auto; grid-column: 2; justify-self: start; margin: 0 0 12px; }
+                .rule-main { padding-bottom: 12px; }
             }
         </style>
         <section class="poster-sheet" aria-label="Founder's promise compact rules poster">
@@ -2003,55 +2021,59 @@
                     <span>Why Trust Us?</span>
                 </div>
 
-                <header class="poster-hero">
-                    <div class="poster-hero-copy">
-                        <h1>Founder's Promise</h1>
-                        <h2>Why trust a new studio?</h2>
+                <div class="promise-layout">
+                    <div class="promise-lead">
+                        <header class="poster-hero">
+                            <div class="poster-hero-copy">
+                                <h1>Founder's Promise</h1>
+                                <h2>Why trust a new studio?</h2>
+                            </div>
+                        </header>
+
+                        <div class="manifesto-bar">
+                            <strong>Trust standard</strong>
+                            <span>A new studio earns trust through written scope, fair refund logic, fast founder response, and a clean rights chain.</span>
+                        </div>
                     </div>
-                </header>
 
-                <div class="manifesto-bar">
-                    <strong>Trust standard</strong>
-                    <span>A new studio earns trust through written scope, fair refund logic, fast founder response, and a clean rights chain.</span>
+                    <main class="rules-list">
+                        <article class="rule-row">
+                            <div class="rule-number">01</div>
+                            <div class="rule-main">
+                                <h3>Signed SOW</h3>
+                                <p>Clear deliverables, deadlines, and terms in writing. No vague verbal deals.</p>
+                            </div>
+                            <div class="rule-tag">Written scope</div>
+                        </article>
+
+                        <article class="rule-row">
+                            <div class="rule-number">02</div>
+                            <div class="rule-main">
+                                <h3>Money-Back Promise</h3>
+                                <p>Refundable deposit if we can't deliver on-brief within contracted revisions.</p>
+                            </div>
+                            <div class="rule-tag">Refund logic</div>
+                        </article>
+
+                        <article class="rule-row">
+                            <div class="rule-number">03</div>
+                            <div class="rule-main">
+                                <h3>48-Hour Response</h3>
+                                <p>Real replies from the founder, not chatbots or sales reps.</p>
+                            </div>
+                            <div class="rule-tag">Founder reply</div>
+                        </article>
+
+                        <article class="rule-row">
+                            <div class="rule-number">04</div>
+                            <div class="rule-main">
+                                <h3>Clean Rights Chain</h3>
+                                <p>Explicit license terms. Premium tiers include Copyright Office registration.</p>
+                            </div>
+                            <div class="rule-tag">Clean rights</div>
+                        </article>
+                    </main>
                 </div>
-
-                <main class="rules-list">
-                    <article class="rule-row">
-                        <div class="rule-number">01</div>
-                        <div class="rule-main">
-                            <h3>Signed SOW</h3>
-                            <p>Clear deliverables, deadlines, and terms in writing. No vague verbal deals.</p>
-                        </div>
-                        <div class="rule-tag">Written scope</div>
-                    </article>
-
-                    <article class="rule-row">
-                        <div class="rule-number">02</div>
-                        <div class="rule-main">
-                            <h3>Money-Back Promise</h3>
-                            <p>Refundable deposit if we can't deliver on-brief within contracted revisions.</p>
-                        </div>
-                        <div class="rule-tag">Refund logic</div>
-                    </article>
-
-                    <article class="rule-row">
-                        <div class="rule-number">03</div>
-                        <div class="rule-main">
-                            <h3>48-Hour Response</h3>
-                            <p>Real replies from the founder, not chatbots or sales reps.</p>
-                        </div>
-                        <div class="rule-tag">Founder reply</div>
-                    </article>
-
-                    <article class="rule-row">
-                        <div class="rule-number">04</div>
-                        <div class="rule-main">
-                            <h3>Clean Rights Chain</h3>
-                            <p>Explicit license terms. Premium tiers include Copyright Office registration.</p>
-                        </div>
-                        <div class="rule-tag">Clean rights</div>
-                    </article>
-                </main>
 
                 <footer class="bottom-statement">
                     <p>Professional trust before the first note is written: scope, rights, response, and accountability are handled up front.</p>
