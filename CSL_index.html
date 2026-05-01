@@ -1721,43 +1721,24 @@
                 overflow: hidden;
                 border: 1px solid rgba(0, 245, 255, 0.28);
                 border-radius: 26px;
-                background:
-                    linear-gradient(90deg, rgba(5, 13, 27, 0.12) 0%, rgba(5, 13, 27, 0.02) 50%, rgba(5, 13, 27, 0.12) 100%),
-                    linear-gradient(180deg, rgba(0,0,0,0.02), rgba(0,0,0,0.1)),
-                    url('seal-image.jpg') center center / cover no-repeat,
-                    #050d1b;
+                background: url('seal-image.jpg') center 28% / cover no-repeat #050d1b;
                 box-shadow: 0 0 44px rgba(0,245,255,0.2), inset 0 0 88px rgba(0,245,255,0.035);
                 margin: 0 auto;
             }
 
             .poster-sheet::before {
-                content: "";
-                position: absolute;
-                inset: -2px;
-                z-index: 1;
-                pointer-events: none;
-                background: linear-gradient(116deg, transparent 0 25%, rgba(0,245,255,0.22) 34%, transparent 42% 70%, rgba(166,255,0,0.12) 80%, transparent 90%);
-                animation: sweep 8s linear infinite;
-                opacity: 0.1;
+                display: none;
             }
 
             .poster-sheet::after {
-                content: "";
-                position: absolute;
-                inset: 0;
-                z-index: 0;
-                pointer-events: none;
-                background: url('seal-image.jpg') center center / auto 82% no-repeat;
-                opacity: 0.72;
+                display: none;
             }
 
             .poster-inner {
                 position: relative;
                 z-index: 2;
                 padding: 22px;
-                background:
-                    radial-gradient(circle at 82% 20%, rgba(0,245,255,0.025), transparent 34%),
-                    linear-gradient(90deg, rgba(5, 13, 27, 0.08), rgba(5, 13, 27, 0.01), rgba(5, 13, 27, 0.08));
+                background: transparent;
             }
 
             .poster-topline {
@@ -1788,21 +1769,12 @@
                 border: 1px solid rgba(0,245,255,0.28);
                 border-radius: 18px;
                 border-bottom: 1px solid rgba(255,255,255,0.1);
-                background:
-                    linear-gradient(135deg, rgba(0,0,0,0.18), rgba(0,0,0,0.02)),
-                    rgba(5, 13, 27, 0.03);
+                background: #07111f;
                 box-shadow: inset 0 0 40px rgba(0,0,0,0.42), 0 0 23px rgba(0,245,255,0.18);
             }
 
             .poster-hero::after {
-                content: "";
-                position: absolute;
-                inset: 0;
-                z-index: -1;
-                pointer-events: none;
-                background:
-                    linear-gradient(180deg, rgba(0,0,0,0.04), rgba(0,0,0,0.18)),
-                    radial-gradient(circle at center, transparent 0 56%, rgba(0,0,0,0.18) 100%);
+                display: none;
             }
 
             .poster-hero-copy {
@@ -1813,7 +1785,7 @@
                 padding: clamp(0.55rem, 1.73vw, 0.83rem);
                 border: 1px solid rgba(0,245,255,0.2);
                 border-radius: 12px;
-                background: linear-gradient(135deg, rgba(0,0,0,0.24), rgba(0,0,0,0.08));
+                background: #081425;
                 backdrop-filter: none;
             }
 
@@ -1846,7 +1818,7 @@
                 border: 1px solid rgba(255, 255, 255, 0.12);
                 border-radius: 18px;
                 padding: 13px 15px;
-                background: rgba(0,0,0,0.16);
+                background: #07111f;
                 backdrop-filter: none;
             }
 
@@ -1880,16 +1852,12 @@
                 min-height: 96px;
                 border: 1px solid rgba(255, 255, 255, 0.12);
                 border-radius: 18px;
-                background: linear-gradient(135deg, rgba(255,255,255,0.075), rgba(255,255,255,0.018)), rgba(8, 20, 38, 0.3);
+                background: #081425;
                 backdrop-filter: none;
             }
 
             .rule-row::before {
-                content: "";
-                position: absolute;
-                inset: 0;
-                pointer-events: none;
-                background: radial-gradient(circle at 0 0, rgba(0,245,255,0.1), transparent 42%), linear-gradient(90deg, rgba(0,245,255,0.04), transparent 42%, rgba(255,43,214,0.04));
+                display: none;
             }
 
             .rule-number {
@@ -1900,7 +1868,7 @@
                 place-items: center;
                 border-right: 1px solid rgba(0,245,255,0.18);
                 color: #00f5ff;
-                background: rgba(0,0,0,0.14);
+                background: #06101d;
                 font-family: "Orbitron", sans-serif;
                 font-size: 2.05rem;
                 font-weight: 900;
@@ -1939,7 +1907,7 @@
                 border-radius: 999px;
                 padding: 10px 11px;
                 color: #a6ff00;
-                background: rgba(0,245,255,0.035);
+                background: #061820;
                 font-family: "Orbitron", sans-serif;
                 font-size: 0.58rem;
                 letter-spacing: 0.1em;
@@ -1956,7 +1924,7 @@
                 border: 1px solid rgba(0, 245, 255, 0.28);
                 border-radius: 18px;
                 padding: 12px 14px;
-                background: linear-gradient(135deg, rgba(0,245,255,0.08), rgba(255,43,214,0.04)), rgba(0,0,0,0.14);
+                background: #07111f;
                 backdrop-filter: none;
             }
 
